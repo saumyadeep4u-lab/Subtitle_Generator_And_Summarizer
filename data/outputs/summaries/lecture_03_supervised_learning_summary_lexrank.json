@@ -1,0 +1,175 @@
+{
+  "video_id": "lecture_03_supervised_learning",
+  "summarizer_model": "lexrank",
+  "device": "cpu",
+  "latency_sec": 1.082,
+  "num_sections": 23,
+  "executive_summary": "In supervised learning, an algorithm observes a training dataset of feature vectors paired with ground truth target labels and estimates a mapping function. Variance measures how sensitively the learned model fluctuates when trained on different random samples drawn from the same underlying population. High capacity models with too many degrees of freedom exhibit low training error but high variance, resulting in severe overfitting. Finally, the course compares linear classifiers, support vector machines, and tree based ensemble algorithms.",
+  "word_count": 77,
+  "sentence_count": 4,
+  "native_word_limit_met": true,
+  "post_processing_triggered": false,
+  "section_summaries": [
+    {
+      "section_id": 1,
+      "start_sec": 0.0,
+      "end_sec": 29.46,
+      "section_summary": "This lecture examines supervised machine learning, generalization theory, and rigorous evaluation methodology. In supervised learning, an algorithm observes a training dataset of feature vectors paired with ground truth target labels and estimates a mapping function.",
+      "word_count": 35
+    },
+    {
+      "section_id": 2,
+      "start_sec": 29.46,
+      "end_sec": 53.92,
+      "section_summary": "Variance measures how sensitively the learned model fluctuates when trained on different random samples drawn from the same underlying population. High capacity models with too many degrees of freedom exhibit low training error but high variance, resulting in severe overfitting.",
+      "word_count": 40
+    },
+    {
+      "section_id": 3,
+      "start_sec": 53.92,
+      "end_sec": 82.08,
+      "section_summary": "This lecture compares linear classifiers, support vector machines, and tree based ensemble algorithms. Logistic regression models the log-odds of binary class membership as a linear combination of input features, optimized by a maximum likelihood estimation.",
+      "word_count": 35
+    },
+    {
+      "section_id": 4,
+      "start_sec": 83.08,
+      "end_sec": 109.1,
+      "section_summary": "",
+      "word_count": 0
+    },
+    {
+      "section_id": 5,
+      "start_sec": 109.1,
+      "end_sec": 135.26,
+      "section_summary": "This lecture focuses on dataset partitioning, cross-validation, and preventing data leakage in applied data science. A common methodological flaw is tuning model hyperparameters or feature selection rules against the final evaluation set, which leaks test information and inflates reported accuracy.",
+      "word_count": 40
+    },
+    {
+      "section_id": 6,
+      "start_sec": 135.26,
+      "end_sec": 158.74,
+      "section_summary": "In K-fold stratified cross-validation, the development data is partitioned into K-folds preserving class ratios, rotating the validation fold K times to estimate mean and standard deviation performance.",
+      "word_count": 27
+    },
+    {
+      "section_id": 7,
+      "start_sec": 159.42,
+      "end_sec": 189.04,
+      "section_summary": "This lecture analyzes classification metrics beyond simple accuracy for imbalanced datasets. Precision measures the proportion of positive predictions that are truly positive, controlling false positive alert fatigue.",
+      "word_count": 27
+    },
+    {
+      "section_id": 8,
+      "start_sec": 189.04,
+      "end_sec": 215.86,
+      "section_summary": "The F1 score computes the harmonic mean of precision and recall, penalizing extreme imbalances between the two metrics. The module delves deeper into the mathematical derivation of second order gradient boosting.",
+      "word_count": 31
+    },
+    {
+      "section_id": 9,
+      "start_sec": 215.86,
+      "end_sec": 241.22,
+      "section_summary": "",
+      "word_count": 0
+    },
+    {
+      "section_id": 10,
+      "start_sec": 241.22,
+      "end_sec": 269.6,
+      "section_summary": "This lecture examines subtle data leakage patterns that frequently invalidate supervised learning benchmarks in industry projects.",
+      "word_count": 16
+    },
+    {
+      "section_id": 11,
+      "start_sec": 269.6,
+      "end_sec": 303.42,
+      "section_summary": "Is computed across the entire dataset prior to splitting into training and test sets.",
+      "word_count": 14
+    },
+    {
+      "section_id": 12,
+      "start_sec": 303.42,
+      "end_sec": 330.32,
+      "section_summary": "",
+      "word_count": 0
+    },
+    {
+      "section_id": 13,
+      "start_sec": 330.32,
+      "end_sec": 359.2,
+      "section_summary": "Once probabilities are calibrated using briar score and reliability diagrams, analysts select optimal operating thresholds based on asymmetric business cost matrices.",
+      "word_count": 21
+    },
+    {
+      "section_id": 14,
+      "start_sec": 359.2,
+      "end_sec": 386.82,
+      "section_summary": "Combining leakage-free cross-validation, calibrated ensemble models, and Shap attribution guarantees transparent and dependable predictive performance.",
+      "word_count": 15
+    },
+    {
+      "section_id": 15,
+      "start_sec": 386.82,
+      "end_sec": 413.66,
+      "section_summary": "This lecture examines supervised machine learning, generalization theory, and rigorous evaluation methodology. In supervised learning, an algorithm observes a training dataset of feature vectors paired with ground truth target labels and estimates a mapping function.",
+      "word_count": 35
+    },
+    {
+      "section_id": 16,
+      "start_sec": 414.46,
+      "end_sec": 444.08,
+      "section_summary": "Variance measures how sensitively the learned model fluctuates when trained on different random samples drawn from the same underlying population. High capacity models with too many degrees of freedom exhibit low training error but high variance, resulting in severe overfitting.",
+      "word_count": 40
+    },
+    {
+      "section_id": 17,
+      "start_sec": 444.08,
+      "end_sec": 471.4,
+      "section_summary": "This lecture compares linear classifiers, support vector machines, and tree-based ensemble algorithms. Logistic regression models the log-odds of binary class membership as a linear combination of input features, optimized via maximum likelihood estimation.",
+      "word_count": 33
+    },
+    {
+      "section_id": 18,
+      "start_sec": 471.4,
+      "end_sec": 496.46,
+      "section_summary": "",
+      "word_count": 0
+    },
+    {
+      "section_id": 19,
+      "start_sec": 496.46,
+      "end_sec": 529.38,
+      "section_summary": "This lecture focuses on dataset partitioning, cross-validation, and preventing data leakage in applied data science. A common methodological flaw is tuning model hyperparameters or feature selection rules against the final evaluation set, which leaks test information and inflates reported accuracy.",
+      "word_count": 40
+    },
+    {
+      "section_id": 20,
+      "start_sec": 529.38,
+      "end_sec": 555.8,
+      "section_summary": "",
+      "word_count": 0
+    },
+    {
+      "section_id": 21,
+      "start_sec": 555.8,
+      "end_sec": 586.86,
+      "section_summary": "This lecture analyzes classification metrics beyond simple accuracy for imbalanced datasets.",
+      "word_count": 11
+    },
+    {
+      "section_id": 22,
+      "start_sec": 587.34,
+      "end_sec": 620.54,
+      "section_summary": "Recall, or sensitivity, measures the proportion of actual positive instances successfully recovered by the model, controlling false negative misses. The F1 score computes the harmonic mean of precision and recall, penalizing extreme imbalances between the two metrics.",
+      "word_count": 37
+    },
+    {
+      "section_id": 23,
+      "start_sec": 620.54,
+      "end_sec": 667.6,
+      "section_summary": "This lecture delves deeper into the mathematical derivation of second order gradient boosting used in modern tabular learning engines.",
+      "word_count": 19
+    }
+  ]
+}

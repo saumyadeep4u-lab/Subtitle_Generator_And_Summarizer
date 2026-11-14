@@ -1,0 +1,168 @@
+{
+  "video_id": "lecture_04_computer_vision_cnns",
+  "summarizer_model": "google/flan-t5-base",
+  "device": "cpu",
+  "latency_sec": 55.214,
+  "num_sections": 22,
+  "executive_summary": "Convolutional neural networks are used in computer vision and convolutional networks are based on tensors. Zero-padding adds a border of zeros around the input perimeter so convolutional filters can process edge pixels without shrinking spatial resolution prematurely. Convolutional output dimensions and receptive field growth in real-time computer vision are studied. A convolutional backbone is used to train pixel-wise segmentation models.",
+  "word_count": 60,
+  "sentence_count": 4,
+  "native_word_limit_met": true,
+  "post_processing_triggered": false,
+  "section_summaries": [
+    {
+      "section_id": 1,
+      "start_sec": 0.0,
+      "end_sec": 27.02,
+      "section_summary": "Convolutional neural networks are used in computer vision and neural network architectures to achieve high-resolution images with high resolution.",
+      "word_count": 19
+    },
+    {
+      "section_id": 2,
+      "start_sec": 27.02,
+      "end_sec": 56.96,
+      "section_summary": "The network detects visual patterns regardless of where they appear in a frame, regardless of the size of the frame. The network also detects patterns that appear in the background of a picture.",
+      "word_count": 33
+    },
+    {
+      "section_id": 3,
+      "start_sec": 56.96,
+      "end_sec": 84.82,
+      "section_summary": "Zero-padding adds a border around the input perimeter so convolutional filters can process edge pixels without shrinking spatial resolution.",
+      "word_count": 19
+    },
+    {
+      "section_id": 4,
+      "start_sec": 84.82,
+      "end_sec": 114.6,
+      "section_summary": "This lecture focuses on deep residual networks, transfer learning, and vision backbones in a wide range of domains.",
+      "word_count": 18
+    },
+    {
+      "section_id": 5,
+      "start_sec": 114.6,
+      "end_sec": 143.0,
+      "section_summary": "ResNet solves the spottle neck problem by introducing identity skip connections that add the input of a convolutional block directly to its output.",
+      "word_count": 23
+    },
+    {
+      "section_id": 6,
+      "start_sec": 143.8,
+      "end_sec": 179.4,
+      "section_summary": "This introductory lecture introduces a new approach to image classification and semantic segmentation, focusing on a number of topics.",
+      "word_count": 19
+    },
+    {
+      "section_id": 7,
+      "start_sec": 180.3,
+      "end_sec": 211.16,
+      "section_summary": "This lecture performs a concrete calculation of convolutional output dimensions and receptive field growth across stacked layers.",
+      "word_count": 17
+    },
+    {
+      "section_id": 8,
+      "start_sec": 211.16,
+      "end_sec": 239.76,
+      "section_summary": "Convolutional filters of size 3 by 3 with a padding of 1 pixel and a stride of 1 preserve the exact spatial dimensions of 224 by 224 while producing 64 output feature channels. Each three by 3 filter contains 3 times 3 times 3, equals 27 weights plus 1 by a term, totaling just 1,792 parameters for the entire.",
+      "word_count": 59
+    },
+    {
+      "section_id": 9,
+      "start_sec": 239.76,
+      "end_sec": 271.52,
+      "section_summary": "Convolutions enable real-time computer vision on mobile and edge devices by performing spatial filtering and cross-channel feature combination simultaneously in a single heavy operation.",
+      "word_count": 24
+    },
+    {
+      "section_id": 10,
+      "start_sec": 272.06,
+      "end_sec": 299.76,
+      "section_summary": "A depthwise convolution applies a single spatial filter independently to each input channel. A pointwise 1 by 1 convolution projects and combines the channel outputs linearly.",
+      "word_count": 26
+    },
+    {
+      "section_id": 11,
+      "start_sec": 299.76,
+      "end_sec": 331.6,
+      "section_summary": "Using cross-entropy to train pixel-wise segmentation models for small distant objects and large foreground objects.",
+      "word_count": 15
+    },
+    {
+      "section_id": 12,
+      "start_sec": 331.6,
+      "end_sec": 359.26,
+      "section_summary": "Data augmentation and vision transformers are key to the future of data augmentation technologies, and this is a must-attend lecture for anyone interested in the field of vision augmentation.",
+      "word_count": 29
+    },
+    {
+      "section_id": 13,
+      "start_sec": 359.26,
+      "end_sec": 387.44,
+      "section_summary": "Convolutional neural networks are used in computer vision and computer vision applications. They are also used in a wide variety of other applications.",
+      "word_count": 23
+    },
+    {
+      "section_id": 14,
+      "start_sec": 388.16,
+      "end_sec": 420.82,
+      "section_summary": "Connecting a standard layer directly to a high-resolution image requires hundreds of millions of parameters and destroys spatial topology.",
+      "word_count": 19
+    },
+    {
+      "section_id": 15,
+      "start_sec": 421.34,
+      "end_sec": 450.76,
+      "section_summary": "A convolutional neural network that detects visual patterns regardless of their location. This lecture examines spatial dimensions, padding, stride, and pooling operations inside a convolution neural backbone.",
+      "word_count": 27
+    },
+    {
+      "section_id": 16,
+      "start_sec": 450.76,
+      "end_sec": 476.96,
+      "section_summary": "Convolutional filtering reduces the size of the image grid and improves the quality of the feature maps by aggregating local neighborhoods and reducing memory footprint.",
+      "word_count": 25
+    },
+    {
+      "section_id": 17,
+      "start_sec": 476.96,
+      "end_sec": 505.9,
+      "section_summary": "This lecture focuses on deep residual networks, transfer learning, and vision backbones in a wide range of domains.",
+      "word_count": 18
+    },
+    {
+      "section_id": 18,
+      "start_sec": 506.48,
+      "end_sec": 530.22,
+      "section_summary": "ResNet solves the spotl neck problem by introducing identity skip connections that add the input of a convolutional block directly to its output.",
+      "word_count": 23
+    },
+    {
+      "section_id": 19,
+      "start_sec": 530.22,
+      "end_sec": 557.88,
+      "section_summary": "This introductory lecture introduces a new approach to image classification and semantic segmentation, focusing on a number of topics.",
+      "word_count": 19
+    },
+    {
+      "section_id": 20,
+      "start_sec": 558.4,
+      "end_sec": 589.14,
+      "section_summary": "Image classification uses a single category label to predict bounding box co-ordinates and class probabilities for every object present.",
+      "word_count": 19
+    },
+    {
+      "section_id": 21,
+      "start_sec": 589.98,
+      "end_sec": 630.74,
+      "section_summary": "This lecture performs a concrete calculation of convolutional output dimensions and receptive field growth across stacked layers.",
+      "word_count": 17
+    },
+    {
+      "section_id": 22,
+      "start_sec": 631.56,
+      "end_sec": 657.1,
+      "section_summary": "Convolutional layers can be stacked back to back to achieve the exact same receptive field as a single 5 by 5 convolution.",
+      "word_count": 22
+    }
+  ]
+}

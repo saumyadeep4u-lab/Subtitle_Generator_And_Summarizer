@@ -1,0 +1,147 @@
+{
+  "video_id": "lecture_01_neural_networks",
+  "summarizer_model": "google/flan-t5-base",
+  "device": "cpu",
+  "latency_sec": 50.13,
+  "num_sections": 19,
+  "executive_summary": "This lecture examines deep learning fundamentals and neural network optimization. The curriculum focuses on gradient descent optimization algorithms and learning rate schedules for generalization on unseen test data. Batch normalization normalizes intermediate layer activations across each mini-batch to zero mean and unit variance, followed by learnable scale and shift parameters. Standard gradient descent without momentum can stall near flat plateaus because the gradient magnitude approaches zero in all directions simultaneously.",
+  "word_count": 70,
+  "sentence_count": 4,
+  "native_word_limit_met": true,
+  "post_processing_triggered": false,
+  "section_summaries": [
+    {
+      "section_id": 1,
+      "start_sec": 0.0,
+      "end_sec": 33.16,
+      "section_summary": "This is a lecture on deep learning and neural network optimization, with a focus on neural networks and neural architectures.",
+      "word_count": 20
+    },
+    {
+      "section_id": 2,
+      "start_sec": 33.66,
+      "end_sec": 61.2,
+      "section_summary": "We use a differentiable reallu to quantify prediction error in a deep network architecture. We also use diffraction to quantify forward propagation error.",
+      "word_count": 23
+    },
+    {
+      "section_id": 3,
+      "start_sec": 61.2,
+      "end_sec": 100.78,
+      "section_summary": "Calculate the mean squared error and the scalar loss in a multi-class classification network using a forward pass and backpropagation.",
+      "word_count": 20
+    },
+    {
+      "section_id": 4,
+      "start_sec": 100.78,
+      "end_sec": 143.7,
+      "section_summary": "This lecture focuses on gradient descent optimization algorithms and learning rate schedules for deep networks. It aims to improve the performance of deep networks by minimizing the number of parameter updates.",
+      "word_count": 31
+    },
+    {
+      "section_id": 5,
+      "start_sec": 143.7,
+      "end_sec": 170.62,
+      "section_summary": "Convergence stalls in suboptimal local minima or saddle points if the learning rate is too large.",
+      "word_count": 16
+    },
+    {
+      "section_id": 6,
+      "start_sec": 171.1,
+      "end_sec": 195.8,
+      "section_summary": "This lecture focuses on generalization strategies and batch normalization for unseen test data. L2 weight decay adds a quadratic penalty on parameter magnitudes directly to the loss function, encouraging smoother decision boundaries.",
+      "word_count": 32
+    },
+    {
+      "section_id": 7,
+      "start_sec": 195.8,
+      "end_sec": 223.1,
+      "section_summary": "Batch normalization normalizes intermediate layer activations across each mini-batch to zero mean and unit variance, followed by learnable scale and shift parameters.",
+      "word_count": 22
+    },
+    {
+      "section_id": 8,
+      "start_sec": 223.1,
+      "end_sec": 272.04,
+      "section_summary": "This lecture conducts a detailed mathematical walkthrough of how matrix dimensions and tensor shapes interact during mini-batch training.",
+      "word_count": 18
+    },
+    {
+      "section_id": 9,
+      "start_sec": 272.78,
+      "end_sec": 302.62,
+      "section_summary": "This lecture analyzes the geometric intuition behind learning rate schedules and momentum. It also discusses the geometry of momentum and learning rates.",
+      "word_count": 22
+    },
+    {
+      "section_id": 10,
+      "start_sec": 302.62,
+      "end_sec": 330.8,
+      "section_summary": "Accelerating gradient descent without momentum can stall near flat plateaus because the gradient magnitude approaches zero in all directions simultaneously.",
+      "word_count": 20
+    },
+    {
+      "section_id": 11,
+      "start_sec": 330.8,
+      "end_sec": 359.24,
+      "section_summary": "This lecture reviews the role of activation function geometry in modern neural architecture design. It focuses on the design of neural networks.",
+      "word_count": 22
+    },
+    {
+      "section_id": 12,
+      "start_sec": 359.24,
+      "end_sec": 386.12,
+      "section_summary": "Identify smooth gating activations for transformers and convolutional backbones. This lecture analyzes the underlying architecture.",
+      "word_count": 15
+    },
+    {
+      "section_id": 13,
+      "start_sec": 386.12,
+      "end_sec": 417.24,
+      "section_summary": "Verify data normalization before entering the first linear layer. Verify that the input features have zero mean and unit variance.",
+      "word_count": 20
+    },
+    {
+      "section_id": 14,
+      "start_sec": 417.24,
+      "end_sec": 454.94,
+      "section_summary": "Deep Learning and Neural Network Optimization is a theoretical and practical introduction to deep learning and its applications in machine learning, computer science, and computer science.",
+      "word_count": 26
+    },
+    {
+      "section_id": 15,
+      "start_sec": 454.94,
+      "end_sec": 482.68,
+      "section_summary": "Calculate a weighted linear combination of its inputs, add a scalar bias term, and apply a non-linear activation function.",
+      "word_count": 19
+    },
+    {
+      "section_id": 16,
+      "start_sec": 482.68,
+      "end_sec": 508.88,
+      "section_summary": "Understand the concept of a rectified linear unit Understand how a forward propagation feature vector is encoded in a network layer.",
+      "word_count": 21
+    },
+    {
+      "section_id": 17,
+      "start_sec": 509.62,
+      "end_sec": 536.76,
+      "section_summary": "Identify prediction error using a differentiable objective or loss function. Identify loss functions for multi-class classification.",
+      "word_count": 16
+    },
+    {
+      "section_id": 18,
+      "start_sec": 536.76,
+      "end_sec": 562.8,
+      "section_summary": "Weight gradients can be exploding if the weight gradients are too high or too low, depending on the depth of the network.",
+      "word_count": 22
+    },
+    {
+      "section_id": 19,
+      "start_sec": 562.8,
+      "end_sec": 628.54,
+      "section_summary": "Learning rate schedules for gradient descent algorithms and learning rate algorithms are discussed in this lecture. The lecture focuses on a full batch gradient descent algorithm that computes exact gradients over the entire training dataset before making a single parameter update.",
+      "word_count": 41
+    }
+  ]
+}

@@ -1,0 +1,1048 @@
+1
+00:00:00,000 --> 00:00:02,150
+Welcome to lecture 4 on computer
+
+2
+00:00:02,190 --> 00:00:04,300
+vision and convolutional neural network
+architectures.
+
+3
+00:00:04,940 --> 00:00:07,550
+Digital images are represented as
+three-dimensional tensors
+
+4
+00:00:07,590 --> 00:00:10,160
+defined by height, width, and color
+channels
+
+5
+00:00:10,200 --> 00:00:13,060
+such as red, green, and blue. Connecting a
+
+6
+00:00:13,100 --> 00:00:15,960
+standard fully connected layer directly to
+a high
+
+7
+00:00:16,000 --> 00:00:18,230
+resolution image requires hundreds of
+millions
+
+8
+00:00:18,270 --> 00:00:20,500
+of parameters and destroys spatial
+topology.
+
+9
+00:00:21,480 --> 00:00:24,250
+Convolutional neural networks, or CNNs,
+solve
+
+10
+00:00:24,290 --> 00:00:27,020
+this problem through three architectural
+priors,
+
+11
+00:00:27,060 --> 00:00:32,080
+local receptive fields, spatial weight
+sharing, and translation equivariants.
+
+12
+00:00:32,740 --> 00:00:35,364
+A learnable convolutional filter,
+typically three by three
+
+13
+00:00:35,404 --> 00:00:37,660
+or five by five pixels in size,
+
+14
+00:00:38,180 --> 00:00:41,820
+slides across the spatial dimensions of
+the input tensor to compute feature maps.
+
+15
+00:00:42,380 --> 00:00:46,480
+Because the exact same filter weights are
+shared across every spatial location,
+
+16
+00:00:46,980 --> 00:00:50,340
+the network detects visual patterns
+regardless of where they appear in the fra
+
+17
+00:00:50,960 --> 00:00:53,960
+In section 2, we examine spatial
+dimensions,
+
+18
+00:00:54,000 --> 00:00:56,960
+padding, stride, and pooling operations
+inside a
+
+19
+00:00:57,000 --> 00:00:59,550
+convolutional backbone. Zero padding adds
+a border
+
+20
+00:00:59,590 --> 00:01:02,140
+of zeros around the input perimeter so
+
+21
+00:01:02,180 --> 00:01:04,813
+convolutional filters can process edge
+pixels
+
+22
+00:01:04,853 --> 00:01:07,040
+without shrinking spatial resolution
+prematurely.
+
+23
+00:01:07,760 --> 00:01:10,020
+Stride defines the step size by which
+
+24
+00:01:10,060 --> 00:01:12,280
+the convolutional kernel shifts
+horizontally and vertically
+
+25
+00:01:12,320 --> 00:01:15,330
+across the image grid. After convolution
+
+26
+00:01:15,370 --> 00:01:18,380
+and batch normalization, nonlinear
+activation functions
+
+27
+00:01:18,420 --> 00:01:21,815
+introduce sparsity into the resulting
+activation maps. Max
+
+28
+00:01:21,855 --> 00:01:24,820
+pooling and average pooling downsample
+feature maps
+
+29
+00:01:24,860 --> 00:01:27,300
+by aggregating local neighborhoods,
+reducing memory
+
+30
+00:01:27,340 --> 00:01:29,780
+footprint and providing invariants to
+small
+
+31
+00:01:29,820 --> 00:01:32,957
+spatial shifts. Early convolutional layers
+learn low-level
+
+32
+00:01:32,997 --> 00:01:35,680
+edge corner and color gradient detectors,
+
+33
+00:01:36,160 --> 00:01:38,798
+whereas deeper layers compose these
+primitives into
+
+34
+00:01:38,838 --> 00:01:41,060
+textures, object parts, and complete
+semantic
+
+35
+00:01:41,100 --> 00:01:44,680
+categories. In section 3, we study deep
+
+36
+00:01:44,720 --> 00:01:48,300
+residual networks, transfer learning, and
+vision backbones.
+
+37
+00:01:48,980 --> 00:01:51,790
+As early architectures scaled beyond 20
+
+38
+00:01:51,830 --> 00:01:54,600
+layers, researchers observed a
+counterintuitive degradation
+
+39
+00:01:54,640 --> 00:01:58,020
+problem where training accuracy saturated
+and then worsened rapidly.
+
+40
+00:01:58,940 --> 00:02:01,150
+ResNet resolved the spottle neck by
+introducing identity
+
+41
+00:02:01,190 --> 00:02:03,360
+skip connections that add the input of a
+
+42
+00:02:03,400 --> 00:02:06,095
+convolutional block directly to its
+output. Instead
+
+43
+00:02:06,135 --> 00:02:08,440
+of learning an unreferenced target mapping
+
+44
+00:02:08,480 --> 00:02:11,089
+from scratch, residual blocks learn a
+residual
+
+45
+00:02:11,129 --> 00:02:13,360
+perturbation relative to the identity
+function.
+
+46
+00:02:14,000 --> 00:02:16,760
+In real-world applications with limited
+labeled
+
+47
+00:02:16,800 --> 00:02:19,060
+images, engineers initialize vision
+pipelines
+
+48
+00:02:19,100 --> 00:02:23,000
+with ResNet or Vision transformer weights
+predrained on millions of labeled images.
+
+49
+00:02:23,800 --> 00:02:25,870
+By freezing early feature extraction
+layers
+
+50
+00:02:25,910 --> 00:02:27,940
+and fine-tuning only the final
+classification
+
+51
+00:02:27,980 --> 00:02:32,140
+head with data augmentation, models
+converge rapidly with high accuracy.
+
+52
+00:02:32,920 --> 00:02:35,763
+In section 4, we extend image
+classification
+
+53
+00:02:35,803 --> 00:02:38,200
+to object detection and semantic
+segmentation.
+
+54
+00:02:38,800 --> 00:02:43,140
+Whereas image classification assigns a
+single category label to an entire frame,
+
+55
+00:02:43,620 --> 00:02:46,118
+object detection outputs both bounding box
+coordinates
+
+56
+00:02:46,158 --> 00:02:48,260
+and class probabilities for every object
+
+57
+00:02:48,300 --> 00:02:51,180
+present. Two stage detectors generate
+candidate
+
+58
+00:02:51,220 --> 00:02:54,100
+region proposals before refining box
+regressions,
+
+59
+00:02:54,480 --> 00:02:56,940
+while single stage detectors like Yolo
+predict bounding
+
+60
+00:02:56,980 --> 00:02:59,400
+boxes and classes in a single forward
+pass.
+
+61
+00:03:00,300 --> 00:03:02,755
+Non-maximum suppression filters out
+redundant overlapping
+
+62
+00:03:02,795 --> 00:03:04,800
+bounding boxes by sorting predictions
+
+63
+00:03:04,840 --> 00:03:07,309
+by confidence and discarding boxes whose
+intersection
+
+64
+00:03:07,349 --> 00:03:09,460
+over union exceeds a configured threshold.
+
+65
+00:03:10,300 --> 00:03:12,842
+Mean average precision across multiple
+intersection over
+
+66
+00:03:12,882 --> 00:03:15,020
+union threshold serves as the standard
+
+67
+00:03:15,060 --> 00:03:18,100
+benchmark metric for evaluating object
+detection systems.
+
+68
+00:03:18,660 --> 00:03:21,406
+In section 5, we perform a concrete
+
+69
+00:03:21,446 --> 00:03:23,760
+calculation of convolutional output
+dimensions and
+
+70
+00:03:23,800 --> 00:03:27,460
+receptive field growth across stack
+layers. Given an
+
+71
+00:03:27,500 --> 00:03:31,160
+input image of size 224 by 224 with
+
+72
+00:03:31,200 --> 00:03:34,549
+3 RGB channels, applying 64 convolutional
+filters of size 3
+
+73
+00:03:34,589 --> 00:03:37,600
+by 3 with a padding of 1 pixel and
+
+74
+00:03:37,640 --> 00:03:41,391
+a stride of 1 preserves the exact spatial
+dimensions
+
+75
+00:03:41,431 --> 00:03:44,760
+of 224 by 224 while producing 64 output
+
+76
+00:03:44,800 --> 00:03:48,349
+feature channels. Each 3 by 3 filter
+contains 3 times
+
+77
+00:03:48,389 --> 00:03:51,580
+3 times 3 equals 27 weights plus 1 by
+
+78
+00:03:51,620 --> 00:03:55,943
+a term, totaling just 1,792 parameters for
+the
+
+79
+00:03:55,983 --> 00:03:59,760
+entire layer. Furthermore, stacking 2,3 by
+3
+
+80
+00:03:59,800 --> 00:04:02,333
+convolutional layers back to back achieves
+the exact same
+
+81
+00:04:02,373 --> 00:04:04,620
+5 by 5 effective receptive field as a
+
+82
+00:04:04,660 --> 00:04:07,270
+single 5 by 5 convolution, while requiring
+
+83
+00:04:07,310 --> 00:04:09,920
+28 percent fewer parameters and
+introducing an
+
+84
+00:04:09,960 --> 00:04:13,118
+additional non-linear activation in
+between. In section
+
+85
+00:04:13,158 --> 00:04:15,860
+6, we examine how depthwise separable
+
+86
+00:04:15,900 --> 00:04:18,580
+convolutions enable real-time computer
+vision on
+
+87
+00:04:18,620 --> 00:04:21,300
+mobile and edge devices. Standard
+convolution
+
+88
+00:04:21,340 --> 00:04:23,820
+performs spatial filtering and
+cross-channel feature
+
+89
+00:04:23,860 --> 00:04:25,920
+combination simultaneously in a single
+
+90
+00:04:25,960 --> 00:04:28,975
+heavy operation. MobileENet architectures
+factorize this
+
+91
+00:04:29,015 --> 00:04:31,520
+operation into two lightweight steps.
+
+92
+00:04:32,060 --> 00:04:34,760
+First, a depthwise convolution applies a
+single
+
+93
+00:04:34,800 --> 00:04:37,460
+spatial filter independently to each input
+channel.
+
+94
+00:04:37,500 --> 00:04:40,230
+Second, a pointwise 1 by 1 convolution
+
+95
+00:04:40,270 --> 00:04:43,000
+projects and combines the channel outputs
+linearly.
+
+96
+00:04:43,560 --> 00:04:48,520
+For a 3 by 3 kernel, depthwise separable
+convolution reduces floating point multipl
+
+97
+00:04:48,560 --> 00:04:50,940
+accumulate operations by a factor of 8 to
+9
+
+98
+00:04:50,980 --> 00:04:53,360
+times with only a minimal tradeoff in top
+1
+
+99
+00:04:53,400 --> 00:04:56,851
+classification accuracy. In section 7, we
+
+100
+00:04:56,891 --> 00:04:59,760
+explore encoder decoder segmentation
+architectures
+
+101
+00:04:59,800 --> 00:05:02,510
+and feature pyramid networks for
+multi-scale
+
+102
+00:05:02,550 --> 00:05:05,260
+visual recognition. Recognizing both tiny
+distant
+
+103
+00:05:05,300 --> 00:05:07,791
+objects and large foreground objects
+requires
+
+104
+00:05:07,831 --> 00:05:09,900
+combining high-resolution spatial detail
+from
+
+105
+00:05:09,940 --> 00:05:12,520
+early layers with rich semantic context
+from
+
+106
+00:05:12,560 --> 00:05:15,140
+deep layers. Unit and feature pyramid
+networks
+
+107
+00:05:15,180 --> 00:05:17,660
+construct top-down lateral pathways that
+upsample deep
+
+108
+00:05:17,700 --> 00:05:19,820
+semantic feature maps and fuse them
+
+109
+00:05:19,860 --> 00:05:22,780
+elementwise with shallow high-resolution
+feature maps.
+
+110
+00:05:22,820 --> 00:05:25,740
+To train pixelwise segmentation models
+underclass
+
+111
+00:05:25,780 --> 00:05:28,895
+imbalance between foreground objects and
+background sky
+
+112
+00:05:28,935 --> 00:05:31,600
+or road pixels, engineers combined
+cross-entropy
+
+113
+00:05:31,640 --> 00:05:34,713
+loss with dice loss and focal loss. In our
+
+114
+00:05:34,753 --> 00:05:37,480
+eighth and concluding section, we review
+advanced data
+
+115
+00:05:37,520 --> 00:05:40,140
+augmentation paradigms and vision
+transformers.
+
+116
+00:05:40,180 --> 00:05:42,800
+Beyond classical random horizontal flips,
+
+117
+00:05:43,320 --> 00:05:46,080
+random resized crops, and color jittering,
+
+118
+00:05:46,120 --> 00:05:48,840
+modern vision training pipelines
+incorporate mix-up
+
+119
+00:05:48,880 --> 00:05:51,942
+and cut mix regularization. Mix-up forms
+synthetic
+
+120
+00:05:51,982 --> 00:05:54,600
+training examples by taking convex linear
+
+121
+00:05:54,640 --> 00:05:57,109
+combinations of pairs of images and their
+
+122
+00:05:57,149 --> 00:05:59,260
+corresponding label vectors, while cut
+mix-paste
+
+123
+00:05:59,300 --> 00:06:02,070
+rectangular patches across training
+images. Combined
+
+124
+00:06:02,110 --> 00:06:04,880
+with vision transformers that partition
+images
+
+125
+00:06:04,920 --> 00:06:07,970
+into 16 by 16 pixel patches processed
+
+126
+00:06:08,010 --> 00:06:11,060
+via multi-head self-attention, modern
+computer vision systems
+
+127
+00:06:11,100 --> 00:06:13,875
+achieve human level perception across
+medical
+
+128
+00:06:13,915 --> 00:06:16,220
+imaging, autonomous navigation, and
+industrial
+
+129
+00:06:16,260 --> 00:06:19,280
+inspection. To reinforce key concepts from
+section 1,
+
+130
+00:06:19,320 --> 00:06:22,340
+let us review the core principles in
+detail.
+
+131
+00:06:23,120 --> 00:06:25,280
+Welcome to lecture 4 on computer
+
+132
+00:06:25,320 --> 00:06:27,440
+vision and convolutional neural network
+architectures.
+
+133
+00:06:28,160 --> 00:06:30,745
+Digital images are represented as
+three-dimensional tensors
+
+134
+00:06:30,785 --> 00:06:32,960
+defined by height, width, and color
+
+135
+00:06:33,000 --> 00:06:35,970
+channels such as red, green, and blue.
+Connecting
+
+136
+00:06:36,010 --> 00:06:38,980
+a standard fully connected layer directly
+to a
+
+137
+00:06:39,020 --> 00:06:41,330
+high-resolution image requires hundreds of
+millions
+
+138
+00:06:41,370 --> 00:06:43,680
+of parameters and destroys spatial
+topology.
+
+139
+00:06:44,620 --> 00:06:47,400
+Convolutional neural networks, or CNNs,
+solve
+
+140
+00:06:47,440 --> 00:06:50,180
+this problem through three architectural
+priors,
+
+141
+00:06:50,600 --> 00:06:55,200
+local receptive fields, spatial
+weight-sharing, and translation-equivarian
+
+142
+00:06:55,920 --> 00:06:58,533
+A learnable convolutional filter,
+typically three by three
+
+143
+00:06:58,573 --> 00:07:00,820
+or five by five pixels in size,
+
+144
+00:07:01,340 --> 00:07:05,020
+slides across the spatial dimensions of
+the input tensor to compute feature maps.
+
+145
+00:07:05,640 --> 00:07:09,640
+Because the exact same filter weights are
+shared across every spatial location,
+
+146
+00:07:10,160 --> 00:07:13,520
+the network detects visual patterns
+regardless of where they appear in the fra
+
+147
+00:07:14,280 --> 00:07:16,787
+To reinforce key concepts from section 2,
+let
+
+148
+00:07:16,827 --> 00:07:18,980
+us review the core principles in detail.
+
+149
+00:07:19,780 --> 00:07:22,660
+In section 2, we examine spatial
+dimensions,
+
+150
+00:07:22,700 --> 00:07:25,540
+padding, stride, and pooling operations
+inside a
+
+151
+00:07:25,580 --> 00:07:28,150
+convolutional backbone. Zero padding adds
+a border
+
+152
+00:07:28,190 --> 00:07:30,760
+of zeros around the input perimeter so
+
+153
+00:07:30,800 --> 00:07:33,433
+convolutional filters can process edge
+pixels
+
+154
+00:07:33,473 --> 00:07:35,660
+without shrinking spatial resolution
+prematurely.
+
+155
+00:07:36,280 --> 00:07:38,606
+Stride defines the step size by which
+
+156
+00:07:38,646 --> 00:07:40,600
+the convolutional kernel shifts
+horizontally and
+
+157
+00:07:40,640 --> 00:07:43,560
+vertically across the image grid. After
+
+158
+00:07:43,600 --> 00:07:46,520
+convolution and batch normalization,
+nonlinear activation
+
+159
+00:07:46,560 --> 00:07:49,611
+functions introduce sparsity into the
+resulting activation
+
+160
+00:07:49,651 --> 00:07:52,260
+maps. Max pooling and average pooling
+
+161
+00:07:52,300 --> 00:07:54,824
+downsample feature maps by aggregating
+local
+
+162
+00:07:54,864 --> 00:07:56,960
+neighborhoods, reducing memory footprint
+and
+
+163
+00:07:57,000 --> 00:07:59,670
+providing invariance to small spatial
+shifts.
+
+164
+00:07:59,710 --> 00:08:02,380
+Early convolutional layers learn low-level
+edge
+
+165
+00:08:02,420 --> 00:08:05,180
+corner and color gradient detectors,
+whereas deeper
+
+166
+00:08:05,220 --> 00:08:07,580
+layers compose these primitives into
+textures,
+
+167
+00:08:07,960 --> 00:08:10,943
+object parts, and complete semantic
+categories. To
+
+168
+00:08:10,983 --> 00:08:13,500
+reinforce key concepts from section 3,
+
+169
+00:08:13,540 --> 00:08:16,620
+let us review the core principles in
+detail.
+
+170
+00:08:16,660 --> 00:08:19,740
+In section 3, we study deep residual
+networks,
+
+171
+00:08:20,220 --> 00:08:23,060
+transfer learning, and vision backbones.
+As
+
+172
+00:08:23,100 --> 00:08:25,900
+early architectures scaled beyond 20
+layers,
+
+173
+00:08:26,480 --> 00:08:30,320
+researchers observed a counterintuitive
+degradation problem where training accurac
+
+174
+00:08:30,360 --> 00:08:33,185
+saturated and then worsened rapidly.
+ResNet resolved
+
+175
+00:08:33,225 --> 00:08:35,640
+the spotl neck by introducing identity
+
+176
+00:08:35,680 --> 00:08:39,580
+skip connections that add the input of a
+convolutional block directly to its output
+
+177
+00:08:40,380 --> 00:08:42,857
+Instead of learning an unreferenced target
+mapping
+
+178
+00:08:42,897 --> 00:08:44,980
+from scratch, residual blocks learn a
+
+179
+00:08:45,020 --> 00:08:47,600
+residual perturbation relative to the
+identity
+
+180
+00:08:47,640 --> 00:08:50,220
+function. In real-world applications with
+limited
+
+181
+00:08:50,260 --> 00:08:52,770
+labeled images, engineers initialize
+vision pipelines
+
+182
+00:08:52,810 --> 00:08:55,320
+with ResNet or Vision Transformer weights
+
+183
+00:08:55,360 --> 00:08:58,050
+predrained on millions of labeled images.
+By
+
+184
+00:08:58,090 --> 00:09:00,780
+freezing early feature extraction layers
+and fine-tuning
+
+185
+00:09:00,820 --> 00:09:03,530
+only the final classification head with
+data
+
+186
+00:09:03,570 --> 00:09:06,280
+augmentation, models converge rapidly with
+high accuracy.
+
+187
+00:09:07,080 --> 00:09:09,629
+To reinforce key concepts from section 4,
+let
+
+188
+00:09:09,669 --> 00:09:11,860
+us review the core principles in detail.
+
+189
+00:09:12,420 --> 00:09:15,360
+In section 4, we extend image
+classification
+
+190
+00:09:15,400 --> 00:09:17,880
+to object detection and semantic
+segmentation.
+
+191
+00:09:18,400 --> 00:09:22,900
+Whereas image classification assigns a
+single category label to an entire frame,
+
+192
+00:09:23,300 --> 00:09:25,850
+object detection outputs both bounding box
+co-ordinates
+
+193
+00:09:25,890 --> 00:09:28,400
+and class probabilities for every object
+present.
+
+194
+00:09:29,100 --> 00:09:31,675
+Two stage detectors generate candidate
+region
+
+195
+00:09:31,715 --> 00:09:33,820
+proposals before refining box regressions,
+
+196
+00:09:33,860 --> 00:09:36,510
+while single stage detectors like Yolo
+predict bounding
+
+197
+00:09:36,550 --> 00:09:39,200
+boxes and classes in a single forward
+pass.
+
+198
+00:09:40,060 --> 00:09:42,471
+Non-maximum suppression filters out
+redundant overlapping
+
+199
+00:09:42,511 --> 00:09:44,480
+bounding boxes by sorting predictions
+
+200
+00:09:44,520 --> 00:09:46,989
+by confidence and discarding boxes whose
+intersection
+
+201
+00:09:47,029 --> 00:09:49,140
+over union exceeds a configured threshold.
+
+202
+00:09:49,980 --> 00:09:52,511
+Mean average precision across multiple
+intersection over
+
+203
+00:09:52,551 --> 00:09:54,680
+union threshold serves as the standard
+
+204
+00:09:54,720 --> 00:09:57,760
+benchmark metric for evaluating object
+detection systems.
+
+205
+00:09:57,800 --> 00:10:00,840
+To reinforce key concepts from section 5,
+
+206
+00:10:00,880 --> 00:10:04,302
+let us review the core principles in
+detail. In
+
+207
+00:10:04,342 --> 00:10:07,380
+section 5, we perform a concrete
+calculation of
+
+208
+00:10:07,420 --> 00:10:11,000
+convolutional output dimensions and
+receptive field growth across stack layers
+
+209
+00:10:11,560 --> 00:10:17,540
+Given an input image of size 224 by 224
+with three RGB channels,
+
+210
+00:10:18,100 --> 00:10:20,820
+applying 64 convolutional filters of size
+3 by 3 with
+
+211
+00:10:20,860 --> 00:10:23,540
+a padding of 1 pixel and a stride of 1
+
+212
+00:10:23,580 --> 00:10:27,380
+preserves the exact spatial dimensions of
+224 by
+
+213
+00:10:27,420 --> 00:10:30,740
+224 while producing 64 output feature
+channels.
+
+214
+00:10:31,560 --> 00:10:37,200
+Each 3 by 3 filter contains 3 times 3
+times 3 equals 27 weights plus 1 bias term
+
+215
+00:10:37,700 --> 00:10:41,620
+totaling just 1,792 parameters for the
+entire
+
+216
+00:10:41,660 --> 00:10:44,980
+layer. Furthermore, stacking 2,3 by 3
+
+217
+00:10:45,020 --> 00:10:47,564
+convolutional layers back to back achieves
+the exact same
+
+218
+00:10:47,604 --> 00:10:49,860
+5 by 5 effective receptive field as a
+
+219
+00:10:49,900 --> 00:10:52,500
+single 5 by 5 convolution, while requiring
+
+220
+00:10:52,540 --> 00:10:55,140
+28 percent fewer parameters and
+introducing an
+
+221
+00:10:55,180 --> 00:10:57,100
+additional non-linear activation in
+between.

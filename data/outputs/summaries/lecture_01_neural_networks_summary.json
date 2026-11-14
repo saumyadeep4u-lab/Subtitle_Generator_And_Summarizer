@@ -1,0 +1,147 @@
+{
+  "video_id": "lecture_01_neural_networks",
+  "summarizer_model": "facebook/bart-large-cnn",
+  "device": "cpu",
+  "latency_sec": 92.551,
+  "num_sections": 19,
+  "executive_summary": "This lecture examines deep learning fundamentals and neural network optimization. The curriculum explores gradient descent optimization algorithms and learning rate schedules. Batch normalization normalizes intermediate layer activations across each mini-batch to zero mean and unit variance. Finally, the module reviews the role of activation function geometry in modern neural architecture design.",
+  "word_count": 51,
+  "sentence_count": 4,
+  "native_word_limit_met": true,
+  "post_processing_triggered": false,
+  "section_summaries": [
+    {
+      "section_id": 1,
+      "start_sec": 0.0,
+      "end_sec": 33.16,
+      "section_summary": "This lecture examines deep learning fundamentals and neural network optimization. Each artificial neuron computes a weighted linear combination of its inputs and adds a scalar bias term.",
+      "word_count": 27
+    },
+    {
+      "section_id": 2,
+      "start_sec": 33.66,
+      "end_sec": 61.2,
+      "section_summary": "A deep stack of linear layers would collapse into a single linear transformation. The rectified linear unit, or reallu, outputs 0 for negative inputs and passes positive values unchanged. During forward propagation, mini-batch of feature vectors pass sequentially through the network layers.",
+      "word_count": 42
+    },
+    {
+      "section_id": 3,
+      "start_sec": 61.2,
+      "end_sec": 100.78,
+      "section_summary": "For continuous regression tasks, mean squared error penalizes large deviations between predicted and observed values. For multi-class classification, categorical cross entropy measures the cool backliberal divergence between the true label distribution and soft max probabilities.",
+      "word_count": 35
+    },
+    {
+      "section_id": 4,
+      "start_sec": 100.78,
+      "end_sec": 143.7,
+      "section_summary": "Deep networks can still suffer from exploding gradients if weight matrices have singular values significantly greater than one. Full batch gradient descent computes exact gradients over the entire training dataset.",
+      "word_count": 30
+    },
+    {
+      "section_id": 5,
+      "start_sec": 143.7,
+      "end_sec": 170.62,
+      "section_summary": "If the learning rate is too large, optimization diverges across the loss landscape. If it is too small, convergence stalls in suboptimal local minima or saddle points.",
+      "word_count": 27
+    },
+    {
+      "section_id": 6,
+      "start_sec": 171.1,
+      "end_sec": 195.8,
+      "section_summary": "This lecture examines regularization strategies and batch normalization for generalization on unseen test data. L2 weight decay adds a quadratic penalty on parameter magnitudes directly to the loss function.",
+      "word_count": 29
+    },
+    {
+      "section_id": 7,
+      "start_sec": 195.8,
+      "end_sec": 223.1,
+      "section_summary": "At inference time, dropout is disabled and weights are scaled proportionally. Batch normalization normalizes intermediate layer activations across each mini-batch to zero mean and unit variance.",
+      "word_count": 26
+    },
+    {
+      "section_id": 8,
+      "start_sec": 223.1,
+      "end_sec": 272.04,
+      "section_summary": "This lecture conducts a detailed mathematical walkthrough of how matrix dimensions and tensor shapes interact during mini-batch training. During the forward pass, broadcasting adds the bias vector to every row of the matrix product, yielding an intermediate representation of shape 64 by 256.",
+      "word_count": 43
+    },
+    {
+      "section_id": 9,
+      "start_sec": 272.78,
+      "end_sec": 302.62,
+      "section_summary": "When computing the backward pass, the upstream gradient arriving at this layer also has shape 64 by 256. This lecture analyzes the geometric intuition behind learning rate schedules and momentum.",
+      "word_count": 30
+    },
+    {
+      "section_id": 10,
+      "start_sec": 302.62,
+      "end_sec": 330.8,
+      "section_summary": "Standard gradient descent without momentum can stall near flat plateaus because the gradient magnitude approaches zero in all directions simultaneously.",
+      "word_count": 20
+    },
+    {
+      "section_id": 11,
+      "start_sec": 330.8,
+      "end_sec": 359.24,
+      "section_summary": "This lecture reviews the role of activation function geometry in modern neural architecture design. The lecture will be given at the University of London's School of Oriental and African Studies.",
+      "word_count": 30
+    },
+    {
+      "section_id": 12,
+      "start_sec": 359.24,
+      "end_sec": 386.12,
+      "section_summary": "Modern transformer and convolutional backbones utilize smooth gating activations such as Swish, SiLU, and GELU activations.",
+      "word_count": 16
+    },
+    {
+      "section_id": 13,
+      "start_sec": 386.12,
+      "end_sec": 417.24,
+      "section_summary": "Always verify data normalization so input features have zero mean and unit variance before entering the first linear layer. Always verify datanormalization.",
+      "word_count": 22
+    },
+    {
+      "section_id": 14,
+      "start_sec": 417.24,
+      "end_sec": 454.94,
+      "section_summary": "This lecture examines deep learning fundamentals and neural network optimization. The lecture will focus on the topic of deep learning and neural networks.",
+      "word_count": 23
+    },
+    {
+      "section_id": 15,
+      "start_sec": 454.94,
+      "end_sec": 482.68,
+      "section_summary": "Each artificial neuron computes a weighted linear combination of its inputs, adds a scalar bias term, and applies a non- linear activation function. Without non-linear activation functions such as re-LU, sigmoid, or hyperbolic tangent, a deep stack of linear layers would collapse.",
+      "word_count": 42
+    },
+    {
+      "section_id": 16,
+      "start_sec": 482.68,
+      "end_sec": 508.88,
+      "section_summary": "Into a single linear transformation. The rectified linear unit, or re-LU, outputs zero for negative inputs and passes positive values unchanged. During forward propagation, mini-batch of feature vectors pass sequentially through the network layers to produce raw logits or probability distributions.",
+      "word_count": 41
+    },
+    {
+      "section_id": 17,
+      "start_sec": 509.62,
+      "end_sec": 536.76,
+      "section_summary": "This lecture quantifies prediction error using a differentiable objective or loss function. For continuous regression tasks, mean-squared error penalizes large deviations between predicted and observed values. For multi-class classification, categorical cross-entropy measures the cool back-liberal divergence between the true label distribution and softmax probabilities.",
+      "word_count": 44
+    },
+    {
+      "section_id": 18,
+      "start_sec": 536.76,
+      "end_sec": 562.8,
+      "section_summary": "However, very deep networks can still suffer from exploding gradients if weight is too much to handle. For example, a very deep network can suffer from exploded gradients due to too much weight.",
+      "word_count": 33
+    },
+    {
+      "section_id": 19,
+      "start_sec": 562.8,
+      "end_sec": 628.54,
+      "section_summary": "Full batch gradient descent computes exact gradients over the entire training dataset before making a single parameter update. If the learning rate is too large, optimization diverges across the loss landscape. If it is too small, convergence stalls in suboptimal local minima or saddle points.",
+      "word_count": 45
+    }
+  ]
+}

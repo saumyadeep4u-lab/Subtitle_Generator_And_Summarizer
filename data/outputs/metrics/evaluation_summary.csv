@@ -1,0 +1,6 @@
+video_id,split,duration_sec,transcribed_words,asr_rtf,num_srt_cues,srt_valid,num_topic_sections,wer,cer,wil,substitutions,deletions,insertions,rouge1_f1,rouge2_f1,rougeL_f1,bertscore_f1,summary_words,summary_sentences,native_word_limit_met,latency_sec
+lecture_01_neural_networks,dev,629.38,1571,0.1666,223,True,19,0.0919,0.0428,0.1325,72,50,27,0.3793,0.1228,0.2414,0.8236,51,4,True,143.502
+lecture_02_nlp_transformers,dev,633.98,1561,0.1667,227,True,23,0.0816,0.0275,0.1321,89,23,20,0.3577,0.0826,0.2114,0.8321,50,4,True,106.73
+lecture_03_supervised_learning,test,668.42,1666,0.1252,242,True,23,0.0393,0.0148,0.066,47,7,12,0.35,0.0678,0.25,0.8245,56,4,True,107.127
+lecture_04_computer_vision_cnns,test,657.98,1587,0.1263,221,True,22,0.1008,0.0592,0.1591,105,55,8,0.2677,0.064,0.2047,0.8367,62,4,True,100.786
+lecture_05_mlops_deployment,test,678.27,1610,0.1266,234,True,23,0.0688,0.0199,0.109,71,11,29,0.2951,0.0333,0.1803,0.8284,62,4,True,102.838

@@ -1,0 +1,1056 @@
+1
+00:00:00,000 --> 00:00:01,990
+Welcome to lecture 2 on natural
+
+2
+00:00:02,030 --> 00:00:03,980
+language processing and the transformer
+architecture.
+
+3
+00:00:04,860 --> 00:00:07,696
+Historically, sequential text modeling
+relied on
+
+4
+00:00:07,736 --> 00:00:10,060
+recurrent neural networks, long short-term
+
+5
+00:00:10,100 --> 00:00:12,380
+memory cells, and gated recurrent units.
+
+6
+00:00:13,240 --> 00:00:15,610
+Recurrent architectures process tokens one
+step at
+
+7
+00:00:15,650 --> 00:00:17,980
+a time from left to right, compressing
+
+8
+00:00:18,020 --> 00:00:20,560
+prior context into a fixed-size hidden
+state vector.
+
+9
+00:00:21,300 --> 00:00:23,896
+This sequential dependency creates two
+severe
+
+10
+00:00:23,936 --> 00:00:26,060
+bottlenecks, training cannot be
+parallelized
+
+11
+00:00:26,100 --> 00:00:28,471
+across sequence positions, and long-range
+dependencies
+
+12
+00:00:28,511 --> 00:00:30,480
+degrade over hundreds of tokens.
+
+13
+00:00:31,380 --> 00:00:33,932
+Subword tokenization algorithms such as
+ViPair encoding
+
+14
+00:00:33,972 --> 00:00:36,120
+and WordPace first segment raw text
+
+15
+00:00:36,160 --> 00:00:38,210
+into frequent subword units to handle rare
+
+16
+00:00:38,250 --> 00:00:40,300
+words and morphology without out of
+vocabulary
+
+17
+00:00:40,340 --> 00:00:41,340
+errors.
+
+18
+00:00:41,600 --> 00:00:43,893
+Each subword token index is mapped to a
+
+19
+00:00:43,933 --> 00:00:45,900
+dense continuous vector via a learnable
+embedding
+
+20
+00:00:45,940 --> 00:00:46,940
+lookup table.
+
+21
+00:00:47,080 --> 00:00:49,450
+Because the transformer removes recurrence
+
+22
+00:00:49,490 --> 00:00:51,820
+entirely, sinusoidal or learned positional
+
+23
+00:00:51,860 --> 00:00:55,440
+encodings are added to token embedding so
+the model can distinguish Word order.
+
+24
+00:00:56,000 --> 00:00:58,972
+In section 2, we analyze scale dot
+
+25
+00:00:59,012 --> 00:01:01,520
+product self-attention, the core
+computational mechanism
+
+26
+00:01:01,560 --> 00:01:02,560
+of the transformer.
+
+27
+00:01:03,080 --> 00:01:05,448
+For every token in an input sequence, the
+
+28
+00:01:05,488 --> 00:01:07,520
+model projects its embedding into three
+distinct
+
+29
+00:01:07,560 --> 00:01:11,540
+vectors, a query vector, a key vector, and
+a value vector.
+
+30
+00:01:12,160 --> 00:01:14,553
+To determine how much attention token A
+should pay
+
+31
+00:01:14,593 --> 00:01:16,680
+to token B, we compute the dot product
+
+32
+00:01:16,720 --> 00:01:19,240
+between the query of token A and the key
+of token B.
+
+33
+00:01:20,200 --> 00:01:22,070
+These raw compatibility scores are divided
+by the
+
+34
+00:01:22,110 --> 00:01:23,940
+square root of the key dimension to
+prevent
+
+35
+00:01:23,980 --> 00:01:26,212
+large dot products from pushing the
+softmax
+
+36
+00:01:26,252 --> 00:01:28,160
+function into regions with tiny gradients.
+
+37
+00:01:28,920 --> 00:01:31,265
+Applying the softmax operation across all
+
+38
+00:01:31,305 --> 00:01:33,220
+sequence positions yields normalized
+attention
+
+39
+00:01:33,260 --> 00:01:34,360
+weights that sum to 1.
+
+40
+00:01:35,100 --> 00:01:37,510
+Each token then computes a weighted sum
+
+41
+00:01:37,550 --> 00:01:39,920
+of value vectors, allowing direct
+contextual information
+
+42
+00:01:39,960 --> 00:01:42,700
+exchange between any pair of words
+regardless of distance.
+
+43
+00:01:43,540 --> 00:01:45,740
+Multihead attention runs several
+self-attention projections
+
+44
+00:01:45,780 --> 00:01:47,940
+in parallel so different heads can
+
+45
+00:01:47,980 --> 00:01:51,820
+attend to syntactic roles, coherence, and
+semantic relations simultaneously.
+
+46
+00:01:52,760 --> 00:01:55,380
+In section 3, we examine the internal
+
+47
+00:01:55,420 --> 00:01:58,000
+block structure of transformer encoders
+and decoders.
+
+48
+00:01:58,500 --> 00:02:00,790
+Each transformer encoder layer wraps the
+
+49
+00:02:00,830 --> 00:02:03,080
+multihead self-attention module and a
+position-wise
+
+50
+00:02:03,120 --> 00:02:06,740
+feed-forward network inside residual skip
+connections and layer normalization.
+
+51
+00:02:07,620 --> 00:02:10,095
+Residual connections allow gradients to
+flow directly through
+
+52
+00:02:10,135 --> 00:02:12,260
+deep stacks of 12 to 96 layers
+
+53
+00:02:12,300 --> 00:02:13,300
+without degradation.
+
+54
+00:02:14,040 --> 00:02:16,495
+In the decoder stack, causal masking sets
+
+55
+00:02:16,535 --> 00:02:18,600
+upper triangular attention logits to
+negative
+
+56
+00:02:18,640 --> 00:02:22,000
+infinity so auto-aggressive generation
+cannot peak at future tokens.
+
+57
+00:02:22,860 --> 00:02:25,030
+Cross-attention layers in encoder decoder
+architectures
+
+58
+00:02:25,070 --> 00:02:27,200
+allow the decoder queries to attend
+
+59
+00:02:27,240 --> 00:02:30,780
+directly over the contextualized
+representations produced by the encoder.
+
+60
+00:02:31,340 --> 00:02:33,947
+The computational complexity of standard
+self-attention
+
+61
+00:02:33,987 --> 00:02:36,120
+scales quadratically with sequence length,
+
+62
+00:02:36,620 --> 00:02:40,280
+motivating sliding window and flash
+attention optimizations for long documents
+
+63
+00:02:41,160 --> 00:02:45,240
+In section 4, we compare pret-range
+transformer paradigms including bird,
+
+64
+00:02:45,560 --> 00:02:46,980
+Bart, and flanty5.
+
+65
+00:02:47,620 --> 00:02:51,040
+Bird is a bi-directional encoder
+pret-range using mask language modeling,
+
+66
+00:02:51,540 --> 00:02:54,250
+making it ideal for token classification,
+
+67
+00:02:54,290 --> 00:02:56,960
+named entity recognition, and semantic
+similarity.
+
+68
+00:02:57,800 --> 00:02:59,710
+Bart combines a bi-directional encoder
+with
+
+69
+00:02:59,750 --> 00:03:01,620
+an auto-aggressive left to right decoder,
+
+70
+00:03:02,060 --> 00:03:06,100
+pret-rained as a denoizing auto encoder by
+reconstructing corrupted text spans.
+
+71
+00:03:06,900 --> 00:03:09,475
+This denoizing objective makes Bart
+exceptionally
+
+72
+00:03:09,515 --> 00:03:11,620
+effective for abstractive document
+summarization
+
+73
+00:03:11,660 --> 00:03:12,660
+and text generation.
+
+74
+00:03:13,380 --> 00:03:16,300
+T5, the text to text transfer transformer,
+
+75
+00:03:16,760 --> 00:03:18,940
+reframes every natural language processing
+task
+
+76
+00:03:18,980 --> 00:03:21,120
+as sequence to sequence generation using
+
+77
+00:03:21,160 --> 00:03:22,740
+task-specific text prefixes.
+
+78
+00:03:23,380 --> 00:03:25,860
+Instruction-toon variants like flanty5
+generalize
+
+79
+00:03:25,900 --> 00:03:28,340
+across unseen summarization and question
+
+80
+00:03:28,380 --> 00:03:31,780
+answering tasks by training on thousands
+of diverse instruction templates.
+
+81
+00:03:32,580 --> 00:03:35,140
+In section 5, we examine subword
+tokenization
+
+82
+00:03:35,180 --> 00:03:37,700
+algorithms in detail and their impact on
+
+83
+00:03:37,740 --> 00:03:39,840
+vocabulary efficiency and sequence length.
+
+84
+00:03:40,340 --> 00:03:44,920
+Word-level vocabulary struggle without a
+vocabulary terms, morphological variations
+
+85
+00:03:45,360 --> 00:03:47,990
+and typographical errors, whereas
+character-level
+
+86
+00:03:48,030 --> 00:03:50,620
+tokenization produces excessively long
+sequences
+
+87
+00:03:50,660 --> 00:03:53,060
+that strain quadratic self-attention
+memory limits.
+
+88
+00:03:53,920 --> 00:03:56,211
+Modern transformers resolve this trade off
+
+89
+00:03:56,251 --> 00:03:58,120
+using subword tokenization methods
+including
+
+90
+00:03:58,160 --> 00:04:01,720
+bipair encoding, word-piece, and unigram
+sentence-piece.
+
+91
+00:04:02,320 --> 00:04:04,732
+Bipair encoding iteratively merges the
+most frequent
+
+92
+00:04:04,772 --> 00:04:06,800
+pairs of adjacent bytes or characters
+
+93
+00:04:06,840 --> 00:04:12,020
+until a target vocabulary size between
+30,000 and 50,000 subword tokens is reache
+
+94
+00:04:12,780 --> 00:04:15,200
+Common words remain single tokens, while
+rare
+
+95
+00:04:15,240 --> 00:04:17,620
+technical terms such as back propagation
+or
+
+96
+00:04:17,660 --> 00:04:20,678
+heteroscodasticity are decomposed into
+meaningful root and
+
+97
+00:04:20,718 --> 00:04:23,300
+suffix subwords, eliminating unknown token
+errors
+
+98
+00:04:23,340 --> 00:04:24,340
+entirely.
+
+99
+00:04:24,620 --> 00:04:27,506
+In section 6, we analyze the computational
+
+100
+00:04:27,546 --> 00:04:29,980
+complexity of self-attention and how
+hierarchical
+
+101
+00:04:30,020 --> 00:04:34,840
+segmentation handles long contexts. When
+an encoder processes a sequence of length
+
+102
+00:04:34,880 --> 00:04:37,220
+and with hidden dimension D, computing the
+
+103
+00:04:37,260 --> 00:04:39,600
+pairwise query key attention matrix
+requires order
+
+104
+00:04:39,640 --> 00:04:41,990
+n squared times D floating point
+operations and
+
+105
+00:04:42,030 --> 00:04:44,380
+order n squared memory to store attention
+weights.
+
+106
+00:04:45,220 --> 00:04:47,298
+Doubling the input sequence length
+quadruples the
+
+107
+00:04:47,338 --> 00:04:49,080
+memory footprint of the attention map.
+
+108
+00:04:49,880 --> 00:04:53,326
+Standard pretrained models enforce strict
+positional embedding
+
+109
+00:04:53,366 --> 00:04:56,280
+limits of 512 or 1024 tokens.
+
+110
+00:04:57,060 --> 00:04:59,800
+By combining semantic topics segmentation
+with bounded
+
+111
+00:04:59,840 --> 00:05:02,540
+512 token windows and a sliding sentence
+
+112
+00:05:02,580 --> 00:05:05,160
+overlap, hierarchical summarization
+pipelines keep memory
+
+113
+00:05:05,200 --> 00:05:07,780
+consumption linear with respect to total
+
+114
+00:05:07,820 --> 00:05:10,940
+lecture duration while preserving
+cross-boundary semantic continuity.
+
+115
+00:05:11,720 --> 00:05:14,725
+In section 7, we compare extractive
+summarization
+
+116
+00:05:14,765 --> 00:05:17,300
+baselines against abstractive sequence to
+sequence
+
+117
+00:05:17,340 --> 00:05:20,360
+models in educational applications.
+Graph-based extractive
+
+118
+00:05:20,400 --> 00:05:23,420
+algorithms such as LexRank and TextRank
+
+119
+00:05:23,460 --> 00:05:25,930
+represent sentences as nodes in a
+similarity
+
+120
+00:05:25,970 --> 00:05:28,440
+graph, where edge weights reflect cosine
+similarity
+
+121
+00:05:28,480 --> 00:05:31,190
+between term frequency vectors, and apply
+eigenvectors
+
+122
+00:05:31,230 --> 00:05:33,940
+centrality to select the most salient
+verbatim
+
+123
+00:05:33,980 --> 00:05:36,848
+sentences. While extractive summaries
+guarantee that individual
+
+124
+00:05:36,888 --> 00:05:39,340
+phrases are copied directly from the
+
+125
+00:05:39,380 --> 00:05:42,290
+transcript, they often suffer from
+dangling
+
+126
+00:05:42,330 --> 00:05:45,240
+pronouns, abrupt topic transitions, and
+conversational
+
+127
+00:05:45,280 --> 00:05:48,471
+disfluencies inherited from spoken
+lectures. Abstractive models
+
+128
+00:05:48,511 --> 00:05:51,240
+like Bartlarge CNN and Flan T5
+
+129
+00:05:51,280 --> 00:05:53,690
+rewrite and compress multi-sentence
+explanations
+
+130
+00:05:53,730 --> 00:05:56,140
+into cohesive, grammatically polished
+academic
+
+131
+00:05:56,180 --> 00:05:59,105
+prose that reads like human authored study
+notes. In
+
+132
+00:05:59,145 --> 00:06:01,740
+our eighth and final section, we review
+the
+
+133
+00:06:01,780 --> 00:06:05,700
+mathematical formulation of Rouge and Bird
+score for evaluating generated summaries.
+
+134
+00:06:06,320 --> 00:06:08,400
+Rouge 1 and Rouge 2 measure unigram
+
+135
+00:06:08,440 --> 00:06:10,480
+and program lexical overlap between the
+candidate
+
+136
+00:06:10,520 --> 00:06:12,830
+summary and reference summary, whereas
+Rouge L
+
+137
+00:06:12,870 --> 00:06:15,180
+computes the longest common sub sequence
+to
+
+138
+00:06:15,220 --> 00:06:18,010
+capture sentence-level word order. Because
+lexical
+
+139
+00:06:18,050 --> 00:06:20,840
+overlap metrics penalize valid paraphrases
+that
+
+140
+00:06:20,880 --> 00:06:23,620
+use synonyms, we complement Rouge with
+Bird
+
+141
+00:06:23,660 --> 00:06:26,400
+score, which computes pairwise cosine
+similarity between
+
+142
+00:06:26,440 --> 00:06:29,555
+contextualized token embeddings of the
+reference and
+
+143
+00:06:29,595 --> 00:06:32,260
+candidate texts. Evaluating both lexical
+overlap
+
+144
+00:06:32,300 --> 00:06:34,878
+and semantic embedding alignment provides
+a
+
+145
+00:06:34,918 --> 00:06:37,060
+rigorous, multi-dimensional assessment of
+summarization
+
+146
+00:06:37,100 --> 00:06:40,020
+quality across educational lectures. To
+reinforce key
+
+147
+00:06:40,060 --> 00:06:42,980
+concepts from Section 1, let us review
+
+148
+00:06:43,020 --> 00:06:45,657
+the core principles in detail. Welcome to
+lecture
+
+149
+00:06:45,697 --> 00:06:48,000
+2 on natural language processing and the
+
+150
+00:06:48,040 --> 00:06:51,262
+transformer architecture. Historically,
+sequential text modeling
+
+151
+00:06:51,302 --> 00:06:53,980
+relied on recurrent neural networks,
+
+152
+00:06:54,500 --> 00:06:57,410
+long short-term memory cells, and gated
+
+153
+00:06:57,450 --> 00:07:00,320
+recurrent units. Recurrent architectures
+process tokens
+
+154
+00:07:00,360 --> 00:07:03,020
+one step at a time from left to right,
+
+155
+00:07:03,060 --> 00:07:05,720
+compressing prior context into a
+fixed-size hidden state vector.
+
+156
+00:07:06,440 --> 00:07:08,930
+This sequential dependency creates two
+severe
+
+157
+00:07:08,970 --> 00:07:11,420
+bottlenecks, training cannot be
+parallelized across
+
+158
+00:07:11,460 --> 00:07:14,500
+sequence positions, and long-range
+dependencies degrade
+
+159
+00:07:14,540 --> 00:07:17,580
+over hundreds of tokens. Subword
+tokenization
+
+160
+00:07:17,620 --> 00:07:20,300
+algorithms such as bipair encoding and
+word-piece first
+
+161
+00:07:20,340 --> 00:07:22,680
+segment raw text into frequent subword
+units
+
+162
+00:07:22,720 --> 00:07:25,520
+to handle rare words and morphology
+without out
+
+163
+00:07:25,560 --> 00:07:28,360
+of vocabulary errors. Each subword token
+index is
+
+164
+00:07:28,400 --> 00:07:31,048
+mapped to a dense continuous vector via a
+
+165
+00:07:31,088 --> 00:07:33,400
+learnable embedding look-up table. Because
+the transformer
+
+166
+00:07:33,440 --> 00:07:36,254
+removes recurrence entirely, sinusoidal or
+learned positional
+
+167
+00:07:36,294 --> 00:07:38,700
+encodings are added to token embeddings
+
+168
+00:07:38,740 --> 00:07:41,771
+so the model can distinguish word order.
+To reinforce
+
+169
+00:07:41,811 --> 00:07:44,500
+key concepts from Section 2, let us review
+
+170
+00:07:44,540 --> 00:07:47,650
+the core principles in detail. In Section
+
+171
+00:07:47,690 --> 00:07:50,800
+2, we analyze scale.product
+self-attention, the core
+
+172
+00:07:50,840 --> 00:07:53,893
+computational mechanism of the
+transformer. For every token
+
+173
+00:07:53,933 --> 00:07:56,600
+in an input sequence, the model projects
+
+174
+00:07:56,640 --> 00:07:59,310
+its embedding into three distinct vectors,
+a query
+
+175
+00:07:59,350 --> 00:08:02,020
+vector, a key vector, and a value vector.
+
+176
+00:08:02,660 --> 00:08:05,042
+To determine how much attention token A
+should pay
+
+177
+00:08:05,082 --> 00:08:07,160
+to token B, we compute the dot product
+
+178
+00:08:07,200 --> 00:08:09,786
+between the query of token A and the key
+
+179
+00:08:09,826 --> 00:08:12,120
+of token B. These raw compatibility scores
+are
+
+180
+00:08:12,160 --> 00:08:14,227
+divided by the square root of the key
+dimension
+
+181
+00:08:14,267 --> 00:08:16,100
+to prevent large dot products from pushing
+the
+
+182
+00:08:16,140 --> 00:08:19,060
+softmax function into regions with tiny
+gradients.
+
+183
+00:08:19,100 --> 00:08:22,020
+Applying the softmax operation across all
+sequence
+
+184
+00:08:22,060 --> 00:08:24,740
+positions yields normalized attention
+weights that sum to
+
+185
+00:08:24,780 --> 00:08:27,120
+1. Each token then computes a weighted
+
+186
+00:08:27,160 --> 00:08:29,640
+sum of value vectors, allowing direct
+contextual
+
+187
+00:08:29,680 --> 00:08:32,160
+information exchange between any pair of
+words
+
+188
+00:08:32,200 --> 00:08:34,996
+regardless of distance. Multihead
+attention runs
+
+189
+00:08:35,036 --> 00:08:37,360
+several self-attention projections in
+parallel
+
+190
+00:08:37,400 --> 00:08:40,031
+so different heads can attend to syntactic
+
+191
+00:08:40,071 --> 00:08:42,320
+roles, coherence, and semantic relations
+simultaneously.
+
+192
+00:08:43,280 --> 00:08:45,787
+To reinforce key concepts from Section 3,
+let
+
+193
+00:08:45,827 --> 00:08:47,980
+us review the core principles in detail.
+
+194
+00:08:48,740 --> 00:08:51,330
+In Section 3, we examine the internal
+
+195
+00:08:51,370 --> 00:08:53,920
+block structure of transformer encoders
+and decoders.
+
+196
+00:08:54,560 --> 00:08:56,780
+Each transformer encoder layer wraps the
+
+197
+00:08:56,820 --> 00:08:59,000
+multihead self-attention module and a
+position-wise
+
+198
+00:08:59,040 --> 00:09:02,700
+feed-forward network inside residual skip
+connections and layer normalization.
+
+199
+00:09:03,460 --> 00:09:05,990
+Residual connections allow gradients to
+flow directly through
+
+200
+00:09:06,030 --> 00:09:08,520
+deep stacks of 12 to 96 layers without
+
+201
+00:09:08,560 --> 00:09:13,620
+degradation. In the decoder stack, causal
+masking sets upper triangular attention
+
+202
+00:09:13,660 --> 00:09:15,770
+logits to negative infinity so
+auto-aggressive
+
+203
+00:09:15,810 --> 00:09:17,920
+generation cannot peak at future tokens.
+
+204
+00:09:18,800 --> 00:09:22,900
+Cross-attention layers in encoder decoder
+architectures allow the decoder queries to
+
+205
+00:09:22,940 --> 00:09:26,660
+attend directly over the contextualized
+representations produced by the encoder.
+
+206
+00:09:27,260 --> 00:09:29,867
+The computational complexity of standard
+self-attention
+
+207
+00:09:29,907 --> 00:09:32,040
+scales quadratically with sequence length,
+
+208
+00:09:32,520 --> 00:09:36,240
+motivating sliding window and flash
+attention optimizations for long documents
+
+209
+00:09:37,160 --> 00:09:39,592
+To reinforce key concepts from Section 4,
+let
+
+210
+00:09:39,632 --> 00:09:41,720
+us review the core principles in detail.
+
+211
+00:09:42,500 --> 00:09:46,580
+In Section 4, we compare pret-rain
+transformer paradims including bird,
+
+212
+00:09:46,620 --> 00:09:49,480
+Bart, and Flan T5. Bird is a
+
+213
+00:09:49,520 --> 00:09:52,380
+bidirectional encoder pret-rain using mask
+language modeling,
+
+214
+00:09:52,860 --> 00:09:55,570
+making it ideal for token classification,
+
+215
+00:09:55,610 --> 00:09:58,280
+named entity recognition, and semantic
+similarity.
+
+216
+00:09:59,180 --> 00:10:02,960
+Bart combines a bidirectional encoder with
+an auto-aggressive left to right decoder,
+
+217
+00:10:03,400 --> 00:10:07,420
+pret-rained as a denoizing auto-encoder by
+reconstructing corrupted text spans.
+
+218
+00:10:08,260 --> 00:10:10,835
+This denoizing objective makes Bart
+exceptionally
+
+219
+00:10:10,875 --> 00:10:12,980
+effective for abstractive document
+summarization
+
+220
+00:10:13,020 --> 00:10:17,640
+and text generation. T5, the text to text
+transfer transformer,
+
+221
+00:10:18,080 --> 00:10:20,260
+reframes every natural language processing
+task
+
+222
+00:10:20,300 --> 00:10:22,440
+as sequence to sequence generation using
+
+223
+00:10:22,480 --> 00:10:25,200
+task-specific text prefixes.
+Instruction-toon variants
+
+224
+00:10:25,240 --> 00:10:27,960
+like Flan T5 generalize across
+
+225
+00:10:28,000 --> 00:10:30,480
+unseen summarization and question
+answering tasks by
+
+226
+00:10:30,520 --> 00:10:32,640
+training on thousands of diverse
+instruction
+
+227
+00:10:32,680 --> 00:10:33,680
+templates.

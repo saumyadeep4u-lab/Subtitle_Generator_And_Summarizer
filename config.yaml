@@ -1,0 +1,78 @@
+project:
+  name: "EdTech Subtitle Generator and Lecture Summarizer"
+  author: "Saumyadeep Bardhan"
+  version: "1.0.0"
+  random_seed: 42
+
+paths:
+  raw_videos_dir: "data/raw_videos"
+  extracted_audio_dir: "data/extracted_audio"
+  ground_truth_dir: "data/reference_ground_truth"
+  transcripts_dir: "data/outputs/transcripts"
+  subtitles_dir: "data/outputs/subtitles"
+  summaries_dir: "data/outputs/summaries"
+  metrics_dir: "data/outputs/metrics"
+  logs_dir: "logs"
+
+audio_extraction:
+  target_sample_rate: 16000
+  channels: 1
+  audio_format: "wav"
+  codec: "pcm_s16le"
+  max_retries: 3
+  retry_backoff_seconds: 2.0
+
+asr_whisper:
+  primary_model: "base"           # Options: "tiny", "base", "small", "medium"
+  ablation_model: "medium"        # Used for baseline vs. enhanced ASR ablation study
+  language: "en"
+  task: "transcribe"
+  word_timestamps: true
+  fp16: false                     # Set auto-detection in code for CPU/GPU compatibility
+  condition_on_previous_text: true
+  no_speech_threshold: 0.6
+  logprob_threshold: -1.0
+
+srt_formatting:
+  max_chars_per_line: 42          # Broadcast standard readability constraint
+  max_lines_per_block: 2
+  min_duration_sec: 1.0
+  max_duration_sec: 7.0
+  min_gap_ms: 40                  # Prevents overlapping timestamps between consecutive cues
+
+topic_segmentation:
+  embedding_model: "sentence-transformers/all-MiniLM-L6-v2"
+  window_size_sentences: 3
+  similarity_drop_threshold: 0.62 # Tuned empirically on Dev split
+  max_chunk_tokens: 512           # Enforced via HuggingFace AutoTokenizer (not character count)
+  chunk_overlap_tokens: 48
+  min_section_tokens: 80
+
+summarization:
+  primary_model: "facebook/bart-large-cnn"
+  ablation_model: "google/flan-t5-base"
+  extractive_baseline: "lexrank"
+  section_summary:
+    min_new_tokens: 25
+    max_new_tokens: 75
+    num_beams: 4
+    length_penalty: 1.2
+    no_repeat_ngram_size: 3
+  video_summary:
+    target_min_sentences: 3       # Brief requirement: 3-5 sentence summaries per video
+    target_max_sentences: 5
+    max_words_limit: 100          # Brief guideline: <= 100 words per video approx
+    min_new_tokens: 45
+    max_new_tokens: 130
+    num_beams: 4
+    length_penalty: 1.5           # Encourages concise synthesis under 100 words
+    no_repeat_ngram_size: 3
+
+evaluation:
+  dev_split_ratio: 0.35           # Used ONLY for threshold & hyperparameter tuning
+  test_split_ratio: 0.65          # Frozen held-out evaluation split
+  bertscore_model: "distilbert-base-uncased"
+  wer_normalization:
+    lowercase: true
+    remove_punctuation: true
+    expand_contractions: true

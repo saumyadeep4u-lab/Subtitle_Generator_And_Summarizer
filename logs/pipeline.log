@@ -1,0 +1,830 @@
+2026-10-21 20:46:51 | INFO     | SmokeTest | Config loaded successfully: EdTech Subtitle Generator and Lecture Summarizer
+2026-10-21 20:48:27 | INFO     | SRTFormatter | Generated SRT: smoke_test.srt | Cues: 2 | Valid: True
+2026-10-21 21:20:38 | INFO     | SmokeTest | Config loaded successfully: EdTech Subtitle Generator and Lecture Summarizer
+2026-10-21 21:20:40 | INFO     | SRTFormatter | Generated SRT: smoke_test.srt | Cues: 2 | Valid: True
+2026-10-21 21:20:56 | INFO     | TopicSegmenter | Loading topic embedding model: sentence-transformers/all-MiniLM-L6-v2...
+2026-10-21 21:21:00 | INFO     | TopicSegmenter | Segmented 'test_lecture' into 1 topic sections (Max tokens enforced: 512).
+2026-10-21 21:32:40 | INFO     | SmokeTest | Config loaded successfully: EdTech Subtitle Generator and Lecture Summarizer
+2026-10-21 21:32:42 | INFO     | SRTFormatter | Generated SRT: smoke_test.srt | Cues: 2 | Valid: True
+2026-10-21 21:39:17 | INFO     | LectureSummarizer | Initialized extractive LexRank baseline summarizer.
+2026-10-21 21:39:26 | INFO     | TopicSegmenter | Loading topic embedding model: sentence-transformers/all-MiniLM-L6-v2...
+2026-10-21 21:39:29 | INFO     | TopicSegmenter | Segmented 'test_lecture' into 1 topic sections (Max tokens enforced: 512).
+2026-10-21 21:45:03 | INFO     | TopicSegmenter | Loading topic embedding model: sentence-transformers/all-MiniLM-L6-v2...
+2026-10-21 21:45:05 | INFO     | TopicSegmenter | Segmented 'test_lecture' into 1 topic sections (Max tokens enforced: 512).
+2026-10-21 22:00:19 | INFO     | SRTFormatter | Generated SRT: test_output.srt | Cues: 2 | Valid: True
+2026-10-21 22:00:19 | INFO     | TopicSegmenter | Loading topic embedding model: sentence-transformers/all-MiniLM-L6-v2...
+2026-10-21 22:00:22 | INFO     | TopicSegmenter | Segmented 'bound_test' into 2 topic sections (Max tokens enforced: 512).
+2026-10-21 22:13:27 | INFO     | Orchestrator | Starting EdTech Subtitle Generator & Summarizer Pipeline...
+2026-10-21 22:13:27 | INFO     | WhisperTranscriber | Loading Whisper model 'base' on device='cpu' (fp16=False)...
+2026-10-21 22:14:08 | INFO     | TopicSegmenter | Loading topic embedding model: sentence-transformers/all-MiniLM-L6-v2...
+2026-10-21 22:14:10 | INFO     | LectureSummarizer | Loading summarization model 'facebook/bart-large-cnn' on 'cpu'...
+2026-10-21 22:14:16 | WARNING  | Orchestrator | No media files found in 'data\raw_videos'. Creating a synthetic test lecture for demonstration...
+2026-10-21 22:14:16 | INFO     | Orchestrator | 
+--- Processing: lecture_01.wav ---
+2026-10-21 22:14:16 | INFO     | AudioExtractor | Extracting audio from 'lecture_01.wav' (Attempt 1/3)...
+2026-10-21 22:14:17 | INFO     | AudioExtractor | Audio extracted: lecture_01.wav | Duration: 5.00s | Latency: 0.998s
+2026-10-21 22:14:17 | INFO     | WhisperTranscriber | Starting transcription for 'lecture_01.wav' using Whisper-base...
+2026-10-21 22:14:18 | INFO     | WhisperTranscriber | Saved transcript: lecture_01_transcript.json | Segments: 0 | Words: 0 | RTF: 0.1994
+2026-10-21 22:14:18 | INFO     | SRTFormatter | Generated SRT: lecture_01.srt | Cues: 0 | Valid: False
+2026-10-21 22:14:22 | INFO     | LectureSummarizer | Saved summary: lecture_01_summary.txt | Words: 32 (<=100) | Sentences: 3
+2026-10-22 14:56:12 | INFO     | SRTFormatter | Generated SRT: temp_unit_test.srt | Cues: 2 | Valid: True
+2026-10-22 14:56:12 | INFO     | SRTFormatter | Generated SRT: temp_wrap_test.srt | Cues: 3 | Valid: True
+2026-10-22 14:56:12 | INFO     | TopicSegmenter | Loading topic embedding model: sentence-transformers/all-MiniLM-L6-v2...
+2026-10-22 14:56:15 | INFO     | TopicSegmenter | Segmented 'bound_test' into 5 topic sections (Max tokens enforced: 512).
+2026-10-22 14:56:15 | INFO     | LectureSummarizer | Initialized extractive LexRank baseline summarizer.
+2026-10-22 15:23:09 | INFO     | DatasetGenerator | Removed old silent dummy file: data/raw_videos/lecture_01.wav
+2026-10-22 15:23:10 | INFO     | DatasetGenerator | [1/5] Generating spoken lecture video: lecture_01_neural_networks.mp4 ...
+2026-10-22 15:23:17 | INFO     | DatasetGenerator | Completed lecture_01_neural_networks.mp4 (10.4 mins | 550 spoken words)
+2026-10-22 15:23:17 | INFO     | DatasetGenerator | [2/5] Generating spoken lecture video: lecture_02_nlp_transformers.mp4 ...
+2026-10-22 15:46:18 | INFO     | DatasetGenerator | [1/5] Generating spoken lecture video: lecture_01_neural_networks.mp4 ...
+2026-10-22 15:46:24 | INFO     | DatasetGenerator | Completed lecture_01_neural_networks.mp4 (10.4 mins | 550 spoken words)
+2026-10-22 15:46:24 | INFO     | DatasetGenerator | [2/5] Generating spoken lecture video: lecture_02_nlp_transformers.mp4 ...
+2026-10-22 16:08:09 | INFO     | DatasetGenerator | [1/5] Generating spoken lecture video: lecture_01_neural_networks.mp4 ...
+2026-10-22 16:08:14 | INFO     | DatasetGenerator | Completed lecture_01_neural_networks.mp4 (10.4 mins | 550 spoken words)
+2026-10-22 16:08:14 | INFO     | DatasetGenerator | [2/5] Generating spoken lecture video: lecture_02_nlp_transformers.mp4 ...
+2026-10-22 16:08:18 | INFO     | DatasetGenerator | Completed lecture_02_nlp_transformers.mp4 (10.6 mins | 515 spoken words)
+2026-10-22 16:08:18 | INFO     | DatasetGenerator | [3/5] Generating spoken lecture video: lecture_03_supervised_learning.mp4 ...
+2026-10-22 16:08:22 | INFO     | DatasetGenerator | Completed lecture_03_supervised_learning.mp4 (10.8 mins | 499 spoken words)
+2026-10-22 16:08:22 | INFO     | DatasetGenerator | [4/5] Generating spoken lecture video: lecture_04_computer_vision_cnns.mp4 ...
+2026-10-22 16:08:26 | INFO     | DatasetGenerator | Completed lecture_04_computer_vision_cnns.mp4 (11.0 mins | 468 spoken words)
+2026-10-22 16:08:26 | INFO     | DatasetGenerator | [5/5] Generating spoken lecture video: lecture_05_mlops_deployment.mp4 ...
+2026-10-22 16:08:31 | INFO     | DatasetGenerator | Completed lecture_05_mlops_deployment.mp4 (11.2 mins | 427 spoken words)
+2026-10-22 16:08:31 | INFO     | DatasetGenerator | All 5 EdTech lecture videos and ground-truth references saved! Metadata: data\raw_videos\metadata.json
+2026-10-22 16:25:16 | INFO     | Orchestrator | Starting EdTech Subtitle Generator & Summarizer Pipeline...
+2026-10-22 16:25:16 | INFO     | WhisperTranscriber | Loading Whisper model 'base' on device='cpu' (fp16=False)...
+2026-10-22 16:25:17 | INFO     | TopicSegmenter | Loading topic embedding model: sentence-transformers/all-MiniLM-L6-v2...
+2026-10-22 16:25:19 | INFO     | LectureSummarizer | Loading summarization model 'facebook/bart-large-cnn' on 'cpu'...
+2026-10-22 16:25:23 | INFO     | Orchestrator | 
+--- Processing: lecture_01_neural_networks.mp4 ---
+2026-10-22 16:25:23 | INFO     | AudioExtractor | Extracting audio from 'lecture_01_neural_networks.mp4' (Attempt 1/3)...
+2026-10-22 16:25:23 | INFO     | AudioExtractor | Audio extracted: lecture_01_neural_networks.wav | Duration: 622.02s | Latency: 0.383s
+2026-10-22 16:25:23 | INFO     | WhisperTranscriber | Starting transcription for 'lecture_01_neural_networks.wav' using Whisper-base...
+2026-10-22 16:25:59 | INFO     | WhisperTranscriber | Saved transcript: lecture_01_neural_networks_transcript.json | Segments: 44 | Words: 562 | RTF: 0.057
+2026-10-22 16:25:59 | INFO     | SRTFormatter | Generated SRT: lecture_01_neural_networks.srt | Cues: 80 | Valid: True
+2026-10-22 16:25:59 | INFO     | TopicSegmenter | Segmented 'lecture_01_neural_networks' into 8 topic sections (Max tokens enforced: 512).
+2026-10-22 16:26:44 | INFO     | LectureSummarizer | Saved summary: lecture_01_neural_networks_summary.txt | Words: 46 (<=100) | Sentences: 3
+2026-10-22 16:26:44 | INFO     | Orchestrator | 
+--- Processing: lecture_02_nlp_transformers.mp4 ---
+2026-10-22 16:26:44 | INFO     | AudioExtractor | Extracting audio from 'lecture_02_nlp_transformers.mp4' (Attempt 1/3)...
+2026-10-22 16:26:44 | INFO     | AudioExtractor | Audio extracted: lecture_02_nlp_transformers.wav | Duration: 634.05s | Latency: 0.344s
+2026-10-22 16:26:44 | INFO     | WhisperTranscriber | Starting transcription for 'lecture_02_nlp_transformers.wav' using Whisper-base...
+2026-10-22 16:27:28 | INFO     | WhisperTranscriber | Saved transcript: lecture_02_nlp_transformers_transcript.json | Segments: 48 | Words: 518 | RTF: 0.069
+2026-10-22 16:27:28 | INFO     | SRTFormatter | Generated SRT: lecture_02_nlp_transformers.srt | Cues: 71 | Valid: True
+2026-10-22 16:27:29 | INFO     | TopicSegmenter | Segmented 'lecture_02_nlp_transformers' into 8 topic sections (Max tokens enforced: 512).
+2026-10-22 16:28:33 | INFO     | LectureSummarizer | Saved summary: lecture_02_nlp_transformers_summary.txt | Words: 39 (<=100) | Sentences: 3
+2026-10-22 16:28:33 | INFO     | Orchestrator | 
+--- Processing: lecture_03_supervised_learning.mp4 ---
+2026-10-22 16:28:33 | INFO     | AudioExtractor | Extracting audio from 'lecture_03_supervised_learning.mp4' (Attempt 1/3)...
+2026-10-22 16:28:34 | INFO     | AudioExtractor | Audio extracted: lecture_03_supervised_learning.wav | Duration: 646.02s | Latency: 0.402s
+2026-10-22 16:28:34 | INFO     | WhisperTranscriber | Starting transcription for 'lecture_03_supervised_learning.wav' using Whisper-base...
+2026-10-22 16:29:33 | INFO     | WhisperTranscriber | Saved transcript: lecture_03_supervised_learning_transcript.json | Segments: 29 | Words: 154 | RTF: 0.0914
+2026-10-22 16:29:33 | INFO     | SRTFormatter | Generated SRT: lecture_03_supervised_learning.srt | Cues: 36 | Valid: True
+2026-10-22 16:29:33 | INFO     | TopicSegmenter | Segmented 'lecture_03_supervised_learning' into 2 topic sections (Max tokens enforced: 512).
+2026-10-22 16:29:52 | INFO     | LectureSummarizer | Saved summary: lecture_03_supervised_learning_summary.txt | Words: 57 (<=100) | Sentences: 3
+2026-10-22 16:29:52 | INFO     | Orchestrator | 
+--- Processing: lecture_04_computer_vision_cnns.mp4 ---
+2026-10-22 16:29:52 | INFO     | AudioExtractor | Extracting audio from 'lecture_04_computer_vision_cnns.mp4' (Attempt 1/3)...
+2026-10-22 16:29:52 | INFO     | AudioExtractor | Audio extracted: lecture_04_computer_vision_cnns.wav | Duration: 658.05s | Latency: 0.469s
+2026-10-22 16:29:52 | INFO     | WhisperTranscriber | Starting transcription for 'lecture_04_computer_vision_cnns.wav' using Whisper-base...
+2026-10-22 16:30:52 | INFO     | WhisperTranscriber | Saved transcript: lecture_04_computer_vision_cnns_transcript.json | Segments: 47 | Words: 482 | RTF: 0.0904
+2026-10-22 16:30:52 | INFO     | SRTFormatter | Generated SRT: lecture_04_computer_vision_cnns.srt | Cues: 74 | Valid: True
+2026-10-22 16:30:52 | INFO     | TopicSegmenter | Segmented 'lecture_04_computer_vision_cnns' into 7 topic sections (Max tokens enforced: 512).
+2026-10-22 19:31:52 | INFO     | Orchestrator | Starting EdTech Subtitle Generator & Summarizer Pipeline...
+2026-10-22 19:31:52 | INFO     | WhisperTranscriber | Loading Whisper model 'base' on device='cpu' (fp16=False)...
+2026-10-22 19:31:53 | INFO     | TopicSegmenter | Loading topic embedding model: sentence-transformers/all-MiniLM-L6-v2...
+2026-10-22 19:31:56 | INFO     | LectureSummarizer | Loading summarization model 'facebook/bart-large-cnn' on 'cpu'...
+2026-10-22 19:32:01 | INFO     | Orchestrator | 
+--- Processing: lecture_01_neural_networks.mp4 ---
+2026-10-22 19:32:01 | INFO     | AudioExtractor | Extracting audio from 'lecture_01_neural_networks.mp4' (Attempt 1/3)...
+2026-10-22 19:32:03 | INFO     | AudioExtractor | Audio extracted: lecture_01_neural_networks.wav | Duration: 622.02s | Latency: 1.266s
+2026-10-22 19:32:03 | INFO     | WhisperTranscriber | Starting transcription for 'lecture_01_neural_networks.wav' using Whisper-base...
+2026-10-22 19:34:24 | INFO     | WhisperTranscriber | Saved transcript: lecture_01_neural_networks_transcript.json | Segments: 44 | Words: 562 | RTF: 0.2266
+2026-10-22 19:34:24 | INFO     | SRTFormatter | Generated SRT: lecture_01_neural_networks.srt | Cues: 80 | Valid: True
+2026-10-22 19:34:25 | INFO     | TopicSegmenter | Segmented 'lecture_01_neural_networks' into 8 topic sections (Max tokens enforced: 512).
+2026-10-22 19:37:51 | INFO     | LectureSummarizer | Saved summary: lecture_01_neural_networks_summary.txt | Words: 46 (<=100) | Sentences: 3
+2026-10-22 19:37:51 | INFO     | Orchestrator | 
+--- Processing: lecture_02_nlp_transformers.mp4 ---
+2026-10-22 19:37:51 | INFO     | AudioExtractor | Extracting audio from 'lecture_02_nlp_transformers.mp4' (Attempt 1/3)...
+2026-10-22 19:37:54 | INFO     | AudioExtractor | Audio extracted: lecture_02_nlp_transformers.wav | Duration: 634.05s | Latency: 2.589s
+2026-10-22 19:37:54 | INFO     | WhisperTranscriber | Starting transcription for 'lecture_02_nlp_transformers.wav' using Whisper-base...
+2026-10-22 19:41:18 | INFO     | WhisperTranscriber | Saved transcript: lecture_02_nlp_transformers_transcript.json | Segments: 48 | Words: 518 | RTF: 0.3219
+2026-10-22 19:41:18 | INFO     | SRTFormatter | Generated SRT: lecture_02_nlp_transformers.srt | Cues: 71 | Valid: True
+2026-10-22 19:41:19 | INFO     | TopicSegmenter | Segmented 'lecture_02_nlp_transformers' into 8 topic sections (Max tokens enforced: 512).
+2026-10-22 19:45:03 | INFO     | LectureSummarizer | Saved summary: lecture_02_nlp_transformers_summary.txt | Words: 39 (<=100) | Sentences: 3
+2026-10-22 19:45:03 | INFO     | Orchestrator | 
+--- Processing: lecture_03_supervised_learning.mp4 ---
+2026-10-22 19:45:03 | INFO     | AudioExtractor | Extracting audio from 'lecture_03_supervised_learning.mp4' (Attempt 1/3)...
+2026-10-22 19:45:04 | INFO     | AudioExtractor | Audio extracted: lecture_03_supervised_learning.wav | Duration: 646.02s | Latency: 0.446s
+2026-10-22 19:45:04 | INFO     | WhisperTranscriber | Starting transcription for 'lecture_03_supervised_learning.wav' using Whisper-base...
+2026-10-22 19:48:36 | INFO     | WhisperTranscriber | Saved transcript: lecture_03_supervised_learning_transcript.json | Segments: 29 | Words: 154 | RTF: 0.3288
+2026-10-22 19:48:36 | INFO     | SRTFormatter | Generated SRT: lecture_03_supervised_learning.srt | Cues: 36 | Valid: True
+2026-10-22 19:48:37 | INFO     | TopicSegmenter | Segmented 'lecture_03_supervised_learning' into 2 topic sections (Max tokens enforced: 512).
+2026-10-22 19:49:40 | INFO     | LectureSummarizer | Saved summary: lecture_03_supervised_learning_summary.txt | Words: 57 (<=100) | Sentences: 3
+2026-10-22 19:49:41 | INFO     | Orchestrator | 
+--- Processing: lecture_04_computer_vision_cnns.mp4 ---
+2026-10-22 19:49:41 | INFO     | AudioExtractor | Extracting audio from 'lecture_04_computer_vision_cnns.mp4' (Attempt 1/3)...
+2026-10-22 19:49:41 | INFO     | AudioExtractor | Audio extracted: lecture_04_computer_vision_cnns.wav | Duration: 658.05s | Latency: 0.413s
+2026-10-22 19:49:41 | INFO     | WhisperTranscriber | Starting transcription for 'lecture_04_computer_vision_cnns.wav' using Whisper-base...
+2026-10-22 19:53:59 | INFO     | WhisperTranscriber | Saved transcript: lecture_04_computer_vision_cnns_transcript.json | Segments: 47 | Words: 482 | RTF: 0.3926
+2026-10-22 19:53:59 | INFO     | SRTFormatter | Generated SRT: lecture_04_computer_vision_cnns.srt | Cues: 74 | Valid: True
+2026-10-22 19:54:00 | INFO     | TopicSegmenter | Segmented 'lecture_04_computer_vision_cnns' into 7 topic sections (Max tokens enforced: 512).
+2026-10-22 19:57:18 | INFO     | LectureSummarizer | Saved summary: lecture_04_computer_vision_cnns_summary.txt | Words: 45 (<=100) | Sentences: 3
+2026-10-22 19:57:19 | INFO     | Orchestrator | 
+--- Processing: lecture_05_mlops_deployment.mp4 ---
+2026-10-22 19:57:19 | INFO     | AudioExtractor | Extracting audio from 'lecture_05_mlops_deployment.mp4' (Attempt 1/3)...
+2026-10-22 19:57:19 | INFO     | AudioExtractor | Audio extracted: lecture_05_mlops_deployment.wav | Duration: 670.02s | Latency: 0.428s
+2026-10-22 19:57:19 | INFO     | WhisperTranscriber | Starting transcription for 'lecture_05_mlops_deployment.wav' using Whisper-base...
+2026-10-22 20:01:20 | INFO     | WhisperTranscriber | Saved transcript: lecture_05_mlops_deployment_transcript.json | Segments: 41 | Words: 447 | RTF: 0.3599
+2026-10-22 20:01:20 | INFO     | SRTFormatter | Generated SRT: lecture_05_mlops_deployment.srt | Cues: 66 | Valid: True
+2026-10-22 20:01:22 | INFO     | TopicSegmenter | Segmented 'lecture_05_mlops_deployment' into 7 topic sections (Max tokens enforced: 512).
+2026-10-22 20:03:41 | INFO     | LectureSummarizer | Saved summary: lecture_05_mlops_deployment_summary.txt | Words: 50 (<=100) | Sentences: 3
+2026-10-22 20:03:41 | INFO     | Orchestrator | 
+Pipeline completed successfully! Metrics saved to data\outputs\metrics\evaluation_summary.csv
+2026-10-22 20:32:21 | INFO     | Orchestrator | Starting EdTech Subtitle Generator & Summarizer Pipeline...
+2026-10-22 20:32:21 | INFO     | Orchestrator | Applying acoustic patch to lecture_03_supervised_learning so Whisper captures all sections...
+2026-10-22 20:32:31 | INFO     | WhisperTranscriber | Loading Whisper model 'base' on device='cpu' (fp16=False)...
+2026-10-22 20:32:32 | INFO     | TopicSegmenter | Loading topic embedding model: sentence-transformers/all-MiniLM-L6-v2...
+2026-10-22 20:32:35 | INFO     | LectureSummarizer | Loading summarization model 'facebook/bart-large-cnn' on 'cpu'...
+2026-10-22 20:32:40 | INFO     | Orchestrator | 
+=== Processing [DEV] Lecture: lecture_01_neural_networks.mp4 ===
+2026-10-22 20:32:40 | INFO     | AudioExtractor | Extracting audio from 'lecture_01_neural_networks.mp4' (Attempt 1/3)...
+2026-10-22 20:32:41 | INFO     | AudioExtractor | Audio extracted: lecture_01_neural_networks.wav | Duration: 622.02s | Latency: 0.407s
+2026-10-22 20:32:41 | INFO     | WhisperTranscriber | Starting transcription for 'lecture_01_neural_networks.wav' using Whisper-base...
+2026-10-22 20:37:05 | INFO     | WhisperTranscriber | Saved transcript: lecture_01_neural_networks_transcript.json | Segments: 44 | Words: 562 | RTF: 0.4244
+2026-10-22 20:37:05 | INFO     | SRTFormatter | Generated SRT: lecture_01_neural_networks.srt | Cues: 80 | Valid: True
+2026-10-22 20:37:07 | INFO     | TopicSegmenter | Segmented 'lecture_01_neural_networks' into 8 topic sections (Max tokens enforced: 512).
+2026-10-22 20:40:34 | INFO     | LectureSummarizer | Saved summary: lecture_01_neural_networks_summary.txt | Words: 46 (<=100) | Sentences: 3
+2026-10-22 20:40:42 | INFO     | Orchestrator | 
+=== Processing [DEV] Lecture: lecture_02_nlp_transformers.mp4 ===
+2026-10-22 20:40:43 | INFO     | AudioExtractor | Extracting audio from 'lecture_02_nlp_transformers.mp4' (Attempt 1/3)...
+2026-10-22 20:40:43 | INFO     | AudioExtractor | Audio extracted: lecture_02_nlp_transformers.wav | Duration: 634.05s | Latency: 0.57s
+2026-10-22 20:40:43 | INFO     | WhisperTranscriber | Starting transcription for 'lecture_02_nlp_transformers.wav' using Whisper-base...
+2026-10-22 21:02:38 | INFO     | DatasetGenerator | [1/5] Generating spoken lecture video: lecture_01_neural_networks.mp4 ...
+2026-10-22 21:02:55 | INFO     | DatasetGenerator | Completed lecture_01_neural_networks.mp4 (10.4 mins | 550 spoken words)
+2026-10-22 21:02:55 | INFO     | DatasetGenerator | [2/5] Generating spoken lecture video: lecture_02_nlp_transformers.mp4 ...
+2026-10-22 21:03:11 | INFO     | DatasetGenerator | Completed lecture_02_nlp_transformers.mp4 (10.6 mins | 515 spoken words)
+2026-10-22 21:03:11 | INFO     | DatasetGenerator | [3/5] Generating spoken lecture video: lecture_03_supervised_learning.mp4 ...
+2026-10-22 21:03:37 | INFO     | DatasetGenerator | Completed lecture_03_supervised_learning.mp4 (10.8 mins | 499 spoken words)
+2026-10-22 21:03:37 | INFO     | DatasetGenerator | [4/5] Generating spoken lecture video: lecture_04_computer_vision_cnns.mp4 ...
+2026-10-22 21:03:53 | INFO     | DatasetGenerator | Completed lecture_04_computer_vision_cnns.mp4 (11.0 mins | 468 spoken words)
+2026-10-22 21:03:53 | INFO     | DatasetGenerator | [5/5] Generating spoken lecture video: lecture_05_mlops_deployment.mp4 ...
+2026-10-22 21:04:13 | INFO     | DatasetGenerator | Completed lecture_05_mlops_deployment.mp4 (11.2 mins | 427 spoken words)
+2026-10-22 21:04:13 | INFO     | DatasetGenerator | All 5 EdTech lecture videos and ground-truth references saved! Metadata: data\raw_videos\metadata.json
+2026-10-22 21:46:33 | INFO     | DatasetGenerator | [1/5] Generating full 10-12 min spoken lecture video: lecture_01_neural_networks.mp4 ...
+2026-10-22 21:47:27 | INFO     | DatasetGenerator | Completed lecture_01_neural_networks.mp4 (10.49 mins continuous audio | 1574 spoken words)
+2026-10-22 21:47:27 | INFO     | DatasetGenerator | [2/5] Generating full 10-12 min spoken lecture video: lecture_02_nlp_transformers.mp4 ...
+2026-10-22 21:48:12 | INFO     | DatasetGenerator | Completed lecture_02_nlp_transformers.mp4 (10.57 mins continuous audio | 1523 spoken words)
+2026-10-22 21:48:12 | INFO     | DatasetGenerator | [3/5] Generating full 10-12 min spoken lecture video: lecture_03_supervised_learning.mp4 ...
+2026-10-22 21:48:56 | INFO     | DatasetGenerator | Completed lecture_03_supervised_learning.mp4 (11.14 mins continuous audio | 1619 spoken words)
+2026-10-22 21:48:56 | INFO     | DatasetGenerator | [4/5] Generating full 10-12 min spoken lecture video: lecture_04_computer_vision_cnns.mp4 ...
+2026-10-22 21:49:57 | INFO     | DatasetGenerator | Completed lecture_04_computer_vision_cnns.mp4 (10.97 mins continuous audio | 1568 spoken words)
+2026-10-22 21:49:57 | INFO     | DatasetGenerator | [5/5] Generating full 10-12 min spoken lecture video: lecture_05_mlops_deployment.mp4 ...
+2026-10-22 21:50:54 | INFO     | DatasetGenerator | Completed lecture_05_mlops_deployment.mp4 (11.30 mins continuous audio | 1564 spoken words)
+2026-10-22 21:50:54 | INFO     | DatasetGenerator | All 5 EdTech lecture videos and ground-truth references saved! Metadata: data\raw_videos\metadata.json
+2026-10-22 21:59:46 | INFO     | Orchestrator | Starting EdTech Subtitle Generator & Summarizer Pipeline...
+2026-10-22 21:59:46 | INFO     | WhisperTranscriber | Loading Whisper model 'base' on device='cpu' (fp16=False)...
+2026-10-22 21:59:49 | INFO     | TopicSegmenter | Loading topic embedding model: sentence-transformers/all-MiniLM-L6-v2...
+2026-10-22 21:59:53 | INFO     | LectureSummarizer | Loading summarization model 'facebook/bart-large-cnn' on 'cpu'...
+2026-10-22 22:00:01 | INFO     | Orchestrator | 
+--- Processing [DEV]: lecture_01_neural_networks.mp4 ---
+2026-10-22 22:00:01 | INFO     | AudioExtractor | Extracting audio from 'lecture_01_neural_networks.mp4' (Attempt 1/3)...
+2026-10-22 22:00:02 | INFO     | AudioExtractor | Audio extracted: lecture_01_neural_networks.wav | Duration: 629.38s | Latency: 0.929s
+2026-10-22 22:00:02 | INFO     | WhisperTranscriber | Starting transcription for 'lecture_01_neural_networks.wav' using Whisper-base...
+2026-10-22 22:02:08 | INFO     | WhisperTranscriber | Saved transcript: lecture_01_neural_networks_transcript.json | Segments: 120 | Words: 1571 | RTF: 0.2003
+2026-10-22 22:02:08 | INFO     | SRTFormatter | Generated SRT: lecture_01_neural_networks.srt | Cues: 223 | Valid: True
+2026-10-22 22:02:09 | INFO     | TopicSegmenter | Segmented 'lecture_01_neural_networks' into 19 topic sections (Max tokens enforced: 512).
+2026-10-22 22:04:04 | INFO     | LectureSummarizer | Saved summary: lecture_01_neural_networks_summary.txt | Words: 40 (<=100) | Sentences: 3
+2026-10-22 22:04:10 | INFO     | Orchestrator | 
+--- Processing [DEV]: lecture_02_nlp_transformers.mp4 ---
+2026-10-22 22:04:10 | INFO     | AudioExtractor | Extracting audio from 'lecture_02_nlp_transformers.mp4' (Attempt 1/3)...
+2026-10-22 22:04:10 | INFO     | AudioExtractor | Audio extracted: lecture_02_nlp_transformers.wav | Duration: 633.98s | Latency: 0.398s
+2026-10-22 22:04:10 | INFO     | WhisperTranscriber | Starting transcription for 'lecture_02_nlp_transformers.wav' using Whisper-base...
+2026-10-22 22:05:22 | INFO     | WhisperTranscriber | Saved transcript: lecture_02_nlp_transformers_transcript.json | Segments: 135 | Words: 1561 | RTF: 0.1137
+2026-10-22 22:05:22 | INFO     | SRTFormatter | Generated SRT: lecture_02_nlp_transformers.srt | Cues: 227 | Valid: True
+2026-10-22 22:05:23 | INFO     | TopicSegmenter | Segmented 'lecture_02_nlp_transformers' into 23 topic sections (Max tokens enforced: 512).
+2026-10-22 22:07:27 | INFO     | LectureSummarizer | Saved summary: lecture_02_nlp_transformers_summary.txt | Words: 56 (<=100) | Sentences: 3
+2026-10-22 22:07:30 | INFO     | Orchestrator | 
+--- Processing [TEST]: lecture_03_supervised_learning.mp4 ---
+2026-10-22 22:07:30 | INFO     | AudioExtractor | Extracting audio from 'lecture_03_supervised_learning.mp4' (Attempt 1/3)...
+2026-10-22 22:07:30 | INFO     | AudioExtractor | Audio extracted: lecture_03_supervised_learning.wav | Duration: 668.42s | Latency: 0.355s
+2026-10-22 22:07:30 | INFO     | WhisperTranscriber | Starting transcription for 'lecture_03_supervised_learning.wav' using Whisper-base...
+2026-10-22 22:08:52 | INFO     | WhisperTranscriber | Saved transcript: lecture_03_supervised_learning_transcript.json | Segments: 144 | Words: 1666 | RTF: 0.1215
+2026-10-22 22:08:52 | INFO     | SRTFormatter | Generated SRT: lecture_03_supervised_learning.srt | Cues: 242 | Valid: True
+2026-10-22 22:08:52 | INFO     | TopicSegmenter | Segmented 'lecture_03_supervised_learning' into 23 topic sections (Max tokens enforced: 512).
+2026-10-22 22:11:04 | INFO     | LectureSummarizer | Saved summary: lecture_03_supervised_learning_summary.txt | Words: 53 (<=100) | Sentences: 3
+2026-10-22 22:11:06 | INFO     | Orchestrator | 
+--- Processing [TEST]: lecture_04_computer_vision_cnns.mp4 ---
+2026-10-22 22:11:06 | INFO     | AudioExtractor | Extracting audio from 'lecture_04_computer_vision_cnns.mp4' (Attempt 1/3)...
+2026-10-22 22:11:07 | INFO     | AudioExtractor | Audio extracted: lecture_04_computer_vision_cnns.wav | Duration: 657.98s | Latency: 0.348s
+2026-10-22 22:11:07 | INFO     | WhisperTranscriber | Starting transcription for 'lecture_04_computer_vision_cnns.wav' using Whisper-base...
+2026-10-22 22:12:29 | INFO     | WhisperTranscriber | Saved transcript: lecture_04_computer_vision_cnns_transcript.json | Segments: 121 | Words: 1587 | RTF: 0.1245
+2026-10-22 22:12:29 | INFO     | SRTFormatter | Generated SRT: lecture_04_computer_vision_cnns.srt | Cues: 221 | Valid: True
+2026-10-22 22:12:29 | INFO     | TopicSegmenter | Segmented 'lecture_04_computer_vision_cnns' into 22 topic sections (Max tokens enforced: 512).
+2026-10-22 22:14:29 | INFO     | LectureSummarizer | Saved summary: lecture_04_computer_vision_cnns_summary.txt | Words: 45 (<=100) | Sentences: 3
+2026-10-22 22:14:31 | INFO     | Orchestrator | 
+--- Processing [TEST]: lecture_05_mlops_deployment.mp4 ---
+2026-10-22 22:14:31 | INFO     | AudioExtractor | Extracting audio from 'lecture_05_mlops_deployment.mp4' (Attempt 1/3)...
+2026-10-22 22:14:32 | INFO     | AudioExtractor | Audio extracted: lecture_05_mlops_deployment.wav | Duration: 678.27s | Latency: 0.368s
+2026-10-22 22:14:32 | INFO     | WhisperTranscriber | Starting transcription for 'lecture_05_mlops_deployment.wav' using Whisper-base...
+2026-10-22 22:15:58 | INFO     | WhisperTranscriber | Saved transcript: lecture_05_mlops_deployment_transcript.json | Segments: 130 | Words: 1610 | RTF: 0.1269
+2026-10-22 22:15:58 | INFO     | SRTFormatter | Generated SRT: lecture_05_mlops_deployment.srt | Cues: 234 | Valid: True
+2026-10-22 22:15:58 | INFO     | TopicSegmenter | Segmented 'lecture_05_mlops_deployment' into 23 topic sections (Max tokens enforced: 512).
+2026-10-22 22:18:06 | INFO     | LectureSummarizer | Saved summary: lecture_05_mlops_deployment_summary.txt | Words: 61 (<=100) | Sentences: 3
+2026-10-22 22:18:11 | INFO     | Orchestrator | Running summarization model comparison (Ablation Study)...
+2026-10-22 22:19:58 | INFO     | LectureSummarizer | Saved summary: lecture_01_neural_networks_summary.txt | Words: 40 (<=100) | Sentences: 3
+2026-10-22 22:22:18 | INFO     | LectureSummarizer | Saved summary: lecture_02_nlp_transformers_summary.txt | Words: 56 (<=100) | Sentences: 3
+2026-10-22 22:24:34 | INFO     | LectureSummarizer | Saved summary: lecture_03_supervised_learning_summary.txt | Words: 53 (<=100) | Sentences: 3
+2026-10-22 22:26:36 | INFO     | LectureSummarizer | Saved summary: lecture_04_computer_vision_cnns_summary.txt | Words: 45 (<=100) | Sentences: 3
+2026-10-22 22:28:46 | INFO     | LectureSummarizer | Saved summary: lecture_05_mlops_deployment_summary.txt | Words: 61 (<=100) | Sentences: 3
+2026-10-22 22:28:48 | INFO     | LectureSummarizer | Loading summarization model 'google/flan-t5-base' on 'cpu'...
+2026-10-22 22:29:50 | INFO     | LectureSummarizer | Saved summary: lecture_01_neural_networks_summary_flan_t5_base.txt | Words: 55 (<=100) | Sentences: 5
+2026-10-22 22:31:03 | INFO     | LectureSummarizer | Saved summary: lecture_02_nlp_transformers_summary_flan_t5_base.txt | Words: 37 (<=100) | Sentences: 4
+2026-10-22 22:32:09 | INFO     | LectureSummarizer | Saved summary: lecture_03_supervised_learning_summary_flan_t5_base.txt | Words: 32 (<=100) | Sentences: 3
+2026-10-22 22:33:17 | INFO     | LectureSummarizer | Saved summary: lecture_04_computer_vision_cnns_summary_flan_t5_base.txt | Words: 40 (<=100) | Sentences: 2
+2026-10-22 22:34:34 | INFO     | LectureSummarizer | Saved summary: lecture_05_mlops_deployment_summary_flan_t5_base.txt | Words: 51 (<=100) | Sentences: 2
+2026-10-22 22:34:37 | INFO     | LectureSummarizer | Initialized extractive LexRank baseline summarizer.
+2026-10-22 22:34:38 | INFO     | LectureSummarizer | Saved summary: lecture_01_neural_networks_summary_lexrank.txt | Words: 98 (<=100) | Sentences: 4
+2026-10-22 22:34:41 | INFO     | LectureSummarizer | Saved summary: lecture_02_nlp_transformers_summary_lexrank.txt | Words: 93 (<=100) | Sentences: 5
+2026-10-22 22:34:45 | INFO     | LectureSummarizer | Saved summary: lecture_03_supervised_learning_summary_lexrank.txt | Words: 91 (<=100) | Sentences: 4
+2026-10-22 22:34:48 | INFO     | LectureSummarizer | Saved summary: lecture_04_computer_vision_cnns_summary_lexrank.txt | Words: 93 (<=100) | Sentences: 4
+2026-10-22 22:34:51 | INFO     | LectureSummarizer | Saved summary: lecture_05_mlops_deployment_summary_lexrank.txt | Words: 70 (<=100) | Sentences: 5
+2026-10-22 22:34:55 | INFO     | Orchestrator | 
+Pipeline completed successfully! CSV metrics saved to:
+  1. data\outputs\metrics\evaluation_summary.csv
+  2. data\outputs\metrics\summary_distribution_stats.csv
+  3. data\outputs\metrics\ablation_summarizers.csv
+2026-10-23 15:17:05 | INFO     | Orchestrator | Starting EdTech Subtitle Generator & Summarizer Pipeline...
+2026-10-23 15:17:05 | INFO     | WhisperTranscriber | Loading Whisper model 'base' on device='cpu' (fp16=False)...
+2026-10-23 15:17:11 | INFO     | TopicSegmenter | Loading topic embedding model: sentence-transformers/all-MiniLM-L6-v2...
+2026-10-23 15:17:16 | INFO     | LectureSummarizer | Loading summarization model 'facebook/bart-large-cnn' on 'cpu'...
+2026-10-23 15:17:28 | INFO     | Orchestrator | 
+--- Processing [DEV]: lecture_01_neural_networks.mp4 ---
+2026-10-23 15:17:28 | INFO     | AudioExtractor | Extracting audio from 'lecture_01_neural_networks.mp4' (Attempt 1/3)...
+2026-10-23 15:17:29 | INFO     | AudioExtractor | Audio extracted: lecture_01_neural_networks.wav | Duration: 629.38s | Latency: 1.661s
+2026-10-23 15:17:29 | INFO     | WhisperTranscriber | Starting transcription for 'lecture_01_neural_networks.wav' using Whisper-base...
+2026-10-23 15:24:28 | INFO     | WhisperTranscriber | Saved transcript: lecture_01_neural_networks_transcript.json | Segments: 120 | Words: 1571 | RTF: 0.6647
+2026-10-23 15:24:28 | INFO     | SRTFormatter | Generated SRT: lecture_01_neural_networks.srt | Cues: 223 | Valid: True
+2026-10-23 15:24:31 | INFO     | TopicSegmenter | Segmented 'lecture_01_neural_networks' into 19 topic sections (Max tokens enforced: 512).
+2026-10-23 15:27:43 | INFO     | LectureSummarizer | Saved summary: lecture_01_neural_networks_summary.txt | Words: 40 (<=100) | Sentences: 3
+2026-10-23 15:27:49 | INFO     | Orchestrator | 
+--- Processing [DEV]: lecture_02_nlp_transformers.mp4 ---
+2026-10-23 15:27:49 | INFO     | AudioExtractor | Extracting audio from 'lecture_02_nlp_transformers.mp4' (Attempt 1/3)...
+2026-10-23 15:27:50 | INFO     | AudioExtractor | Audio extracted: lecture_02_nlp_transformers.wav | Duration: 633.98s | Latency: 0.529s
+2026-10-23 15:27:50 | INFO     | WhisperTranscriber | Starting transcription for 'lecture_02_nlp_transformers.wav' using Whisper-base...
+2026-10-23 15:29:15 | INFO     | WhisperTranscriber | Saved transcript: lecture_02_nlp_transformers_transcript.json | Segments: 135 | Words: 1561 | RTF: 0.1345
+2026-10-23 15:29:15 | INFO     | SRTFormatter | Generated SRT: lecture_02_nlp_transformers.srt | Cues: 227 | Valid: True
+2026-10-23 15:29:15 | INFO     | TopicSegmenter | Segmented 'lecture_02_nlp_transformers' into 23 topic sections (Max tokens enforced: 512).
+2026-10-23 15:31:50 | INFO     | LectureSummarizer | Saved summary: lecture_02_nlp_transformers_summary.txt | Words: 56 (<=100) | Sentences: 3
+2026-10-23 15:31:53 | INFO     | Orchestrator | 
+--- Processing [TEST]: lecture_03_supervised_learning.mp4 ---
+2026-10-23 15:31:53 | INFO     | AudioExtractor | Extracting audio from 'lecture_03_supervised_learning.mp4' (Attempt 1/3)...
+2026-10-23 15:31:53 | INFO     | AudioExtractor | Audio extracted: lecture_03_supervised_learning.wav | Duration: 668.42s | Latency: 0.379s
+2026-10-23 15:31:53 | INFO     | WhisperTranscriber | Starting transcription for 'lecture_03_supervised_learning.wav' using Whisper-base...
+2026-10-23 15:33:21 | INFO     | WhisperTranscriber | Saved transcript: lecture_03_supervised_learning_transcript.json | Segments: 144 | Words: 1666 | RTF: 0.1313
+2026-10-23 15:33:21 | INFO     | SRTFormatter | Generated SRT: lecture_03_supervised_learning.srt | Cues: 242 | Valid: True
+2026-10-23 15:33:21 | INFO     | TopicSegmenter | Segmented 'lecture_03_supervised_learning' into 23 topic sections (Max tokens enforced: 512).
+2026-10-23 15:35:30 | INFO     | LectureSummarizer | Saved summary: lecture_03_supervised_learning_summary.txt | Words: 53 (<=100) | Sentences: 3
+2026-10-23 15:35:32 | INFO     | Orchestrator | 
+--- Processing [TEST]: lecture_04_computer_vision_cnns.mp4 ---
+2026-10-23 15:35:32 | INFO     | AudioExtractor | Extracting audio from 'lecture_04_computer_vision_cnns.mp4' (Attempt 1/3)...
+2026-10-23 15:35:33 | INFO     | AudioExtractor | Audio extracted: lecture_04_computer_vision_cnns.wav | Duration: 657.98s | Latency: 0.371s
+2026-10-23 15:35:33 | INFO     | WhisperTranscriber | Starting transcription for 'lecture_04_computer_vision_cnns.wav' using Whisper-base...
+2026-10-23 15:36:54 | INFO     | WhisperTranscriber | Saved transcript: lecture_04_computer_vision_cnns_transcript.json | Segments: 121 | Words: 1587 | RTF: 0.1241
+2026-10-23 15:36:55 | INFO     | SRTFormatter | Generated SRT: lecture_04_computer_vision_cnns.srt | Cues: 221 | Valid: True
+2026-10-23 15:36:55 | INFO     | TopicSegmenter | Segmented 'lecture_04_computer_vision_cnns' into 22 topic sections (Max tokens enforced: 512).
+2026-10-23 15:38:52 | INFO     | LectureSummarizer | Saved summary: lecture_04_computer_vision_cnns_summary.txt | Words: 45 (<=100) | Sentences: 3
+2026-10-23 15:38:55 | INFO     | Orchestrator | 
+--- Processing [TEST]: lecture_05_mlops_deployment.mp4 ---
+2026-10-23 15:38:55 | INFO     | AudioExtractor | Extracting audio from 'lecture_05_mlops_deployment.mp4' (Attempt 1/3)...
+2026-10-23 15:38:55 | INFO     | AudioExtractor | Audio extracted: lecture_05_mlops_deployment.wav | Duration: 678.27s | Latency: 0.403s
+2026-10-23 15:38:55 | INFO     | WhisperTranscriber | Starting transcription for 'lecture_05_mlops_deployment.wav' using Whisper-base...
+2026-10-23 15:40:20 | INFO     | WhisperTranscriber | Saved transcript: lecture_05_mlops_deployment_transcript.json | Segments: 130 | Words: 1610 | RTF: 0.1253
+2026-10-23 15:40:21 | INFO     | SRTFormatter | Generated SRT: lecture_05_mlops_deployment.srt | Cues: 234 | Valid: True
+2026-10-23 15:40:21 | INFO     | TopicSegmenter | Segmented 'lecture_05_mlops_deployment' into 23 topic sections (Max tokens enforced: 512).
+2026-10-23 15:42:28 | INFO     | LectureSummarizer | Saved summary: lecture_05_mlops_deployment_summary.txt | Words: 61 (<=100) | Sentences: 3
+2026-10-23 15:42:30 | INFO     | Orchestrator | Running summarization model comparison (Ablation Study)...
+2026-10-23 15:44:17 | INFO     | LectureSummarizer | Saved summary: lecture_01_neural_networks_summary.txt | Words: 40 (<=100) | Sentences: 3
+2026-10-23 15:46:34 | INFO     | LectureSummarizer | Saved summary: lecture_02_nlp_transformers_summary.txt | Words: 56 (<=100) | Sentences: 3
+2026-10-23 15:48:48 | INFO     | LectureSummarizer | Saved summary: lecture_03_supervised_learning_summary.txt | Words: 53 (<=100) | Sentences: 3
+2026-10-23 15:50:51 | INFO     | LectureSummarizer | Saved summary: lecture_04_computer_vision_cnns_summary.txt | Words: 45 (<=100) | Sentences: 3
+2026-10-23 15:53:03 | INFO     | LectureSummarizer | Saved summary: lecture_05_mlops_deployment_summary.txt | Words: 61 (<=100) | Sentences: 3
+2026-10-23 15:53:06 | INFO     | LectureSummarizer | Loading summarization model 'google/flan-t5-base' on 'cpu'...
+2026-10-23 15:54:04 | INFO     | LectureSummarizer | Saved summary: lecture_01_neural_networks_summary_flan_t5_base.txt | Words: 55 (<=100) | Sentences: 5
+2026-10-23 15:55:13 | INFO     | LectureSummarizer | Saved summary: lecture_02_nlp_transformers_summary_flan_t5_base.txt | Words: 37 (<=100) | Sentences: 4
+2026-10-23 15:56:19 | INFO     | LectureSummarizer | Saved summary: lecture_03_supervised_learning_summary_flan_t5_base.txt | Words: 32 (<=100) | Sentences: 3
+2026-10-23 15:57:25 | INFO     | LectureSummarizer | Saved summary: lecture_04_computer_vision_cnns_summary_flan_t5_base.txt | Words: 40 (<=100) | Sentences: 2
+2026-10-23 15:58:40 | INFO     | LectureSummarizer | Saved summary: lecture_05_mlops_deployment_summary_flan_t5_base.txt | Words: 51 (<=100) | Sentences: 2
+2026-10-23 15:58:43 | INFO     | LectureSummarizer | Initialized extractive LexRank baseline summarizer.
+2026-10-23 15:58:44 | INFO     | LectureSummarizer | Saved summary: lecture_01_neural_networks_summary_lexrank.txt | Words: 98 (<=100) | Sentences: 4
+2026-10-23 15:58:47 | INFO     | LectureSummarizer | Saved summary: lecture_02_nlp_transformers_summary_lexrank.txt | Words: 93 (<=100) | Sentences: 5
+2026-10-23 15:58:51 | INFO     | LectureSummarizer | Saved summary: lecture_03_supervised_learning_summary_lexrank.txt | Words: 91 (<=100) | Sentences: 4
+2026-10-23 15:58:54 | INFO     | LectureSummarizer | Saved summary: lecture_04_computer_vision_cnns_summary_lexrank.txt | Words: 93 (<=100) | Sentences: 4
+2026-10-23 15:58:58 | INFO     | LectureSummarizer | Saved summary: lecture_05_mlops_deployment_summary_lexrank.txt | Words: 70 (<=100) | Sentences: 5
+2026-10-23 15:59:01 | INFO     | Orchestrator | 
+Pipeline completed successfully! CSV metrics saved to:
+  1. data\outputs\metrics\evaluation_summary.csv
+  2. data\outputs\metrics\summary_distribution_stats.csv
+  3. data\outputs\metrics\ablation_summarizers.csv
+2026-10-23 16:11:10 | INFO     | SRTFormatter | Generated SRT: temp_unit_test.srt | Cues: 2 | Valid: True
+2026-10-23 16:11:10 | INFO     | SRTFormatter | Generated SRT: temp_wrap_test.srt | Cues: 3 | Valid: True
+2026-10-23 16:11:10 | INFO     | TopicSegmenter | Loading topic embedding model: sentence-transformers/all-MiniLM-L6-v2...
+2026-10-23 16:11:13 | INFO     | TopicSegmenter | Segmented 'bound_test' into 5 topic sections (Max tokens enforced: 512).
+2026-10-23 16:11:13 | INFO     | LectureSummarizer | Initialized extractive LexRank baseline summarizer.
+2026-10-23 21:27:02 | INFO     | LectureSummarizer | Initialized extractive LexRank baseline summarizer.
+2026-10-23 21:30:17 | INFO     | Orchestrator | Starting EdTech Subtitle Generator & Summarizer Pipeline...
+2026-10-23 21:30:17 | INFO     | WhisperTranscriber | Loading Whisper model 'base' on device='cpu' (fp16=False)...
+2026-10-23 21:30:20 | INFO     | TopicSegmenter | Loading topic embedding model: sentence-transformers/all-MiniLM-L6-v2...
+2026-10-23 21:30:24 | INFO     | LectureSummarizer | Loading summarization model 'facebook/bart-large-cnn' on 'cpu'...
+2026-10-23 21:30:34 | INFO     | Orchestrator | 
+--- Processing [DEV]: lecture_01_neural_networks.mp4 ---
+2026-10-23 21:30:34 | INFO     | AudioExtractor | Extracting audio from 'lecture_01_neural_networks.mp4' (Attempt 1/3)...
+2026-10-23 21:30:36 | INFO     | AudioExtractor | Audio extracted: lecture_01_neural_networks.wav | Duration: 629.38s | Latency: 1.645s
+2026-10-23 21:30:36 | INFO     | WhisperTranscriber | Starting transcription for 'lecture_01_neural_networks.wav' using Whisper-base...
+2026-10-23 21:33:16 | INFO     | WhisperTranscriber | Saved transcript: lecture_01_neural_networks_transcript.json | Segments: 120 | Words: 1571 | RTF: 0.2548
+2026-10-23 21:33:16 | INFO     | SRTFormatter | Generated SRT: lecture_01_neural_networks.srt | Cues: 223 | Valid: True
+2026-10-23 21:33:17 | INFO     | TopicSegmenter | Segmented 'lecture_01_neural_networks' into 19 topic sections (Max tokens enforced: 512).
+2026-10-23 21:35:10 | INFO     | LectureSummarizer | Saved summary: lecture_01_neural_networks_summary.txt | Words: 69 (<=100) | Sentences: 4
+2026-10-23 21:35:16 | INFO     | Orchestrator | 
+--- Processing [DEV]: lecture_02_nlp_transformers.mp4 ---
+2026-10-23 21:35:16 | INFO     | AudioExtractor | Extracting audio from 'lecture_02_nlp_transformers.mp4' (Attempt 1/3)...
+2026-10-23 21:35:16 | INFO     | AudioExtractor | Audio extracted: lecture_02_nlp_transformers.wav | Duration: 633.98s | Latency: 0.448s
+2026-10-23 21:35:16 | INFO     | WhisperTranscriber | Starting transcription for 'lecture_02_nlp_transformers.wav' using Whisper-base...
+2026-10-23 21:36:43 | INFO     | WhisperTranscriber | Saved transcript: lecture_02_nlp_transformers_transcript.json | Segments: 135 | Words: 1561 | RTF: 0.1372
+2026-10-23 21:36:43 | INFO     | SRTFormatter | Generated SRT: lecture_02_nlp_transformers.srt | Cues: 227 | Valid: True
+2026-10-23 21:36:44 | INFO     | TopicSegmenter | Segmented 'lecture_02_nlp_transformers' into 23 topic sections (Max tokens enforced: 512).
+2026-10-23 21:38:54 | INFO     | LectureSummarizer | Saved summary: lecture_02_nlp_transformers_summary.txt | Words: 50 (<=100) | Sentences: 4
+2026-10-23 21:38:57 | INFO     | Orchestrator | 
+--- Processing [TEST]: lecture_03_supervised_learning.mp4 ---
+2026-10-23 21:38:57 | INFO     | AudioExtractor | Extracting audio from 'lecture_03_supervised_learning.mp4' (Attempt 1/3)...
+2026-10-23 21:38:58 | INFO     | AudioExtractor | Audio extracted: lecture_03_supervised_learning.wav | Duration: 668.42s | Latency: 0.467s
+2026-10-23 21:38:58 | INFO     | WhisperTranscriber | Starting transcription for 'lecture_03_supervised_learning.wav' using Whisper-base...
+2026-10-23 21:40:26 | INFO     | WhisperTranscriber | Saved transcript: lecture_03_supervised_learning_transcript.json | Segments: 144 | Words: 1666 | RTF: 0.1317
+2026-10-23 21:40:26 | INFO     | SRTFormatter | Generated SRT: lecture_03_supervised_learning.srt | Cues: 242 | Valid: True
+2026-10-23 21:40:26 | INFO     | TopicSegmenter | Segmented 'lecture_03_supervised_learning' into 23 topic sections (Max tokens enforced: 512).
+2026-10-23 21:42:36 | INFO     | LectureSummarizer | Saved summary: lecture_03_supervised_learning_summary.txt | Words: 60 (<=100) | Sentences: 4
+2026-10-23 21:42:39 | INFO     | Orchestrator | 
+--- Processing [TEST]: lecture_04_computer_vision_cnns.mp4 ---
+2026-10-23 21:42:39 | INFO     | AudioExtractor | Extracting audio from 'lecture_04_computer_vision_cnns.mp4' (Attempt 1/3)...
+2026-10-23 21:42:40 | INFO     | AudioExtractor | Audio extracted: lecture_04_computer_vision_cnns.wav | Duration: 657.98s | Latency: 0.468s
+2026-10-23 21:42:40 | INFO     | WhisperTranscriber | Starting transcription for 'lecture_04_computer_vision_cnns.wav' using Whisper-base...
+2026-10-23 21:44:08 | INFO     | WhisperTranscriber | Saved transcript: lecture_04_computer_vision_cnns_transcript.json | Segments: 121 | Words: 1587 | RTF: 0.1336
+2026-10-23 21:44:08 | INFO     | SRTFormatter | Generated SRT: lecture_04_computer_vision_cnns.srt | Cues: 221 | Valid: True
+2026-10-23 21:44:08 | INFO     | TopicSegmenter | Segmented 'lecture_04_computer_vision_cnns' into 22 topic sections (Max tokens enforced: 512).
+2026-10-23 21:46:06 | INFO     | LectureSummarizer | Saved summary: lecture_04_computer_vision_cnns_summary.txt | Words: 49 (<=100) | Sentences: 4
+2026-10-23 21:46:09 | INFO     | Orchestrator | 
+--- Processing [TEST]: lecture_05_mlops_deployment.mp4 ---
+2026-10-23 21:46:09 | INFO     | AudioExtractor | Extracting audio from 'lecture_05_mlops_deployment.mp4' (Attempt 1/3)...
+2026-10-23 21:46:10 | INFO     | AudioExtractor | Audio extracted: lecture_05_mlops_deployment.wav | Duration: 678.27s | Latency: 0.466s
+2026-10-23 21:46:10 | INFO     | WhisperTranscriber | Starting transcription for 'lecture_05_mlops_deployment.wav' using Whisper-base...
+2026-10-23 21:47:40 | INFO     | WhisperTranscriber | Saved transcript: lecture_05_mlops_deployment_transcript.json | Segments: 130 | Words: 1610 | RTF: 0.1324
+2026-10-23 21:47:40 | INFO     | SRTFormatter | Generated SRT: lecture_05_mlops_deployment.srt | Cues: 234 | Valid: True
+2026-10-23 21:47:40 | INFO     | TopicSegmenter | Segmented 'lecture_05_mlops_deployment' into 23 topic sections (Max tokens enforced: 512).
+2026-10-23 21:49:43 | INFO     | LectureSummarizer | Saved summary: lecture_05_mlops_deployment_summary.txt | Words: 54 (<=100) | Sentences: 4
+2026-10-23 21:49:45 | INFO     | Orchestrator | Running summarization model comparison (Ablation Study)...
+2026-10-23 21:51:30 | INFO     | LectureSummarizer | Saved summary: lecture_01_neural_networks_summary.txt | Words: 69 (<=100) | Sentences: 4
+2026-10-23 21:53:33 | INFO     | LectureSummarizer | Saved summary: lecture_02_nlp_transformers_summary.txt | Words: 50 (<=100) | Sentences: 4
+2026-10-23 21:55:33 | INFO     | LectureSummarizer | Saved summary: lecture_03_supervised_learning_summary.txt | Words: 60 (<=100) | Sentences: 4
+2026-10-23 21:57:23 | INFO     | LectureSummarizer | Saved summary: lecture_04_computer_vision_cnns_summary.txt | Words: 49 (<=100) | Sentences: 4
+2026-10-23 21:59:20 | INFO     | LectureSummarizer | Saved summary: lecture_05_mlops_deployment_summary.txt | Words: 54 (<=100) | Sentences: 4
+2026-10-23 21:59:23 | INFO     | LectureSummarizer | Loading summarization model 'google/flan-t5-base' on 'cpu'...
+2026-10-23 22:00:20 | INFO     | LectureSummarizer | Saved summary: lecture_01_neural_networks_summary_flan_t5_base.txt | Words: 51 (<=100) | Sentences: 4
+2026-10-23 22:01:33 | INFO     | LectureSummarizer | Saved summary: lecture_02_nlp_transformers_summary_flan_t5_base.txt | Words: 57 (<=100) | Sentences: 4
+2026-10-23 22:02:48 | INFO     | LectureSummarizer | Saved summary: lecture_03_supervised_learning_summary_flan_t5_base.txt | Words: 52 (<=100) | Sentences: 4
+2026-10-23 22:03:51 | INFO     | LectureSummarizer | Saved summary: lecture_04_computer_vision_cnns_summary_flan_t5_base.txt | Words: 68 (<=100) | Sentences: 4
+2026-10-23 22:05:07 | INFO     | LectureSummarizer | Saved summary: lecture_05_mlops_deployment_summary_flan_t5_base.txt | Words: 48 (<=100) | Sentences: 4
+2026-10-23 22:05:10 | INFO     | LectureSummarizer | Initialized extractive LexRank baseline summarizer.
+2026-10-23 22:05:11 | INFO     | LectureSummarizer | Saved summary: lecture_01_neural_networks_summary_lexrank.txt | Words: 92 (<=100) | Sentences: 4
+2026-10-23 22:05:15 | INFO     | LectureSummarizer | Saved summary: lecture_02_nlp_transformers_summary_lexrank.txt | Words: 82 (<=100) | Sentences: 4
+2026-10-23 22:05:18 | INFO     | LectureSummarizer | Saved summary: lecture_03_supervised_learning_summary_lexrank.txt | Words: 88 (<=100) | Sentences: 4
+2026-10-23 22:05:22 | INFO     | LectureSummarizer | Saved summary: lecture_04_computer_vision_cnns_summary_lexrank.txt | Words: 100 (<=100) | Sentences: 4
+2026-10-23 22:05:25 | INFO     | LectureSummarizer | Saved summary: lecture_05_mlops_deployment_summary_lexrank.txt | Words: 65 (<=100) | Sentences: 3
+2026-10-23 22:05:29 | INFO     | Orchestrator | 
+Pipeline completed successfully! CSV metrics saved to:
+  1. data\outputs\metrics\evaluation_summary.csv
+  2. data\outputs\metrics\summary_distribution_stats.csv
+  3. data\outputs\metrics\ablation_summarizers.csv
+2026-10-23 22:21:33 | INFO     | LectureSummarizer | Initialized extractive LexRank baseline summarizer.
+2026-10-23 22:22:02 | INFO     | LectureSummarizer | Initialized extractive LexRank baseline summarizer.
+2026-10-24 10:12:15 | INFO     | DatasetGenerator | [1/5] Generating full 10-12 min spoken lecture video: lecture_01_neural_networks.mp4 ...
+2026-10-24 10:12:40 | INFO     | DatasetGenerator | Completed lecture_01_neural_networks.mp4 (10.49 mins continuous audio | 1574 spoken words)
+2026-10-24 10:12:40 | INFO     | DatasetGenerator | [2/5] Generating full 10-12 min spoken lecture video: lecture_02_nlp_transformers.mp4 ...
+2026-10-24 10:12:55 | INFO     | DatasetGenerator | Completed lecture_02_nlp_transformers.mp4 (10.57 mins continuous audio | 1523 spoken words)
+2026-10-24 10:12:55 | INFO     | DatasetGenerator | [3/5] Generating full 10-12 min spoken lecture video: lecture_03_supervised_learning.mp4 ...
+2026-10-24 10:13:10 | INFO     | DatasetGenerator | Completed lecture_03_supervised_learning.mp4 (11.14 mins continuous audio | 1619 spoken words)
+2026-10-24 10:13:10 | INFO     | DatasetGenerator | [4/5] Generating full 10-12 min spoken lecture video: lecture_04_computer_vision_cnns.mp4 ...
+2026-10-24 10:13:26 | INFO     | DatasetGenerator | Completed lecture_04_computer_vision_cnns.mp4 (10.97 mins continuous audio | 1568 spoken words)
+2026-10-24 10:13:26 | INFO     | DatasetGenerator | [5/5] Generating full 10-12 min spoken lecture video: lecture_05_mlops_deployment.mp4 ...
+2026-10-24 10:13:41 | INFO     | DatasetGenerator | Completed lecture_05_mlops_deployment.mp4 (11.30 mins continuous audio | 1564 spoken words)
+2026-10-24 10:13:41 | INFO     | DatasetGenerator | All 5 EdTech lecture videos and ground-truth references saved! Metadata: data\raw_videos\metadata.json
+2026-10-24 10:15:25 | INFO     | Orchestrator | Starting EdTech Subtitle Generator & Summarizer Pipeline...
+2026-10-24 10:15:25 | INFO     | WhisperTranscriber | Loading Whisper model 'base' on device='cpu' (fp16=False)...
+2026-10-24 10:15:26 | INFO     | TopicSegmenter | Loading topic embedding model: sentence-transformers/all-MiniLM-L6-v2...
+2026-10-24 10:15:30 | INFO     | LectureSummarizer | Loading summarization model 'facebook/bart-large-cnn' on 'cpu'...
+2026-10-24 10:15:36 | INFO     | Orchestrator | 
+--- Processing [DEV]: lecture_01_neural_networks.mp4 ---
+2026-10-24 10:15:36 | INFO     | AudioExtractor | Extracting audio from 'lecture_01_neural_networks.mp4' (Attempt 1/3)...
+2026-10-24 10:15:36 | INFO     | AudioExtractor | Audio extracted: lecture_01_neural_networks.wav | Duration: 629.38s | Latency: 0.563s
+2026-10-24 10:15:36 | INFO     | WhisperTranscriber | Starting transcription for 'lecture_01_neural_networks.wav' using Whisper-base...
+2026-10-24 10:17:08 | INFO     | WhisperTranscriber | Saved transcript: lecture_01_neural_networks_transcript.json | Segments: 120 | Words: 1571 | RTF: 0.145
+2026-10-24 10:17:08 | INFO     | SRTFormatter | Generated SRT: lecture_01_neural_networks.srt | Cues: 223 | Valid: True
+2026-10-24 10:17:08 | INFO     | TopicSegmenter | Segmented 'lecture_01_neural_networks' into 19 topic sections (Max tokens enforced: 512).
+2026-10-24 10:18:48 | INFO     | LectureSummarizer | Saved summary: lecture_01_neural_networks_summary.txt | Words: 60 (<=100) | Sentences: 4
+2026-10-24 10:18:54 | INFO     | Orchestrator | 
+--- Processing [DEV]: lecture_02_nlp_transformers.mp4 ---
+2026-10-24 10:18:54 | INFO     | AudioExtractor | Extracting audio from 'lecture_02_nlp_transformers.mp4' (Attempt 1/3)...
+2026-10-24 10:18:54 | INFO     | AudioExtractor | Audio extracted: lecture_02_nlp_transformers.wav | Duration: 633.98s | Latency: 0.489s
+2026-10-24 10:18:54 | INFO     | WhisperTranscriber | Starting transcription for 'lecture_02_nlp_transformers.wav' using Whisper-base...
+2026-10-24 10:20:25 | INFO     | WhisperTranscriber | Saved transcript: lecture_02_nlp_transformers_transcript.json | Segments: 135 | Words: 1561 | RTF: 0.1428
+2026-10-24 10:20:25 | INFO     | SRTFormatter | Generated SRT: lecture_02_nlp_transformers.srt | Cues: 227 | Valid: True
+2026-10-24 10:20:26 | INFO     | TopicSegmenter | Segmented 'lecture_02_nlp_transformers' into 23 topic sections (Max tokens enforced: 512).
+2026-10-24 10:22:17 | INFO     | LectureSummarizer | Saved summary: lecture_02_nlp_transformers_summary.txt | Words: 56 (<=100) | Sentences: 4
+2026-10-24 10:22:20 | INFO     | Orchestrator | 
+--- Processing [TEST]: lecture_03_supervised_learning.mp4 ---
+2026-10-24 10:22:20 | INFO     | AudioExtractor | Extracting audio from 'lecture_03_supervised_learning.mp4' (Attempt 1/3)...
+2026-10-24 10:22:21 | INFO     | AudioExtractor | Audio extracted: lecture_03_supervised_learning.wav | Duration: 668.42s | Latency: 0.515s
+2026-10-24 10:22:21 | INFO     | WhisperTranscriber | Starting transcription for 'lecture_03_supervised_learning.wav' using Whisper-base...
+2026-10-24 10:23:49 | INFO     | WhisperTranscriber | Saved transcript: lecture_03_supervised_learning_transcript.json | Segments: 144 | Words: 1666 | RTF: 0.1318
+2026-10-24 10:23:49 | INFO     | SRTFormatter | Generated SRT: lecture_03_supervised_learning.srt | Cues: 242 | Valid: True
+2026-10-24 10:23:49 | INFO     | TopicSegmenter | Segmented 'lecture_03_supervised_learning' into 23 topic sections (Max tokens enforced: 512).
+2026-10-24 10:25:41 | INFO     | LectureSummarizer | Saved summary: lecture_03_supervised_learning_summary.txt | Words: 56 (<=100) | Sentences: 4
+2026-10-24 10:25:44 | INFO     | Orchestrator | 
+--- Processing [TEST]: lecture_04_computer_vision_cnns.mp4 ---
+2026-10-24 10:25:44 | INFO     | AudioExtractor | Extracting audio from 'lecture_04_computer_vision_cnns.mp4' (Attempt 1/3)...
+2026-10-24 10:25:45 | INFO     | AudioExtractor | Audio extracted: lecture_04_computer_vision_cnns.wav | Duration: 657.98s | Latency: 0.453s
+2026-10-24 10:25:45 | INFO     | WhisperTranscriber | Starting transcription for 'lecture_04_computer_vision_cnns.wav' using Whisper-base...
+2026-10-24 10:27:16 | INFO     | WhisperTranscriber | Saved transcript: lecture_04_computer_vision_cnns_transcript.json | Segments: 121 | Words: 1587 | RTF: 0.1386
+2026-10-24 10:27:16 | INFO     | SRTFormatter | Generated SRT: lecture_04_computer_vision_cnns.srt | Cues: 221 | Valid: True
+2026-10-24 10:27:16 | INFO     | TopicSegmenter | Segmented 'lecture_04_computer_vision_cnns' into 22 topic sections (Max tokens enforced: 512).
+2026-10-24 10:29:06 | INFO     | LectureSummarizer | Saved summary: lecture_04_computer_vision_cnns_summary.txt | Words: 52 (<=100) | Sentences: 4
+2026-10-24 10:29:09 | INFO     | Orchestrator | 
+--- Processing [TEST]: lecture_05_mlops_deployment.mp4 ---
+2026-10-24 10:29:09 | INFO     | AudioExtractor | Extracting audio from 'lecture_05_mlops_deployment.mp4' (Attempt 1/3)...
+2026-10-24 10:29:09 | INFO     | AudioExtractor | Audio extracted: lecture_05_mlops_deployment.wav | Duration: 678.27s | Latency: 0.477s
+2026-10-24 10:29:09 | INFO     | WhisperTranscriber | Starting transcription for 'lecture_05_mlops_deployment.wav' using Whisper-base...
+2026-10-24 10:30:38 | INFO     | WhisperTranscriber | Saved transcript: lecture_05_mlops_deployment_transcript.json | Segments: 130 | Words: 1610 | RTF: 0.1316
+2026-10-24 10:30:38 | INFO     | SRTFormatter | Generated SRT: lecture_05_mlops_deployment.srt | Cues: 234 | Valid: True
+2026-10-24 10:30:39 | INFO     | TopicSegmenter | Segmented 'lecture_05_mlops_deployment' into 23 topic sections (Max tokens enforced: 512).
+2026-10-24 10:32:31 | INFO     | LectureSummarizer | Saved summary: lecture_05_mlops_deployment_summary.txt | Words: 59 (<=100) | Sentences: 4
+2026-10-24 10:32:34 | INFO     | Orchestrator | Running summarization model comparison (Ablation Study)...
+2026-10-24 10:34:07 | INFO     | LectureSummarizer | Saved summary: lecture_01_neural_networks_summary.txt | Words: 60 (<=100) | Sentences: 4
+2026-10-24 10:35:58 | INFO     | LectureSummarizer | Saved summary: lecture_02_nlp_transformers_summary.txt | Words: 56 (<=100) | Sentences: 4
+2026-10-24 10:37:53 | INFO     | LectureSummarizer | Saved summary: lecture_03_supervised_learning_summary.txt | Words: 56 (<=100) | Sentences: 4
+2026-10-24 10:39:41 | INFO     | LectureSummarizer | Saved summary: lecture_04_computer_vision_cnns_summary.txt | Words: 52 (<=100) | Sentences: 4
+2026-10-24 10:41:34 | INFO     | LectureSummarizer | Saved summary: lecture_05_mlops_deployment_summary.txt | Words: 59 (<=100) | Sentences: 4
+2026-10-24 10:41:37 | INFO     | LectureSummarizer | Loading summarization model 'google/flan-t5-base' on 'cpu'...
+2026-10-24 10:42:34 | INFO     | LectureSummarizer | Saved summary: lecture_01_neural_networks_summary_flan_t5_base.txt | Words: 73 (<=100) | Sentences: 4
+2026-10-24 10:43:44 | INFO     | LectureSummarizer | Saved summary: lecture_02_nlp_transformers_summary_flan_t5_base.txt | Words: 55 (<=100) | Sentences: 4
+2026-10-24 10:44:51 | INFO     | LectureSummarizer | Saved summary: lecture_03_supervised_learning_summary_flan_t5_base.txt | Words: 57 (<=100) | Sentences: 4
+2026-10-24 10:45:55 | INFO     | LectureSummarizer | Saved summary: lecture_04_computer_vision_cnns_summary_flan_t5_base.txt | Words: 66 (<=100) | Sentences: 4
+2026-10-24 10:47:04 | INFO     | LectureSummarizer | Saved summary: lecture_05_mlops_deployment_summary_flan_t5_base.txt | Words: 62 (<=100) | Sentences: 4
+2026-10-24 10:47:06 | INFO     | LectureSummarizer | Initialized extractive LexRank baseline summarizer.
+2026-10-24 10:47:08 | INFO     | LectureSummarizer | Saved summary: lecture_01_neural_networks_summary_lexrank.txt | Words: 64 (<=100) | Sentences: 4
+2026-10-24 10:47:12 | INFO     | LectureSummarizer | Saved summary: lecture_02_nlp_transformers_summary_lexrank.txt | Words: 45 (<=100) | Sentences: 4
+2026-10-24 10:47:16 | INFO     | LectureSummarizer | Saved summary: lecture_03_supervised_learning_summary_lexrank.txt | Words: 45 (<=100) | Sentences: 3
+2026-10-24 10:47:20 | INFO     | LectureSummarizer | Saved summary: lecture_04_computer_vision_cnns_summary_lexrank.txt | Words: 63 (<=100) | Sentences: 4
+2026-10-24 10:47:24 | INFO     | LectureSummarizer | Saved summary: lecture_05_mlops_deployment_summary_lexrank.txt | Words: 62 (<=100) | Sentences: 4
+2026-10-24 10:47:28 | INFO     | Orchestrator | 
+Pipeline completed successfully! CSV metrics saved to:
+  1. data\outputs\metrics\evaluation_summary.csv
+  2. data\outputs\metrics\summary_distribution_stats.csv
+  3. data\outputs\metrics\ablation_summarizers.csv
+2026-10-24 11:12:04 | INFO     | LectureSummarizer | Initialized extractive LexRank baseline summarizer.
+2026-10-24 11:18:56 | INFO     | Orchestrator | Starting EdTech Subtitle Generator & Summarizer Pipeline...
+2026-10-24 11:18:56 | INFO     | WhisperTranscriber | Loading Whisper model 'base' on device='cpu' (fp16=False)...
+2026-10-24 11:18:57 | INFO     | TopicSegmenter | Loading topic embedding model: sentence-transformers/all-MiniLM-L6-v2...
+2026-10-24 11:19:02 | INFO     | LectureSummarizer | Loading summarization model 'facebook/bart-large-cnn' on 'cpu'...
+2026-10-24 11:19:09 | INFO     | Orchestrator | 
+--- Processing [DEV]: lecture_01_neural_networks.mp4 ---
+2026-10-24 11:19:09 | INFO     | AudioExtractor | Extracting audio from 'lecture_01_neural_networks.mp4' (Attempt 1/3)...
+2026-10-24 11:19:10 | INFO     | AudioExtractor | Audio extracted: lecture_01_neural_networks.wav | Duration: 629.38s | Latency: 1.628s
+2026-10-24 11:19:10 | INFO     | WhisperTranscriber | Starting transcription for 'lecture_01_neural_networks.wav' using Whisper-base...
+2026-10-24 11:22:48 | INFO     | WhisperTranscriber | Saved transcript: lecture_01_neural_networks_transcript.json | Segments: 120 | Words: 1571 | RTF: 0.3454
+2026-10-24 11:22:48 | INFO     | SRTFormatter | Generated SRT: lecture_01_neural_networks.srt | Cues: 223 | Valid: True
+2026-10-24 11:22:51 | INFO     | TopicSegmenter | Segmented 'lecture_01_neural_networks' into 19 topic sections (Max tokens enforced: 512).
+2026-10-24 11:25:47 | INFO     | LectureSummarizer | Saved summary: lecture_01_neural_networks_summary.txt | Words: 51 (<=100) | Sentences: 4
+2026-10-24 11:25:53 | INFO     | Orchestrator | 
+--- Processing [DEV]: lecture_02_nlp_transformers.mp4 ---
+2026-10-24 11:25:53 | INFO     | AudioExtractor | Extracting audio from 'lecture_02_nlp_transformers.mp4' (Attempt 1/3)...
+2026-10-24 11:25:54 | INFO     | AudioExtractor | Audio extracted: lecture_02_nlp_transformers.wav | Duration: 633.98s | Latency: 1.32s
+2026-10-24 11:25:54 | INFO     | WhisperTranscriber | Starting transcription for 'lecture_02_nlp_transformers.wav' using Whisper-base...
+2026-10-24 11:27:25 | INFO     | WhisperTranscriber | Saved transcript: lecture_02_nlp_transformers_transcript.json | Segments: 135 | Words: 1561 | RTF: 0.1435
+2026-10-24 11:27:25 | INFO     | SRTFormatter | Generated SRT: lecture_02_nlp_transformers.srt | Cues: 227 | Valid: True
+2026-10-24 11:27:26 | INFO     | TopicSegmenter | Segmented 'lecture_02_nlp_transformers' into 23 topic sections (Max tokens enforced: 512).
+2026-10-24 11:29:13 | INFO     | LectureSummarizer | Saved summary: lecture_02_nlp_transformers_summary.txt | Words: 42 (<=100) | Sentences: 4
+2026-10-24 11:29:16 | INFO     | Orchestrator | 
+--- Processing [TEST]: lecture_03_supervised_learning.mp4 ---
+2026-10-24 11:29:16 | INFO     | AudioExtractor | Extracting audio from 'lecture_03_supervised_learning.mp4' (Attempt 1/3)...
+2026-10-24 11:29:17 | INFO     | AudioExtractor | Audio extracted: lecture_03_supervised_learning.wav | Duration: 668.42s | Latency: 0.377s
+2026-10-24 11:29:17 | INFO     | WhisperTranscriber | Starting transcription for 'lecture_03_supervised_learning.wav' using Whisper-base...
+2026-10-24 11:30:40 | INFO     | WhisperTranscriber | Saved transcript: lecture_03_supervised_learning_transcript.json | Segments: 144 | Words: 1666 | RTF: 0.1253
+2026-10-24 11:30:40 | INFO     | SRTFormatter | Generated SRT: lecture_03_supervised_learning.srt | Cues: 242 | Valid: True
+2026-10-24 11:30:41 | INFO     | TopicSegmenter | Segmented 'lecture_03_supervised_learning' into 23 topic sections (Max tokens enforced: 512).
+2026-10-24 11:32:29 | INFO     | LectureSummarizer | Saved summary: lecture_03_supervised_learning_summary.txt | Words: 56 (<=100) | Sentences: 4
+2026-10-24 11:32:32 | INFO     | Orchestrator | 
+--- Processing [TEST]: lecture_04_computer_vision_cnns.mp4 ---
+2026-10-24 11:32:32 | INFO     | AudioExtractor | Extracting audio from 'lecture_04_computer_vision_cnns.mp4' (Attempt 1/3)...
+2026-10-24 11:32:32 | INFO     | AudioExtractor | Audio extracted: lecture_04_computer_vision_cnns.wav | Duration: 657.98s | Latency: 0.369s
+2026-10-24 11:32:32 | INFO     | WhisperTranscriber | Starting transcription for 'lecture_04_computer_vision_cnns.wav' using Whisper-base...
+2026-10-24 11:33:53 | INFO     | WhisperTranscriber | Saved transcript: lecture_04_computer_vision_cnns_transcript.json | Segments: 121 | Words: 1587 | RTF: 0.1236
+2026-10-24 11:33:53 | INFO     | SRTFormatter | Generated SRT: lecture_04_computer_vision_cnns.srt | Cues: 221 | Valid: True
+2026-10-24 11:33:54 | INFO     | TopicSegmenter | Segmented 'lecture_04_computer_vision_cnns' into 22 topic sections (Max tokens enforced: 512).
+2026-10-24 11:35:34 | INFO     | LectureSummarizer | Saved summary: lecture_04_computer_vision_cnns_summary.txt | Words: 62 (<=100) | Sentences: 4
+2026-10-24 11:35:37 | INFO     | Orchestrator | 
+--- Processing [TEST]: lecture_05_mlops_deployment.mp4 ---
+2026-10-24 11:35:37 | INFO     | AudioExtractor | Extracting audio from 'lecture_05_mlops_deployment.mp4' (Attempt 1/3)...
+2026-10-24 11:35:38 | INFO     | AudioExtractor | Audio extracted: lecture_05_mlops_deployment.wav | Duration: 678.27s | Latency: 0.384s
+2026-10-24 11:35:38 | INFO     | WhisperTranscriber | Starting transcription for 'lecture_05_mlops_deployment.wav' using Whisper-base...
+2026-10-24 11:37:02 | INFO     | WhisperTranscriber | Saved transcript: lecture_05_mlops_deployment_transcript.json | Segments: 130 | Words: 1610 | RTF: 0.124
+2026-10-24 11:37:02 | INFO     | SRTFormatter | Generated SRT: lecture_05_mlops_deployment.srt | Cues: 234 | Valid: True
+2026-10-24 11:37:02 | INFO     | TopicSegmenter | Segmented 'lecture_05_mlops_deployment' into 23 topic sections (Max tokens enforced: 512).
+2026-10-24 11:38:48 | INFO     | LectureSummarizer | Saved summary: lecture_05_mlops_deployment_summary.txt | Words: 62 (<=100) | Sentences: 4
+2026-10-24 11:38:51 | INFO     | Orchestrator | Running summarization model comparison (Ablation Study)...
+2026-10-24 11:40:24 | INFO     | LectureSummarizer | Saved summary: lecture_01_neural_networks_summary.txt | Words: 51 (<=100) | Sentences: 4
+2026-10-24 11:42:10 | INFO     | LectureSummarizer | Saved summary: lecture_02_nlp_transformers_summary.txt | Words: 42 (<=100) | Sentences: 4
+2026-10-24 11:43:59 | INFO     | LectureSummarizer | Saved summary: lecture_03_supervised_learning_summary.txt | Words: 56 (<=100) | Sentences: 4
+2026-10-24 11:45:42 | INFO     | LectureSummarizer | Saved summary: lecture_04_computer_vision_cnns_summary.txt | Words: 62 (<=100) | Sentences: 4
+2026-10-24 11:47:28 | INFO     | LectureSummarizer | Saved summary: lecture_05_mlops_deployment_summary.txt | Words: 62 (<=100) | Sentences: 4
+2026-10-24 11:47:31 | INFO     | LectureSummarizer | Loading summarization model 'google/flan-t5-base' on 'cpu'...
+2026-10-24 11:48:23 | INFO     | LectureSummarizer | Saved summary: lecture_01_neural_networks_summary_flan_t5_base.txt | Words: 70 (<=100) | Sentences: 4
+2026-10-24 11:49:30 | INFO     | LectureSummarizer | Saved summary: lecture_02_nlp_transformers_summary_flan_t5_base.txt | Words: 60 (<=100) | Sentences: 4
+2026-10-24 11:50:35 | INFO     | LectureSummarizer | Saved summary: lecture_03_supervised_learning_summary_flan_t5_base.txt | Words: 71 (<=100) | Sentences: 4
+2026-10-24 11:51:32 | INFO     | LectureSummarizer | Saved summary: lecture_04_computer_vision_cnns_summary_flan_t5_base.txt | Words: 60 (<=100) | Sentences: 4
+2026-10-24 11:52:36 | INFO     | LectureSummarizer | Saved summary: lecture_05_mlops_deployment_summary_flan_t5_base.txt | Words: 60 (<=100) | Sentences: 4
+2026-10-24 11:52:38 | INFO     | LectureSummarizer | Initialized extractive LexRank baseline summarizer.
+2026-10-24 11:52:39 | INFO     | LectureSummarizer | Saved summary: lecture_01_neural_networks_summary_lexrank.txt | Words: 65 (<=100) | Sentences: 4
+2026-10-24 11:52:43 | INFO     | LectureSummarizer | Saved summary: lecture_02_nlp_transformers_summary_lexrank.txt | Words: 47 (<=100) | Sentences: 4
+2026-10-24 11:52:46 | INFO     | LectureSummarizer | Saved summary: lecture_03_supervised_learning_summary_lexrank.txt | Words: 77 (<=100) | Sentences: 4
+2026-10-24 11:52:50 | INFO     | LectureSummarizer | Saved summary: lecture_04_computer_vision_cnns_summary_lexrank.txt | Words: 65 (<=100) | Sentences: 4
+2026-10-24 11:52:53 | INFO     | LectureSummarizer | Saved summary: lecture_05_mlops_deployment_summary_lexrank.txt | Words: 72 (<=100) | Sentences: 4
+2026-10-24 11:52:57 | INFO     | Orchestrator | 
+Pipeline completed successfully! CSV metrics saved to:
+  1. data\outputs\metrics\evaluation_summary.csv
+  2. data\outputs\metrics\summary_distribution_stats.csv
+  3. data\outputs\metrics\ablation_summarizers.csv
+2026-10-24 12:12:13 | INFO     | LectureSummarizer | Initialized extractive LexRank baseline summarizer.
+2026-10-24 12:15:38 | INFO     | Orchestrator | Starting EdTech Subtitle Generator & Summarizer Pipeline...
+2026-10-24 12:15:38 | INFO     | WhisperTranscriber | Loading Whisper model 'base' on device='cpu' (fp16=False)...
+2026-10-24 12:15:38 | INFO     | TopicSegmenter | Loading topic embedding model: sentence-transformers/all-MiniLM-L6-v2...
+2026-10-24 12:15:41 | INFO     | LectureSummarizer | Loading summarization model 'facebook/bart-large-cnn' on 'cpu'...
+2026-10-24 12:15:45 | INFO     | Orchestrator | 
+--- Processing [DEV]: lecture_01_neural_networks.mp4 ---
+2026-10-24 12:15:45 | INFO     | AudioExtractor | Extracting audio from 'lecture_01_neural_networks.mp4' (Attempt 1/3)...
+2026-10-24 12:15:46 | INFO     | AudioExtractor | Audio extracted: lecture_01_neural_networks.wav | Duration: 629.38s | Latency: 1.345s
+2026-10-24 12:15:46 | INFO     | WhisperTranscriber | Starting transcription for 'lecture_01_neural_networks.wav' using Whisper-base...
+2026-10-24 12:17:03 | INFO     | WhisperTranscriber | Saved transcript: lecture_01_neural_networks_transcript.json | Segments: 120 | Words: 1571 | RTF: 0.121
+2026-10-24 12:17:03 | INFO     | SRTFormatter | Generated SRT: lecture_01_neural_networks.srt | Cues: 223 | Valid: True
+2026-10-24 12:17:03 | INFO     | TopicSegmenter | Segmented 'lecture_01_neural_networks' into 19 topic sections (Max tokens enforced: 512).
+2026-10-24 12:18:29 | INFO     | LectureSummarizer | Saved summary: lecture_01_neural_networks_summary.txt | Words: 51 (<=100) | Sentences: 4
+2026-10-24 12:18:33 | INFO     | Orchestrator | 
+--- Processing [DEV]: lecture_02_nlp_transformers.mp4 ---
+2026-10-24 12:18:33 | INFO     | AudioExtractor | Extracting audio from 'lecture_02_nlp_transformers.mp4' (Attempt 1/3)...
+2026-10-24 12:18:34 | INFO     | AudioExtractor | Audio extracted: lecture_02_nlp_transformers.wav | Duration: 633.98s | Latency: 1.201s
+2026-10-24 12:18:34 | INFO     | WhisperTranscriber | Starting transcription for 'lecture_02_nlp_transformers.wav' using Whisper-base...
+2026-10-24 12:20:10 | INFO     | Orchestrator | Starting EdTech Subtitle Generator & Summarizer Pipeline...
+2026-10-24 12:20:10 | INFO     | WhisperTranscriber | Loading Whisper model 'base' on device='cpu' (fp16=False)...
+2026-10-24 12:20:11 | INFO     | TopicSegmenter | Loading topic embedding model: sentence-transformers/all-MiniLM-L6-v2...
+2026-10-24 12:20:31 | INFO     | Orchestrator | Starting EdTech Subtitle Generator & Summarizer Pipeline...
+2026-10-24 12:20:31 | INFO     | WhisperTranscriber | Loading Whisper model 'base' on device='cpu' (fp16=False)...
+2026-10-24 12:20:32 | INFO     | TopicSegmenter | Loading topic embedding model: sentence-transformers/all-MiniLM-L6-v2...
+2026-10-24 12:20:34 | INFO     | LectureSummarizer | Loading summarization model 'facebook/bart-large-cnn' on 'cpu'...
+2026-10-24 12:20:37 | INFO     | Orchestrator | 
+--- Processing [DEV]: lecture_01_neural_networks.mp4 ---
+2026-10-24 12:20:37 | INFO     | AudioExtractor | Extracting audio from 'lecture_01_neural_networks.mp4' (Attempt 1/3)...
+2026-10-24 12:20:38 | INFO     | AudioExtractor | Audio extracted: lecture_01_neural_networks.wav | Duration: 629.38s | Latency: 0.369s
+2026-10-24 12:20:38 | INFO     | WhisperTranscriber | Starting transcription for 'lecture_01_neural_networks.wav' using Whisper-base...
+2026-10-24 12:22:00 | INFO     | WhisperTranscriber | Saved transcript: lecture_01_neural_networks_transcript.json | Segments: 120 | Words: 1571 | RTF: 0.1309
+2026-10-24 12:22:00 | INFO     | SRTFormatter | Generated SRT: lecture_01_neural_networks.srt | Cues: 223 | Valid: True
+2026-10-24 12:22:01 | INFO     | TopicSegmenter | Segmented 'lecture_01_neural_networks' into 19 topic sections (Max tokens enforced: 512).
+2026-10-24 12:23:33 | INFO     | LectureSummarizer | Saved summary: lecture_01_neural_networks_summary.txt | Words: 51 (<=100) | Sentences: 4
+2026-10-24 12:23:36 | INFO     | Orchestrator | 
+--- Processing [DEV]: lecture_02_nlp_transformers.mp4 ---
+2026-10-24 12:23:36 | INFO     | AudioExtractor | Extracting audio from 'lecture_02_nlp_transformers.mp4' (Attempt 1/3)...
+2026-10-24 12:23:36 | INFO     | AudioExtractor | Audio extracted: lecture_02_nlp_transformers.wav | Duration: 633.98s | Latency: 0.353s
+2026-10-24 12:23:36 | INFO     | WhisperTranscriber | Starting transcription for 'lecture_02_nlp_transformers.wav' using Whisper-base...
+2026-10-24 12:24:59 | INFO     | WhisperTranscriber | Saved transcript: lecture_02_nlp_transformers_transcript.json | Segments: 135 | Words: 1561 | RTF: 0.1306
+2026-10-24 12:24:59 | INFO     | SRTFormatter | Generated SRT: lecture_02_nlp_transformers.srt | Cues: 227 | Valid: True
+2026-10-24 12:25:00 | INFO     | TopicSegmenter | Segmented 'lecture_02_nlp_transformers' into 23 topic sections (Max tokens enforced: 512).
+2026-10-24 12:26:45 | INFO     | LectureSummarizer | Saved summary: lecture_02_nlp_transformers_summary.txt | Words: 50 (<=100) | Sentences: 4
+2026-10-24 12:26:47 | INFO     | Orchestrator | 
+--- Processing [TEST]: lecture_03_supervised_learning.mp4 ---
+2026-10-24 12:26:47 | INFO     | AudioExtractor | Extracting audio from 'lecture_03_supervised_learning.mp4' (Attempt 1/3)...
+2026-10-24 12:26:47 | INFO     | AudioExtractor | Audio extracted: lecture_03_supervised_learning.wav | Duration: 668.42s | Latency: 0.388s
+2026-10-24 12:26:47 | INFO     | WhisperTranscriber | Starting transcription for 'lecture_03_supervised_learning.wav' using Whisper-base...
+2026-10-24 12:28:12 | INFO     | WhisperTranscriber | Saved transcript: lecture_03_supervised_learning_transcript.json | Segments: 144 | Words: 1666 | RTF: 0.1266
+2026-10-24 12:28:12 | INFO     | SRTFormatter | Generated SRT: lecture_03_supervised_learning.srt | Cues: 242 | Valid: True
+2026-10-24 12:28:13 | INFO     | TopicSegmenter | Segmented 'lecture_03_supervised_learning' into 23 topic sections (Max tokens enforced: 512).
+2026-10-24 12:29:58 | INFO     | LectureSummarizer | Saved summary: lecture_03_supervised_learning_summary.txt | Words: 56 (<=100) | Sentences: 4
+2026-10-24 12:30:01 | INFO     | Orchestrator | 
+--- Processing [TEST]: lecture_04_computer_vision_cnns.mp4 ---
+2026-10-24 12:30:01 | INFO     | AudioExtractor | Extracting audio from 'lecture_04_computer_vision_cnns.mp4' (Attempt 1/3)...
+2026-10-24 12:30:01 | INFO     | AudioExtractor | Audio extracted: lecture_04_computer_vision_cnns.wav | Duration: 657.98s | Latency: 0.403s
+2026-10-24 12:30:01 | INFO     | WhisperTranscriber | Starting transcription for 'lecture_04_computer_vision_cnns.wav' using Whisper-base...
+2026-10-24 12:31:22 | INFO     | WhisperTranscriber | Saved transcript: lecture_04_computer_vision_cnns_transcript.json | Segments: 121 | Words: 1587 | RTF: 0.123
+2026-10-24 12:31:22 | INFO     | SRTFormatter | Generated SRT: lecture_04_computer_vision_cnns.srt | Cues: 221 | Valid: True
+2026-10-24 12:31:22 | INFO     | TopicSegmenter | Segmented 'lecture_04_computer_vision_cnns' into 22 topic sections (Max tokens enforced: 512).
+2026-10-24 12:33:02 | INFO     | LectureSummarizer | Saved summary: lecture_04_computer_vision_cnns_summary.txt | Words: 62 (<=100) | Sentences: 4
+2026-10-24 12:33:05 | INFO     | Orchestrator | 
+--- Processing [TEST]: lecture_05_mlops_deployment.mp4 ---
+2026-10-24 12:33:05 | INFO     | AudioExtractor | Extracting audio from 'lecture_05_mlops_deployment.mp4' (Attempt 1/3)...
+2026-10-24 12:33:05 | INFO     | AudioExtractor | Audio extracted: lecture_05_mlops_deployment.wav | Duration: 678.27s | Latency: 0.43s
+2026-10-24 12:33:05 | INFO     | WhisperTranscriber | Starting transcription for 'lecture_05_mlops_deployment.wav' using Whisper-base...
+2026-10-24 12:34:30 | INFO     | WhisperTranscriber | Saved transcript: lecture_05_mlops_deployment_transcript.json | Segments: 130 | Words: 1610 | RTF: 0.1241
+2026-10-24 12:34:30 | INFO     | SRTFormatter | Generated SRT: lecture_05_mlops_deployment.srt | Cues: 234 | Valid: True
+2026-10-24 12:34:30 | INFO     | TopicSegmenter | Segmented 'lecture_05_mlops_deployment' into 23 topic sections (Max tokens enforced: 512).
+2026-10-24 12:36:11 | INFO     | LectureSummarizer | Saved summary: lecture_05_mlops_deployment_summary.txt | Words: 62 (<=100) | Sentences: 4
+2026-10-24 12:36:16 | INFO     | Orchestrator | Running summarization model comparison (Ablation Study)...
+2026-10-24 12:37:48 | INFO     | LectureSummarizer | Saved summary: lecture_01_neural_networks_summary.txt | Words: 51 (<=100) | Sentences: 4
+2026-10-24 12:39:37 | INFO     | LectureSummarizer | Saved summary: lecture_02_nlp_transformers_summary.txt | Words: 50 (<=100) | Sentences: 4
+2026-10-24 12:41:23 | INFO     | LectureSummarizer | Saved summary: lecture_03_supervised_learning_summary.txt | Words: 56 (<=100) | Sentences: 4
+2026-10-24 12:43:05 | INFO     | LectureSummarizer | Saved summary: lecture_04_computer_vision_cnns_summary.txt | Words: 62 (<=100) | Sentences: 4
+2026-10-24 12:44:49 | INFO     | LectureSummarizer | Saved summary: lecture_05_mlops_deployment_summary.txt | Words: 62 (<=100) | Sentences: 4
+2026-10-24 12:44:51 | INFO     | LectureSummarizer | Loading summarization model 'google/flan-t5-base' on 'cpu'...
+2026-10-24 12:45:42 | INFO     | LectureSummarizer | Saved summary: lecture_01_neural_networks_summary_flan_t5_base.txt | Words: 70 (<=100) | Sentences: 4
+2026-10-24 12:46:49 | INFO     | LectureSummarizer | Saved summary: lecture_02_nlp_transformers_summary_flan_t5_base.txt | Words: 58 (<=100) | Sentences: 4
+2026-10-24 12:47:55 | INFO     | LectureSummarizer | Saved summary: lecture_03_supervised_learning_summary_flan_t5_base.txt | Words: 71 (<=100) | Sentences: 4
+2026-10-24 12:48:50 | INFO     | LectureSummarizer | Saved summary: lecture_04_computer_vision_cnns_summary_flan_t5_base.txt | Words: 60 (<=100) | Sentences: 4
+2026-10-24 12:49:52 | INFO     | LectureSummarizer | Saved summary: lecture_05_mlops_deployment_summary_flan_t5_base.txt | Words: 60 (<=100) | Sentences: 4
+2026-10-24 12:49:55 | INFO     | LectureSummarizer | Initialized extractive LexRank baseline summarizer.
+2026-10-24 12:49:56 | INFO     | LectureSummarizer | Saved summary: lecture_01_neural_networks_summary_lexrank.txt | Words: 65 (<=100) | Sentences: 4
+2026-10-24 12:50:00 | INFO     | LectureSummarizer | Saved summary: lecture_02_nlp_transformers_summary_lexrank.txt | Words: 47 (<=100) | Sentences: 4
+2026-10-24 12:50:03 | INFO     | LectureSummarizer | Saved summary: lecture_03_supervised_learning_summary_lexrank.txt | Words: 77 (<=100) | Sentences: 4
+2026-10-24 12:50:06 | INFO     | LectureSummarizer | Saved summary: lecture_04_computer_vision_cnns_summary_lexrank.txt | Words: 65 (<=100) | Sentences: 4
+2026-10-24 12:50:10 | INFO     | LectureSummarizer | Saved summary: lecture_05_mlops_deployment_summary_lexrank.txt | Words: 71 (<=100) | Sentences: 4
+2026-10-24 12:50:13 | INFO     | Orchestrator | 
+Pipeline completed successfully! CSV metrics saved to:
+  1. data\outputs\metrics\evaluation_summary.csv
+  2. data\outputs\metrics\summary_distribution_stats.csv
+  3. data\outputs\metrics\ablation_summarizers.csv
+2026-10-24 14:03:33 | INFO     | WhisperTranscriber | Loading Whisper model 'base' on device='cpu' (fp16=False)...
+2026-10-24 14:03:34 | INFO     | TopicSegmenter | Loading topic embedding model: sentence-transformers/all-MiniLM-L6-v2...
+2026-10-24 14:03:37 | INFO     | LectureSummarizer | Loading summarization model 'facebook/bart-large-cnn' on 'cpu'...
+2026-10-24 15:18:30 | INFO     | WhisperTranscriber | Loading Whisper model 'base' on device='cpu' (fp16=False)...
+2026-10-24 15:18:31 | INFO     | TopicSegmenter | Loading topic embedding model: sentence-transformers/all-MiniLM-L6-v2...
+2026-10-24 15:18:34 | INFO     | LectureSummarizer | Loading summarization model 'facebook/bart-large-cnn' on 'cpu'...
+2026-10-24 15:20:39 | INFO     | AudioExtractor | Extracting audio from 'sIEL9gMOqOY.wav' (Attempt 1/3)...
+2026-10-24 15:20:40 | INFO     | AudioExtractor | Audio extracted: sIEL9gMOqOY.wav | Duration: 768.21s | Latency: 0.818s
+2026-10-24 15:20:40 | INFO     | WhisperTranscriber | Starting transcription for 'sIEL9gMOqOY.wav' using Whisper-base...
+2026-10-24 15:22:22 | INFO     | WhisperTranscriber | Saved transcript: sIEL9gMOqOY_transcript.json | Segments: 295 | Words: 1791 | RTF: 0.1322
+2026-10-24 15:22:22 | INFO     | SRTFormatter | Generated SRT: sIEL9gMOqOY.srt | Cues: 296 | Valid: True
+2026-10-24 15:22:22 | INFO     | TopicSegmenter | Segmented 'sIEL9gMOqOY' into 25 topic sections (Max tokens enforced: 512).
+2026-10-24 15:24:31 | INFO     | LectureSummarizer | Saved summary: sIEL9gMOqOY_summary.txt | Words: 44 (<=100) | Sentences: 4
+2026-10-24 20:02:18 | INFO     | WhisperTranscriber | Loading Whisper model 'base' on device='cpu' (fp16=False)...
+2026-10-24 20:02:21 | INFO     | TopicSegmenter | Loading topic embedding model: sentence-transformers/all-MiniLM-L6-v2...
+2026-10-24 20:02:27 | INFO     | LectureSummarizer | Loading summarization model 'facebook/bart-large-cnn' on 'cpu'...
+2026-10-24 20:06:25 | INFO     | AudioExtractor | Extracting audio from 'lYwf1-causo.wav' (Attempt 1/3)...
+2026-10-24 20:06:26 | INFO     | AudioExtractor | Audio extracted: lYwf1-causo.wav | Duration: 439.47s | Latency: 0.672s
+2026-10-24 20:06:26 | INFO     | WhisperTranscriber | Starting transcription for 'lYwf1-causo.wav' using Whisper-base...
+2026-10-24 20:10:31 | INFO     | WhisperTranscriber | Saved transcript: lYwf1-causo_transcript.json | Segments: 92 | Words: 1201 | RTF: 0.5576
+2026-10-24 20:10:31 | INFO     | SRTFormatter | Generated SRT: lYwf1-causo.srt | Cues: 132 | Valid: True
+2026-10-24 20:10:31 | INFO     | TopicSegmenter | Segmented 'lYwf1-causo' into 13 topic sections (Max tokens enforced: 512).
+2026-10-24 20:15:47 | INFO     | LectureSummarizer | Saved summary: lYwf1-causo_summary.txt | Words: 58 (<=100) | Sentences: 4
+2026-10-24 20:40:35 | INFO     | WhisperTranscriber | Loading Whisper model 'medium' on device='cpu' (fp16=False)...
+2026-10-24 20:49:02 | INFO     | TopicSegmenter | Loading topic embedding model: sentence-transformers/all-MiniLM-L6-v2...
+2026-10-24 20:49:05 | INFO     | LectureSummarizer | Loading summarization model 'google/flan-t5-base' on 'cpu'...
+2026-10-24 20:53:49 | INFO     | AudioExtractor | Extracting audio from 'lYwf1-causo.wav' (Attempt 1/3)...
+2026-10-24 20:53:50 | INFO     | AudioExtractor | Audio extracted: lYwf1-causo.wav | Duration: 439.47s | Latency: 0.653s
+2026-10-24 20:53:50 | INFO     | WhisperTranscriber | Starting transcription for 'lYwf1-causo.wav' using Whisper-medium...
+2026-10-24 21:07:08 | INFO     | WhisperTranscriber | Saved transcript: lYwf1-causo_transcript.json | Segments: 95 | Words: 1207 | RTF: 1.8168
+2026-10-24 21:07:08 | INFO     | SRTFormatter | Generated SRT: lYwf1-causo.srt | Cues: 133 | Valid: True
+2026-10-24 21:07:09 | INFO     | TopicSegmenter | Segmented 'lYwf1-causo' into 13 topic sections (Max tokens enforced: 512).
+2026-10-24 21:08:23 | INFO     | LectureSummarizer | Saved summary: lYwf1-causo_summary.txt | Words: 49 (<=100) | Sentences: 4
+2026-10-24 21:39:19 | INFO     | WhisperTranscriber | Loading Whisper model 'medium' on device='cpu' (fp16=False)...
+2026-10-24 21:39:30 | INFO     | TopicSegmenter | Loading topic embedding model: sentence-transformers/all-MiniLM-L6-v2...
+2026-10-24 21:39:33 | INFO     | LectureSummarizer | Loading summarization model 'google/flan-t5-base' on 'cpu'...
+2026-10-24 21:41:07 | INFO     | AudioExtractor | Extracting audio from 'lYwf1-causo.wav' (Attempt 1/3)...
+2026-10-24 21:41:07 | INFO     | AudioExtractor | Audio extracted: lYwf1-causo.wav | Duration: 439.47s | Latency: 0.549s
+2026-10-24 21:41:07 | INFO     | WhisperTranscriber | Starting transcription for 'lYwf1-causo.wav' using Whisper-medium...
+2026-10-24 21:51:14 | INFO     | WhisperTranscriber | Saved transcript: lYwf1-causo_transcript.json | Segments: 95 | Words: 1207 | RTF: 1.381
+2026-10-24 21:51:14 | INFO     | SRTFormatter | Generated SRT: lYwf1-causo.srt | Cues: 133 | Valid: True
+2026-10-24 21:51:15 | INFO     | TopicSegmenter | Segmented 'lYwf1-causo' into 13 topic sections (Max tokens enforced: 512).
+2026-10-24 21:52:11 | INFO     | LectureSummarizer | Saved summary: lYwf1-causo_summary.txt | Words: 49 (<=100) | Sentences: 4
+2026-10-24 22:00:08 | INFO     | LectureSummarizer | Initialized extractive LexRank baseline summarizer.
+2026-10-24 22:16:45 | INFO     | WhisperTranscriber | Loading Whisper model 'medium' on device='cpu' (fp16=False)...
+2026-10-24 22:16:56 | INFO     | TopicSegmenter | Loading topic embedding model: sentence-transformers/all-MiniLM-L6-v2...
+2026-10-24 22:16:59 | INFO     | LectureSummarizer | Loading summarization model 'google/flan-t5-base' on 'cpu'...
+2026-10-24 22:19:38 | INFO     | AudioExtractor | Extracting audio from 'lYwf1-causo.wav' (Attempt 1/3)...
+2026-10-24 22:19:38 | INFO     | AudioExtractor | Audio extracted: lYwf1-causo.wav | Duration: 439.47s | Latency: 0.454s
+2026-10-24 22:19:38 | INFO     | WhisperTranscriber | Starting transcription for 'lYwf1-causo.wav' using Whisper-medium...
+2026-10-24 22:29:40 | INFO     | WhisperTranscriber | Saved transcript: lYwf1-causo_transcript.json | Segments: 95 | Words: 1207 | RTF: 1.3697
+2026-10-24 22:29:40 | INFO     | SRTFormatter | Generated SRT: lYwf1-causo.srt | Cues: 133 | Valid: True
+2026-10-24 22:29:41 | INFO     | TopicSegmenter | Segmented 'lYwf1-causo' into 13 topic sections (Max tokens enforced: 512).
+2026-10-24 22:30:39 | INFO     | LectureSummarizer | Saved summary: lYwf1-causo_summary.txt | Words: 55 (<=100) | Sentences: 4
+2026-10-24 22:36:28 | INFO     | WhisperTranscriber | Loading Whisper model 'medium' on device='cpu' (fp16=False)...
+2026-10-24 22:36:38 | INFO     | TopicSegmenter | Loading topic embedding model: sentence-transformers/all-MiniLM-L6-v2...
+2026-10-24 22:36:41 | INFO     | LectureSummarizer | Loading summarization model 'facebook/bart-large-cnn' on 'cpu'...
+2026-10-24 22:39:32 | INFO     | AudioExtractor | Extracting audio from 'lYwf1-causo.wav' (Attempt 1/3)...
+2026-10-24 22:39:33 | INFO     | AudioExtractor | Audio extracted: lYwf1-causo.wav | Duration: 439.47s | Latency: 0.547s
+2026-10-24 22:39:33 | INFO     | WhisperTranscriber | Starting transcription for 'lYwf1-causo.wav' using Whisper-medium...
+2026-10-24 22:49:13 | INFO     | WhisperTranscriber | Saved transcript: lYwf1-causo_transcript.json | Segments: 95 | Words: 1207 | RTF: 1.3197
+2026-10-24 22:49:13 | INFO     | SRTFormatter | Generated SRT: lYwf1-causo.srt | Cues: 133 | Valid: True
+2026-10-24 22:49:13 | INFO     | TopicSegmenter | Segmented 'lYwf1-causo' into 13 topic sections (Max tokens enforced: 512).
+2026-10-24 22:50:46 | INFO     | LectureSummarizer | Saved summary: lYwf1-causo_summary.txt | Words: 65 (<=100) | Sentences: 4
+2026-10-25 11:32:29 | INFO     | LectureSummarizer | Initialized extractive LexRank baseline summarizer.
+2026-10-25 11:49:29 | INFO     | Orchestrator | Starting EdTech Subtitle Generator & Summarizer Pipeline...
+2026-10-25 11:49:29 | INFO     | WhisperTranscriber | Loading Whisper model 'medium' on device='cpu' (fp16=False)...
+2026-10-25 11:49:42 | INFO     | TopicSegmenter | Loading topic embedding model: sentence-transformers/all-MiniLM-L6-v2...
+2026-10-25 11:49:46 | INFO     | LectureSummarizer | Loading summarization model 'facebook/bart-large-cnn' on 'cpu'...
+2026-10-25 11:49:52 | INFO     | Orchestrator | 
+--- Processing [DEV]: lecture_01_neural_networks.mp4 ---
+2026-10-25 11:49:52 | INFO     | AudioExtractor | Extracting audio from 'lecture_01_neural_networks.mp4' (Attempt 1/3)...
+2026-10-25 11:49:54 | INFO     | AudioExtractor | Audio extracted: lecture_01_neural_networks.wav | Duration: 629.38s | Latency: 1.429s
+2026-10-25 11:49:54 | INFO     | WhisperTranscriber | Starting transcription for 'lecture_01_neural_networks.wav' using Whisper-medium...
+2026-10-25 12:01:37 | INFO     | WhisperTranscriber | Saved transcript: lecture_01_neural_networks_transcript.json | Segments: 152 | Words: 1546 | RTF: 1.117
+2026-10-25 12:01:37 | INFO     | SRTFormatter | Generated SRT: lecture_01_neural_networks.srt | Cues: 235 | Valid: True
+2026-10-25 12:01:38 | INFO     | TopicSegmenter | Segmented 'lecture_01_neural_networks' into 23 topic sections (Max tokens enforced: 512).
+2026-10-25 12:03:21 | INFO     | LectureSummarizer | Saved summary: lecture_01_neural_networks_summary.txt | Words: 61 (<=100) | Sentences: 4
+2026-10-25 12:03:24 | INFO     | Orchestrator | 
+--- Processing [DEV]: lecture_02_nlp_transformers.mp4 ---
+2026-10-25 12:03:24 | INFO     | AudioExtractor | Extracting audio from 'lecture_02_nlp_transformers.mp4' (Attempt 1/3)...
+2026-10-25 12:03:26 | INFO     | AudioExtractor | Audio extracted: lecture_02_nlp_transformers.wav | Duration: 633.98s | Latency: 1.298s
+2026-10-25 12:03:26 | INFO     | WhisperTranscriber | Starting transcription for 'lecture_02_nlp_transformers.wav' using Whisper-medium...
+2026-10-25 12:15:39 | INFO     | WhisperTranscriber | Saved transcript: lecture_02_nlp_transformers_transcript.json | Segments: 150 | Words: 1534 | RTF: 1.1573
+2026-10-25 12:15:40 | INFO     | SRTFormatter | Generated SRT: lecture_02_nlp_transformers.srt | Cues: 232 | Valid: True
+2026-10-25 12:15:40 | INFO     | TopicSegmenter | Segmented 'lecture_02_nlp_transformers' into 24 topic sections (Max tokens enforced: 512).
+2026-10-25 12:17:48 | INFO     | LectureSummarizer | Saved summary: lecture_02_nlp_transformers_summary.txt | Words: 60 (<=100) | Sentences: 4
+2026-10-25 12:17:51 | INFO     | Orchestrator | 
+--- Processing [TEST]: lecture_03_supervised_learning.mp4 ---
+2026-10-25 12:17:51 | INFO     | AudioExtractor | Extracting audio from 'lecture_03_supervised_learning.mp4' (Attempt 1/3)...
+2026-10-25 12:17:51 | INFO     | AudioExtractor | Audio extracted: lecture_03_supervised_learning.wav | Duration: 668.42s | Latency: 0.465s
+2026-10-25 12:17:51 | INFO     | WhisperTranscriber | Starting transcription for 'lecture_03_supervised_learning.wav' using Whisper-medium...
+2026-10-25 12:31:16 | INFO     | WhisperTranscriber | Saved transcript: lecture_03_supervised_learning_transcript.json | Segments: 162 | Words: 1629 | RTF: 1.2037
+2026-10-25 12:31:16 | INFO     | SRTFormatter | Generated SRT: lecture_03_supervised_learning.srt | Cues: 258 | Valid: True
+2026-10-25 12:31:17 | INFO     | TopicSegmenter | Segmented 'lecture_03_supervised_learning' into 24 topic sections (Max tokens enforced: 512).
+2026-10-25 12:33:58 | INFO     | LectureSummarizer | Saved summary: lecture_03_supervised_learning_summary.txt | Words: 54 (<=100) | Sentences: 4
+2026-10-25 12:34:02 | INFO     | Orchestrator | 
+--- Processing [TEST]: lecture_04_computer_vision_cnns.mp4 ---
+2026-10-25 12:34:02 | INFO     | AudioExtractor | Extracting audio from 'lecture_04_computer_vision_cnns.mp4' (Attempt 1/3)...
+2026-10-25 12:34:02 | INFO     | AudioExtractor | Audio extracted: lecture_04_computer_vision_cnns.wav | Duration: 657.98s | Latency: 0.418s
+2026-10-25 12:34:02 | INFO     | WhisperTranscriber | Starting transcription for 'lecture_04_computer_vision_cnns.wav' using Whisper-medium...
+2026-10-25 12:54:59 | INFO     | Orchestrator | Starting EdTech Subtitle Generator & Summarizer Pipeline...
+2026-10-25 12:54:59 | INFO     | WhisperTranscriber | Loading Whisper model 'base' on device='cpu' (fp16=False)...
+2026-10-25 12:54:59 | INFO     | TopicSegmenter | Loading topic embedding model: sentence-transformers/all-MiniLM-L6-v2...
+2026-10-25 12:55:02 | INFO     | LectureSummarizer | Loading summarization model 'facebook/bart-large-cnn' on 'cpu'...
+2026-10-25 12:55:07 | INFO     | Orchestrator | 
+--- Processing [DEV]: lecture_01_neural_networks.mp4 ---
+2026-10-25 12:55:07 | INFO     | AudioExtractor | Extracting audio from 'lecture_01_neural_networks.mp4' (Attempt 1/3)...
+2026-10-25 12:55:08 | INFO     | AudioExtractor | Audio extracted: lecture_01_neural_networks.wav | Duration: 629.38s | Latency: 1.351s
+2026-10-25 12:55:08 | INFO     | WhisperTranscriber | Starting transcription for 'lecture_01_neural_networks.wav' using Whisper-base...
+2026-10-25 12:56:53 | INFO     | WhisperTranscriber | Saved transcript: lecture_01_neural_networks_transcript.json | Segments: 120 | Words: 1571 | RTF: 0.1666
+2026-10-25 12:56:53 | INFO     | SRTFormatter | Generated SRT: lecture_01_neural_networks.srt | Cues: 223 | Valid: True
+2026-10-25 12:56:54 | INFO     | TopicSegmenter | Segmented 'lecture_01_neural_networks' into 19 topic sections (Max tokens enforced: 512).
+2026-10-25 12:59:18 | INFO     | LectureSummarizer | Saved summary: lecture_01_neural_networks_summary.txt | Words: 51 (<=100) | Sentences: 4
+2026-10-25 12:59:21 | INFO     | Orchestrator | 
+--- Processing [DEV]: lecture_02_nlp_transformers.mp4 ---
+2026-10-25 12:59:21 | INFO     | AudioExtractor | Extracting audio from 'lecture_02_nlp_transformers.mp4' (Attempt 1/3)...
+2026-10-25 12:59:22 | INFO     | AudioExtractor | Audio extracted: lecture_02_nlp_transformers.wav | Duration: 633.98s | Latency: 0.491s
+2026-10-25 12:59:22 | INFO     | WhisperTranscriber | Starting transcription for 'lecture_02_nlp_transformers.wav' using Whisper-base...
+2026-10-25 13:01:07 | INFO     | WhisperTranscriber | Saved transcript: lecture_02_nlp_transformers_transcript.json | Segments: 135 | Words: 1561 | RTF: 0.1667
+2026-10-25 13:01:07 | INFO     | SRTFormatter | Generated SRT: lecture_02_nlp_transformers.srt | Cues: 227 | Valid: True
+2026-10-25 13:01:08 | INFO     | TopicSegmenter | Segmented 'lecture_02_nlp_transformers' into 23 topic sections (Max tokens enforced: 512).
+2026-10-25 13:02:55 | INFO     | LectureSummarizer | Saved summary: lecture_02_nlp_transformers_summary.txt | Words: 50 (<=100) | Sentences: 4
+2026-10-25 13:02:57 | INFO     | Orchestrator | 
+--- Processing [TEST]: lecture_03_supervised_learning.mp4 ---
+2026-10-25 13:02:57 | INFO     | AudioExtractor | Extracting audio from 'lecture_03_supervised_learning.mp4' (Attempt 1/3)...
+2026-10-25 13:02:57 | INFO     | AudioExtractor | Audio extracted: lecture_03_supervised_learning.wav | Duration: 668.42s | Latency: 0.377s
+2026-10-25 13:02:57 | INFO     | WhisperTranscriber | Starting transcription for 'lecture_03_supervised_learning.wav' using Whisper-base...
+2026-10-25 13:04:21 | INFO     | WhisperTranscriber | Saved transcript: lecture_03_supervised_learning_transcript.json | Segments: 144 | Words: 1666 | RTF: 0.1252
+2026-10-25 13:04:21 | INFO     | SRTFormatter | Generated SRT: lecture_03_supervised_learning.srt | Cues: 242 | Valid: True
+2026-10-25 13:04:22 | INFO     | TopicSegmenter | Segmented 'lecture_03_supervised_learning' into 23 topic sections (Max tokens enforced: 512).
+2026-10-25 13:06:09 | INFO     | LectureSummarizer | Saved summary: lecture_03_supervised_learning_summary.txt | Words: 56 (<=100) | Sentences: 4
+2026-10-25 13:06:11 | INFO     | Orchestrator | 
+--- Processing [TEST]: lecture_04_computer_vision_cnns.mp4 ---
+2026-10-25 13:06:11 | INFO     | AudioExtractor | Extracting audio from 'lecture_04_computer_vision_cnns.mp4' (Attempt 1/3)...
+2026-10-25 13:06:12 | INFO     | AudioExtractor | Audio extracted: lecture_04_computer_vision_cnns.wav | Duration: 657.98s | Latency: 0.398s
+2026-10-25 13:06:12 | INFO     | WhisperTranscriber | Starting transcription for 'lecture_04_computer_vision_cnns.wav' using Whisper-base...
+2026-10-25 13:07:35 | INFO     | WhisperTranscriber | Saved transcript: lecture_04_computer_vision_cnns_transcript.json | Segments: 121 | Words: 1587 | RTF: 0.1263
+2026-10-25 13:07:35 | INFO     | SRTFormatter | Generated SRT: lecture_04_computer_vision_cnns.srt | Cues: 221 | Valid: True
+2026-10-25 13:07:35 | INFO     | TopicSegmenter | Segmented 'lecture_04_computer_vision_cnns' into 22 topic sections (Max tokens enforced: 512).
+2026-10-25 13:09:16 | INFO     | LectureSummarizer | Saved summary: lecture_04_computer_vision_cnns_summary.txt | Words: 62 (<=100) | Sentences: 4
+2026-10-25 13:09:19 | INFO     | Orchestrator | 
+--- Processing [TEST]: lecture_05_mlops_deployment.mp4 ---
+2026-10-25 13:09:19 | INFO     | AudioExtractor | Extracting audio from 'lecture_05_mlops_deployment.mp4' (Attempt 1/3)...
+2026-10-25 13:09:19 | INFO     | AudioExtractor | Audio extracted: lecture_05_mlops_deployment.wav | Duration: 678.27s | Latency: 0.433s
+2026-10-25 13:09:19 | INFO     | WhisperTranscriber | Starting transcription for 'lecture_05_mlops_deployment.wav' using Whisper-base...
+2026-10-25 13:10:45 | INFO     | WhisperTranscriber | Saved transcript: lecture_05_mlops_deployment_transcript.json | Segments: 130 | Words: 1610 | RTF: 0.1266
+2026-10-25 13:10:45 | INFO     | SRTFormatter | Generated SRT: lecture_05_mlops_deployment.srt | Cues: 234 | Valid: True
+2026-10-25 13:10:45 | INFO     | TopicSegmenter | Segmented 'lecture_05_mlops_deployment' into 23 topic sections (Max tokens enforced: 512).
+2026-10-25 13:12:28 | INFO     | LectureSummarizer | Saved summary: lecture_05_mlops_deployment_summary.txt | Words: 62 (<=100) | Sentences: 4
+2026-10-25 13:12:31 | INFO     | Orchestrator | Running summarization model comparison (Ablation Study)...
+2026-10-25 13:14:03 | INFO     | LectureSummarizer | Saved summary: lecture_01_neural_networks_summary.txt | Words: 51 (<=100) | Sentences: 4
+2026-10-25 13:15:53 | INFO     | LectureSummarizer | Saved summary: lecture_02_nlp_transformers_summary.txt | Words: 50 (<=100) | Sentences: 4
+2026-10-25 13:17:43 | INFO     | LectureSummarizer | Saved summary: lecture_03_supervised_learning_summary.txt | Words: 56 (<=100) | Sentences: 4
+2026-10-25 13:19:27 | INFO     | LectureSummarizer | Saved summary: lecture_04_computer_vision_cnns_summary.txt | Words: 62 (<=100) | Sentences: 4
+2026-10-25 13:21:13 | INFO     | LectureSummarizer | Saved summary: lecture_05_mlops_deployment_summary.txt | Words: 62 (<=100) | Sentences: 4
+2026-10-25 13:21:16 | INFO     | LectureSummarizer | Loading summarization model 'google/flan-t5-base' on 'cpu'...
+2026-10-25 13:22:08 | INFO     | LectureSummarizer | Saved summary: lecture_01_neural_networks_summary_flan_t5_base.txt | Words: 70 (<=100) | Sentences: 4
+2026-10-25 13:23:16 | INFO     | LectureSummarizer | Saved summary: lecture_02_nlp_transformers_summary_flan_t5_base.txt | Words: 58 (<=100) | Sentences: 4
+2026-10-25 13:24:22 | INFO     | LectureSummarizer | Saved summary: lecture_03_supervised_learning_summary_flan_t5_base.txt | Words: 71 (<=100) | Sentences: 4
+2026-10-25 13:25:19 | INFO     | LectureSummarizer | Saved summary: lecture_04_computer_vision_cnns_summary_flan_t5_base.txt | Words: 60 (<=100) | Sentences: 4
+2026-10-25 13:26:25 | INFO     | LectureSummarizer | Saved summary: lecture_05_mlops_deployment_summary_flan_t5_base.txt | Words: 60 (<=100) | Sentences: 4
+2026-10-25 13:26:27 | INFO     | LectureSummarizer | Initialized extractive LexRank baseline summarizer.
+2026-10-25 13:26:28 | INFO     | LectureSummarizer | Saved summary: lecture_01_neural_networks_summary_lexrank.txt | Words: 65 (<=100) | Sentences: 4
+2026-10-25 13:26:32 | INFO     | LectureSummarizer | Saved summary: lecture_02_nlp_transformers_summary_lexrank.txt | Words: 47 (<=100) | Sentences: 4
+2026-10-25 13:26:35 | INFO     | LectureSummarizer | Saved summary: lecture_03_supervised_learning_summary_lexrank.txt | Words: 77 (<=100) | Sentences: 4
+2026-10-25 13:26:39 | INFO     | LectureSummarizer | Saved summary: lecture_04_computer_vision_cnns_summary_lexrank.txt | Words: 65 (<=100) | Sentences: 4
+2026-10-25 13:26:42 | INFO     | LectureSummarizer | Saved summary: lecture_05_mlops_deployment_summary_lexrank.txt | Words: 71 (<=100) | Sentences: 4
+2026-10-25 13:26:46 | INFO     | Orchestrator | 
+Pipeline completed successfully! CSV metrics saved to:
+  1. data\outputs\metrics\evaluation_summary.csv
+  2. data\outputs\metrics\summary_distribution_stats.csv
+  3. data\outputs\metrics\ablation_summarizers.csv

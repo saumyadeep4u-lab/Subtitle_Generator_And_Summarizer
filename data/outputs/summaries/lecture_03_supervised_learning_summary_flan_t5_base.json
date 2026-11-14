@@ -1,0 +1,175 @@
+{
+  "video_id": "lecture_03_supervised_learning",
+  "summarizer_model": "google/flan-t5-base",
+  "device": "cpu",
+  "latency_sec": 63.464,
+  "num_sections": 23,
+  "executive_summary": "Supervised machine learning, generalization theory, and rigorous evaluation methodology are discussed in this course. High capacity models with too many degrees of freedom exhibit low training error but high variance, resulting in severe overfitting. Precision measures the proportion of positive predictive predictions that are truly positive, controlling false positive alert fatigue, and more. The F1 score computes the harmonic mean of precision and recall, penalizing extreme imbalances between the two metrics.",
+  "word_count": 71,
+  "sentence_count": 4,
+  "native_word_limit_met": true,
+  "post_processing_triggered": false,
+  "section_summaries": [
+    {
+      "section_id": 1,
+      "start_sec": 0.0,
+      "end_sec": 29.46,
+      "section_summary": "This lecture focuses on supervised machine learning, generalization theory, and rigorous evaluation methodology, as well as supervised learning.",
+      "word_count": 18
+    },
+    {
+      "section_id": 2,
+      "start_sec": 29.46,
+      "end_sec": 53.92,
+      "section_summary": "Variance measures how sensitively the learned model fluctuates when trained on different random samples drawn from the same underlying population.",
+      "word_count": 20
+    },
+    {
+      "section_id": 3,
+      "start_sec": 53.92,
+      "end_sec": 82.08,
+      "section_summary": "Logistic regression models the log-odds of binary class membership as a linear combination of input features optimized by a maximum likelihood estimation.",
+      "word_count": 22
+    },
+    {
+      "section_id": 4,
+      "start_sec": 83.08,
+      "end_sec": 109.1,
+      "section_summary": "Gradient-Boosted Decision Trees (GBTs) build shallow trees where each new tree fits the negative gradient of the gradient.",
+      "word_count": 18
+    },
+    {
+      "section_id": 5,
+      "start_sec": 109.1,
+      "end_sec": 135.26,
+      "section_summary": "This lecture focuses on data partitioning, cross-validation, and preventing data leakage in applied data science.",
+      "word_count": 15
+    },
+    {
+      "section_id": 6,
+      "start_sec": 135.26,
+      "end_sec": 158.74,
+      "section_summary": "The development data is partitioned into K-folds preserving class ratios, rotating the validation fold K times to estimate mean and standard deviation performance.",
+      "word_count": 23
+    },
+    {
+      "section_id": 7,
+      "start_sec": 159.42,
+      "end_sec": 189.04,
+      "section_summary": "Precision measures the proportion of positive predictions that are truly positive, controlling false positive alert fatigue. This lecture analyzes classification metrics beyond simple accuracy for imbalanced datasets.",
+      "word_count": 27
+    },
+    {
+      "section_id": 8,
+      "start_sec": 189.04,
+      "end_sec": 215.86,
+      "section_summary": "The F1 score computes the harmonic mean of precision and recall, penalizing extreme imbalances between the two metrics. This lecture delves deeper into the mathematical derivation of second order gradient boosting.",
+      "word_count": 31
+    },
+    {
+      "section_id": 9,
+      "start_sec": 215.86,
+      "end_sec": 241.22,
+      "section_summary": "We propose a new regression tree function that minimizes the regularized empirical loss over all training examples, plus a complexity penalty on the number of terminal leaves and the squared L2 norm of leaf weights.",
+      "word_count": 35
+    },
+    {
+      "section_id": 10,
+      "start_sec": 241.22,
+      "end_sec": 269.6,
+      "section_summary": "Data leakage is a common problem with supervised learning benchmarks in industry projects. This talk focuses on how data leakage can be remedied.",
+      "word_count": 23
+    },
+    {
+      "section_id": 11,
+      "start_sec": 269.6,
+      "end_sec": 303.42,
+      "section_summary": "Probability calibration is a method for estimating the likelihood of a given probability distribution. It is based on the assumption that probability distributions can be derived from a large number of variables, such as a set of variables.",
+      "word_count": 38
+    },
+    {
+      "section_id": 12,
+      "start_sec": 303.42,
+      "end_sec": 330.32,
+      "section_summary": "",
+      "word_count": 0
+    },
+    {
+      "section_id": 13,
+      "start_sec": 330.32,
+      "end_sec": 359.2,
+      "section_summary": "Using asymmetric business cost matrices, analysts select optimal operating thresholds based on business cost data.",
+      "word_count": 15
+    },
+    {
+      "section_id": 14,
+      "start_sec": 359.2,
+      "end_sec": 386.82,
+      "section_summary": "Combining leakage-free cross-validation, calibrated ensemble models, and Shap attribution guarantees transparent and reliable predictive performance.",
+      "word_count": 15
+    },
+    {
+      "section_id": 15,
+      "start_sec": 386.82,
+      "end_sec": 413.66,
+      "section_summary": "A supervised machine learning algorithm observes a training dataset of feature vectors paired with ground truth target labels and estimates a mapping function.",
+      "word_count": 23
+    },
+    {
+      "section_id": 16,
+      "start_sec": 414.46,
+      "end_sec": 444.08,
+      "section_summary": "Variance measures how sensitively the learned model fluctuates when trained on different samples drawn from the same underlying population. High capacity models with too many degrees of freedom exhibit low training error but high variance.",
+      "word_count": 35
+    },
+    {
+      "section_id": 17,
+      "start_sec": 444.08,
+      "end_sec": 471.4,
+      "section_summary": "Logistic regression models the log-odds of binary class membership as a linear combination of input features, optimized via maximum likelihood estimation.",
+      "word_count": 21
+    },
+    {
+      "section_id": 18,
+      "start_sec": 471.4,
+      "end_sec": 496.46,
+      "section_summary": "Deep Decision Trees recursively partition feature space along axis align splits that maximize information gain or minimize gene impurity.",
+      "word_count": 19
+    },
+    {
+      "section_id": 19,
+      "start_sec": 496.46,
+      "end_sec": 529.38,
+      "section_summary": "This lecture focuses on data partitioning, cross-validation, and preventing data leakage in applied data science.",
+      "word_count": 15
+    },
+    {
+      "section_id": 20,
+      "start_sec": 529.38,
+      "end_sec": 555.8,
+      "section_summary": "Machine learning workflows enforce a strict three-way split into training, development validation, and unseen held-out test partitions.",
+      "word_count": 17
+    },
+    {
+      "section_id": 21,
+      "start_sec": 555.8,
+      "end_sec": 586.86,
+      "section_summary": "This lecture analyzes classification metrics beyond simple accuracy for imbalanced datasets. It focuses on the use of classification metrics for a wide range of applications.",
+      "word_count": 25
+    },
+    {
+      "section_id": 22,
+      "start_sec": 587.34,
+      "end_sec": 620.54,
+      "section_summary": "Recall, or sensitivity, measures the proportion of actual positive instances successfully recovered by the model, controlling false negative misses. The F1 score computes the harmonic mean of precision and recall.",
+      "word_count": 30
+    },
+    {
+      "section_id": 23,
+      "start_sec": 620.54,
+      "end_sec": 667.6,
+      "section_summary": "This lecture delves deeper into the mathematical derivation of second order gradient boosting used in modern tabular learning engines.",
+      "word_count": 19
+    }
+  ]
+}

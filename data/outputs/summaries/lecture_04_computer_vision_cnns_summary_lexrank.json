@@ -1,0 +1,168 @@
+{
+  "video_id": "lecture_04_computer_vision_cnns",
+  "summarizer_model": "lexrank",
+  "device": "cpu",
+  "latency_sec": 0.989,
+  "num_sections": 22,
+  "executive_summary": "This lecture examines computer vision and convolutional neural network architectures. Digital images are represented as three-dimensional tensors defined by height, width, and color channels such as red, green, and blue. By freezing early feature extraction layers and fine-tuning only the final classification head with data augmentation, models converge rapidly with high accuracy. A depthwise convolution applies a single spatial filter independently to each input channel.",
+  "word_count": 65,
+  "sentence_count": 4,
+  "native_word_limit_met": true,
+  "post_processing_triggered": false,
+  "section_summaries": [
+    {
+      "section_id": 1,
+      "start_sec": 0.0,
+      "end_sec": 27.02,
+      "section_summary": "This lecture examines computer vision and convolutional neural network architectures. Digital images are represented as three-dimensional tensors defined by height, width, and color channels such as red, green, and blue.",
+      "word_count": 30
+    },
+    {
+      "section_id": 2,
+      "start_sec": 27.02,
+      "end_sec": 56.96,
+      "section_summary": "Because the exact same filter weights are shared across every spatial location, the network detects visual patterns regardless of where they appear in the frame.",
+      "word_count": 25
+    },
+    {
+      "section_id": 3,
+      "start_sec": 56.96,
+      "end_sec": 84.82,
+      "section_summary": "Zero-padding adds a border of zeros around the input perimeter so convolutional filters can process edge pixels without shrinking spatial resolution prematurely.",
+      "word_count": 22
+    },
+    {
+      "section_id": 4,
+      "start_sec": 84.82,
+      "end_sec": 114.6,
+      "section_summary": "This lecture studies deep residual networks, transfer learning, and vision backbones.",
+      "word_count": 11
+    },
+    {
+      "section_id": 5,
+      "start_sec": 114.6,
+      "end_sec": 143.0,
+      "section_summary": "",
+      "word_count": 0
+    },
+    {
+      "section_id": 6,
+      "start_sec": 143.8,
+      "end_sec": 179.4,
+      "section_summary": "By freezing early feature extraction layers and fine-tuning only the final classification head with data augmentation, models converge rapidly with high accuracy. The module extends image classification to object detection and semantic segmentation.",
+      "word_count": 33
+    },
+    {
+      "section_id": 7,
+      "start_sec": 180.3,
+      "end_sec": 211.16,
+      "section_summary": "This lecture performs a concrete calculation of convolutional output dimensions and receptive field growth across stacked layers.",
+      "word_count": 17
+    },
+    {
+      "section_id": 8,
+      "start_sec": 211.16,
+      "end_sec": 239.76,
+      "section_summary": "",
+      "word_count": 0
+    },
+    {
+      "section_id": 9,
+      "start_sec": 239.76,
+      "end_sec": 271.52,
+      "section_summary": "This lecture examines how depthwise separable convolutions enable real-time computer vision on mobile and edge devices. Standard convolution performs spatial filtering and cross-channel feature combination simultaneously in a single heavy operation.",
+      "word_count": 31
+    },
+    {
+      "section_id": 10,
+      "start_sec": 272.06,
+      "end_sec": 299.76,
+      "section_summary": "A depthwise convolution applies a single spatial filter independently to each input channel. A pointwise 1 by 1 convolution projects and combines the channel outputs linearly.",
+      "word_count": 26
+    },
+    {
+      "section_id": 11,
+      "start_sec": 299.76,
+      "end_sec": 331.6,
+      "section_summary": "Recognizing both tiny distant objects and large foreground objects requires combining high-resolution spatial detail from early layers with rich semantic context from deep layers. To train pixelwise segmentation models underclass imbalance between foreground objects and background sky or road pixels, engineers combined cross-entropy.",
+      "word_count": 43
+    },
+    {
+      "section_id": 12,
+      "start_sec": 331.6,
+      "end_sec": 359.26,
+      "section_summary": "This lecture reviews advanced data augmentation paradigms and vision transformers.",
+      "word_count": 10
+    },
+    {
+      "section_id": 13,
+      "start_sec": 359.26,
+      "end_sec": 387.44,
+      "section_summary": "This lecture examines computer vision and convolutional neural network architectures.",
+      "word_count": 10
+    },
+    {
+      "section_id": 14,
+      "start_sec": 388.16,
+      "end_sec": 420.82,
+      "section_summary": "Digital images are represented as three-dimensional tensors defined by height, width, and color channels such as red, green, and blue. Connecting a standard fully connected layer directly to a high-resolution image requires hundreds of millions of parameters and destroys spatial topology.",
+      "word_count": 41
+    },
+    {
+      "section_id": 15,
+      "start_sec": 421.34,
+      "end_sec": 450.76,
+      "section_summary": "Because the exact same filter weights are shared across every spatial location, the network detects visual patterns regardless of where they appear in the frame. The module examines spatial dimensions, padding, stride, and pooling operations inside a convolutional backbone.",
+      "word_count": 39
+    },
+    {
+      "section_id": 16,
+      "start_sec": 450.76,
+      "end_sec": 476.96,
+      "section_summary": "Convolutional filters can process edge pixels without shrinking spatial resolution prematurely.",
+      "word_count": 11
+    },
+    {
+      "section_id": 17,
+      "start_sec": 476.96,
+      "end_sec": 505.9,
+      "section_summary": "This lecture studies deep residual networks, transfer learning, and vision backbones.",
+      "word_count": 11
+    },
+    {
+      "section_id": 18,
+      "start_sec": 506.48,
+      "end_sec": 530.22,
+      "section_summary": "",
+      "word_count": 0
+    },
+    {
+      "section_id": 19,
+      "start_sec": 530.22,
+      "end_sec": 557.88,
+      "section_summary": "By freezing early feature extraction layers and fine-tuning only the final classification head with data augmentation, models converge rapidly with high accuracy. The module extends image classification to object detection and semantic segmentation.",
+      "word_count": 33
+    },
+    {
+      "section_id": 20,
+      "start_sec": 558.4,
+      "end_sec": 589.14,
+      "section_summary": "",
+      "word_count": 0
+    },
+    {
+      "section_id": 21,
+      "start_sec": 589.98,
+      "end_sec": 630.74,
+      "section_summary": "This lecture performs a concrete calculation of convolutional output dimensions and receptive field growth across stacked layers.",
+      "word_count": 17
+    },
+    {
+      "section_id": 22,
+      "start_sec": 631.56,
+      "end_sec": 657.1,
+      "section_summary": "",
+      "word_count": 0
+    }
+  ]
+}

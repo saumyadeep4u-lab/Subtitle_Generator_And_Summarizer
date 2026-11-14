@@ -1,0 +1,175 @@
+{
+  "video_id": "lecture_02_nlp_transformers",
+  "summarizer_model": "lexrank",
+  "device": "cpu",
+  "latency_sec": 1.164,
+  "num_sections": 23,
+  "executive_summary": "This lecture examines natural language processing and the transformer architecture. This sequential dependency creates two severe bottlenecks, training cannot be parallelized. Furthermore, it analyzes scaled dot-product self-attention, the core computational mechanism of the transformer. Finally, the course examines the internal block structure of transformer encoders and decoders.",
+  "word_count": 47,
+  "sentence_count": 4,
+  "native_word_limit_met": true,
+  "post_processing_triggered": false,
+  "section_summaries": [
+    {
+      "section_id": 1,
+      "start_sec": 0.0,
+      "end_sec": 26.06,
+      "section_summary": "This lecture examines natural language processing and the transformer architecture. This sequential dependency creates two severe bottlenecks, training cannot be parallelized.",
+      "word_count": 21
+    },
+    {
+      "section_id": 2,
+      "start_sec": 26.06,
+      "end_sec": 51.82,
+      "section_summary": "Each subword token index is mapped to a dense continuous vector via a learnable embedding lookup table.",
+      "word_count": 17
+    },
+    {
+      "section_id": 3,
+      "start_sec": 51.82,
+      "end_sec": 79.24,
+      "section_summary": "This lecture analyzes scaled dot-product self-attention, the core computational mechanism of the transformer.",
+      "word_count": 13
+    },
+    {
+      "section_id": 4,
+      "start_sec": 80.2,
+      "end_sec": 107.94,
+      "section_summary": "Each token then computes a weighted sum of value vectors, allowing direct contextual information exchange between any pair of words regardless of distance.",
+      "word_count": 23
+    },
+    {
+      "section_id": 5,
+      "start_sec": 107.94,
+      "end_sec": 132.26,
+      "section_summary": "This lecture examines the internal block structure of transformer encoders and decoders.",
+      "word_count": 12
+    },
+    {
+      "section_id": 6,
+      "start_sec": 132.26,
+      "end_sec": 156.12,
+      "section_summary": "",
+      "word_count": 0
+    },
+    {
+      "section_id": 7,
+      "start_sec": 156.62,
+      "end_sec": 181.62,
+      "section_summary": "This lecture compares pretrained transformer paradigms including BERT, BART, and FLAN-T5. Bird is a bi-directional encoder pretrained using mask language modeling, making it ideal for token classification, named entity recognition, and semantic similarity.",
+      "word_count": 33
+    },
+    {
+      "section_id": 8,
+      "start_sec": 182.06,
+      "end_sec": 211.78,
+      "section_summary": "",
+      "word_count": 0
+    },
+    {
+      "section_id": 9,
+      "start_sec": 212.58,
+      "end_sec": 246.8,
+      "section_summary": "",
+      "word_count": 0
+    },
+    {
+      "section_id": 10,
+      "start_sec": 246.8,
+      "end_sec": 274.84,
+      "section_summary": "Common words remain single tokens, while rare technical terms such as backpropagation or heteroskedasticity are decomposed into meaningful root and suffix subwords, eliminating unknown token errors entirely. The module analyzes the computational complexity of self-attention and how hierarchical segmentation handles long contexts.",
+      "word_count": 42
+    },
+    {
+      "section_id": 11,
+      "start_sec": 274.84,
+      "end_sec": 302.54,
+      "section_summary": "Standard pretrained models enforce strict positional embedding limits of 512 or 1024 tokens.",
+      "word_count": 13
+    },
+    {
+      "section_id": 12,
+      "start_sec": 302.54,
+      "end_sec": 333.94,
+      "section_summary": "This lecture compares extractive summarization baselines against abstractive sequence to sequence models in educational applications.",
+      "word_count": 15
+    },
+    {
+      "section_id": 13,
+      "start_sec": 333.94,
+      "end_sec": 361.74,
+      "section_summary": "Abstractive models like Bartlarge CNN and FLAN-T5 rewrite and compress multi-sentence explanations into cohesive, grammatically polished academic prose that reads like human authored study notes.",
+      "word_count": 25
+    },
+    {
+      "section_id": 14,
+      "start_sec": 361.74,
+      "end_sec": 386.4,
+      "section_summary": "",
+      "word_count": 0
+    },
+    {
+      "section_id": 15,
+      "start_sec": 386.4,
+      "end_sec": 413.98,
+      "section_summary": "This lecture examines natural language processing and the transformer architecture.",
+      "word_count": 10
+    },
+    {
+      "section_id": 16,
+      "start_sec": 414.5,
+      "end_sec": 442.68,
+      "section_summary": "This sequential dependency creates two severe bottlenecks, training cannot be parallelized across sequence positions, and long-range dependencies degrade over hundreds of tokens.",
+      "word_count": 22
+    },
+    {
+      "section_id": 17,
+      "start_sec": 442.68,
+      "end_sec": 470.8,
+      "section_summary": "Each subword token index is mapped to a dense continuous vector via a learnable embedding look-up table. Because the transformer removes recurrence entirely, sinusoidal or learned positional encodings are added to token embeddings so the model can distinguish word order.",
+      "word_count": 40
+    },
+    {
+      "section_id": 18,
+      "start_sec": 470.8,
+      "end_sec": 496.1,
+      "section_summary": "",
+      "word_count": 0
+    },
+    {
+      "section_id": 19,
+      "start_sec": 496.1,
+      "end_sec": 522.32,
+      "section_summary": "Each token then computes a weighted sum of value vectors, allowing direct contextual information exchange between any pair of words regardless of distance. Multi-head attention runs several self-attention projections in parallel so different heads can attend to syntactic roles, coherence, and semantic relations simultaneously.",
+      "word_count": 44
+    },
+    {
+      "section_id": 20,
+      "start_sec": 523.28,
+      "end_sec": 548.52,
+      "section_summary": "This lecture examines the internal block structure of transformer encoders and decoders.",
+      "word_count": 12
+    },
+    {
+      "section_id": 21,
+      "start_sec": 548.52,
+      "end_sec": 572.04,
+      "section_summary": "",
+      "word_count": 0
+    },
+    {
+      "section_id": 22,
+      "start_sec": 572.52,
+      "end_sec": 598.28,
+      "section_summary": "This lecture compares pretrained transformer paradigms including BERT, BART, and FLAN-T5. Bird is a bidirectional encoder pretrained using mask language modeling, making it ideal for token classification, named entity recognition, and semantic similarity.",
+      "word_count": 33
+    },
+    {
+      "section_id": 23,
+      "start_sec": 599.18,
+      "end_sec": 633.1,
+      "section_summary": "BART combines a bidirectional encoder with an autoregressive left to right decoder, pretrained as a denoising autoencoder by reconstructing corrupted text spans.",
+      "word_count": 22
+    }
+  ]
+}

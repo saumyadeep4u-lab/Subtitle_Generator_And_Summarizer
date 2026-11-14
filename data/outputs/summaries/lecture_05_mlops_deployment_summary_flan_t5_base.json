@@ -1,0 +1,175 @@
+{
+  "video_id": "lecture_05_mlops_deployment",
+  "summarizer_model": "google/flan-t5-base",
+  "device": "cpu",
+  "latency_sec": 62.839,
+  "num_sections": 23,
+  "executive_summary": "MLOps Engineering, Reproduction, and Production Machine Learning Systems are the future of machine learning. Regression testing, fault tolerance, and operational telemetry are covered in this introductory lecture. Furthermore, it focuses on the architecture of feature stores and metadata registries in enterprise machine learning platforms. Finally, the module focuses on modular repository design and automated software testing for machine learning pipelines.",
+  "word_count": 60,
+  "sentence_count": 4,
+  "native_word_limit_met": true,
+  "post_processing_triggered": false,
+  "section_summaries": [
+    {
+      "section_id": 1,
+      "start_sec": 0.0,
+      "end_sec": 27.14,
+      "section_summary": "MLOps is a machine learning architecture that enables the development of machine learning systems that can be used in a wide range of applications.",
+      "word_count": 24
+    },
+    {
+      "section_id": 2,
+      "start_sec": 27.14,
+      "end_sec": 57.18,
+      "section_summary": "Track model checkpoints and datasets with explicit version tags, training timestamps, and SHA-256 cryptographic checksums.",
+      "word_count": 15
+    },
+    {
+      "section_id": 3,
+      "start_sec": 57.18,
+      "end_sec": 86.44,
+      "section_summary": "Automated tests suites built with pytest verify both unit functionality and boundary conditions before any code change is made.",
+      "word_count": 19
+    },
+    {
+      "section_id": 4,
+      "start_sec": 87.08,
+      "end_sec": 114.32,
+      "section_summary": "Regression tests ensure that updates to heuristic post-processors or configuration thresholds do not silently degrade established precision or formatting standards. This lecture focuses on inference optimization, fault tolerance, and operational telemetry.",
+      "word_count": 31
+    },
+    {
+      "section_id": 5,
+      "start_sec": 114.78,
+      "end_sec": 142.46,
+      "section_summary": "Engineers track operational metrics along with statistical quality metrics when deploying speech recognition and transformer summarization models. Br>.",
+      "word_count": 18
+    },
+    {
+      "section_id": 6,
+      "start_sec": 142.46,
+      "end_sec": 169.94,
+      "section_summary": "This lecture focuses on post-deployment monitoring, data drift detection, and human in the loop feedback loops.",
+      "word_count": 16
+    },
+    {
+      "section_id": 7,
+      "start_sec": 170.74,
+      "end_sec": 201.34,
+      "section_summary": "This lecture focuses on containerization, dependency pinning, continuous integration workflows, and continuous integration tools for distributed systems.",
+      "word_count": 17
+    },
+    {
+      "section_id": 8,
+      "start_sec": 201.34,
+      "end_sec": 231.62,
+      "section_summary": "A common source of production failures is environment skew between a data scientist local workstation and the cloud inference server.",
+      "word_count": 20
+    },
+    {
+      "section_id": 9,
+      "start_sec": 231.62,
+      "end_sec": 268.48,
+      "section_summary": "This lecture analyzes shadow deployments, canary releases, and A/B testing strategies for validating new model versions safely in production.",
+      "word_count": 19
+    },
+    {
+      "section_id": 10,
+      "start_sec": 268.48,
+      "end_sec": 300.54,
+      "section_summary": "This lecture focuses on the architecture of feature stores and metadata registries in enterprise machine learning platforms, and explores how they can be integrated into machine learning architectures.",
+      "word_count": 28
+    },
+    {
+      "section_id": 11,
+      "start_sec": 300.54,
+      "end_sec": 326.94,
+      "section_summary": "A unified model store and a model registry to provide a single point in time training snapshot and low latency online inference lookup.",
+      "word_count": 23
+    },
+    {
+      "section_id": 12,
+      "start_sec": 326.94,
+      "end_sec": 353.6,
+      "section_summary": "A fall tolerant pipeline never crashes silently or returns malformed outputs to the client. Instead, circuit breakers trip automatically to root requests to deterministic fallback heuristics, such as falling back from a heavy abstractive transformer to a fast extractive Lex rank summarizer, while emitting structured warning.",
+      "word_count": 46
+    },
+    {
+      "section_id": 13,
+      "start_sec": 353.6,
+      "end_sec": 381.04,
+      "section_summary": "This lecture focuses on MLOps engineering, reproducibility and production machine learning systems, as well as their applications in the field of machine learning.",
+      "word_count": 23
+    },
+    {
+      "section_id": 14,
+      "start_sec": 381.04,
+      "end_sec": 410.04,
+      "section_summary": "Ensure that all hyperparameters, file paths, token limits and operating thresholds are centralized in an external configuration file.",
+      "word_count": 18
+    },
+    {
+      "section_id": 15,
+      "start_sec": 410.04,
+      "end_sec": 437.92,
+      "section_summary": "This lecture focuses on the design of modular repository architectures and automated software testing for machine learning pipelines, as well as the development of a modular repository framework.",
+      "word_count": 28
+    },
+    {
+      "section_id": 16,
+      "start_sec": 438.14,
+      "end_sec": 468.34,
+      "section_summary": "Automated tests suites built with ptest verify both unit functionality and boundary conditions before any code change is merged.",
+      "word_count": 19
+    },
+    {
+      "section_id": 17,
+      "start_sec": 468.34,
+      "end_sec": 496.02,
+      "section_summary": "Regression tests ensure that updates to heuristic post-processors or configuration thresholds do not silently degrade established precision or formatting standards. This lecture focuses on inference optimization, fault tolerance, and operational telemetry.",
+      "word_count": 31
+    },
+    {
+      "section_id": 18,
+      "start_sec": 496.02,
+      "end_sec": 524.18,
+      "section_summary": "Engineers track operational metrics along with statistical quality metrics when deploying speech recognition and transformer summarization models. Br>.",
+      "word_count": 18
+    },
+    {
+      "section_id": 19,
+      "start_sec": 524.18,
+      "end_sec": 552.12,
+      "section_summary": "This lecture focuses on post-employment monitoring, data drift detection, and human-in-the-loop feedback loops.",
+      "word_count": 13
+    },
+    {
+      "section_id": 20,
+      "start_sec": 552.12,
+      "end_sec": 581.7,
+      "section_summary": "MLOps pipeline flags samples for human annotation and triggers scheduled retraining if a low drift or low confidence fall back rates exceed calibrated alert thresholds.",
+      "word_count": 25
+    },
+    {
+      "section_id": 21,
+      "start_sec": 582.12,
+      "end_sec": 611.88,
+      "section_summary": "This lecture focuses on containerization, dependency pinning, and continuous integration workflows for machine learning deployment. It also discusses the use of cloud inference and cloud based architectures.",
+      "word_count": 27
+    },
+    {
+      "section_id": 22,
+      "start_sec": 612.12,
+      "end_sec": 641.62,
+      "section_summary": "Continuous Integration (Circum-Testing) is a critical component of continuous integration. It is the foundation for continuous integration, a process that automates the execution of Linterchecks, type annotation verification, and unit tests.",
+      "word_count": 31
+    },
+    {
+      "section_id": 23,
+      "start_sec": 641.62,
+      "end_sec": 677.54,
+      "section_summary": "In a shadow deployment, live incoming requests are mirrored asynchronously to the candidate model in the background, allowing engineers to compare its predictions and latency against the incumbent model without exposing users to unverified outputs.",
+      "word_count": 35
+    }
+  ]
+}
